@@ -1,32 +1,28 @@
 {
     "cameras": {
-        "3": {
-            "id": 3,
-            "name": "Nova Câmera 3",
-            "rtsp_url": "rtsp://admin:admin@192.168.0.5:554/1/2",
+        "1": {
+            "id": 1,
+            "name": "Nova Câmera 1",
+            "source": "0",
             "description": "Insira a descrição",
-            "enabled": true,
-            "username": null,
-            "password": null
+            "enabled": true
         },
-        "4": {
-            "id": 4,
-            "name": "Nova Câmera 4",
-            "rtsp_url": "rtsp://admin:admin@192.168.0.5:554/1/4",
+        "2": {
+            "id": 2,
+            "name": "Nova Câmera 2",
+            "source": "rtsp://admin:admin@192.168.0.5:554/1/2",
             "description": "Insira a descrição",
-            "enabled": true,
-            "username": null,
-            "password": null
+            "enabled": true
         }
     },
     "detection": {
         "model_path": "modelos/best.pt",
-        "confidence_threshold": 0.503584229390681,
+        "confidence_threshold": 0.5,
         "show_window": false,
         "tracking_enabled": true,
-        "count_line_position": 0.40412186379928317,
-        "count_line_width_percent": 0.503584229390681,
-        "preferred_backend": "directml",
+        "count_line_position": 0.4525089605734767,
+        "count_line_width_percent": 0.8064516129032258,
+        "preferred_backend": "openvino",
         "model_path_tensorrt": "modelos/best.engine",
         "model_path_openvino": "modelos/best_openvino_model",
         "auto_optimize": true,

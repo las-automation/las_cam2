@@ -1,5 +1,6 @@
 """
 Serviço de detecção com seleção inteligente de backend (TensorRT/DirectML/OpenVINO/CPU)
+e lógica de contagem aprimorada.
 """
 import threading
 import time
@@ -14,17 +15,24 @@ from ..models.entities import DetectionSession, CameraStatus, CargoType
 from ..config.settings import config_manager, BackendOption, CameraConfig
 from ..utils.logger import log_system_event, log_error, log_user_action
 
+# --- Constantes ---
+CROSSING_THRESHOLD = 0.70  # Limiar de 70% para contagem
+DEFAULT_RTSP_TIMEOUT = 10 # Segundos de timeout para conexão RTSP (ajuste conforme necessário)
+# --- Fim Constantes ---
 
 class DetectionService:
-    """Serviço de detecção de objetos com aceleração de hardware"""
+    """
+    Gerencia as threads de detecção para múltiplas câmeras, selecionando
+    o backend de inferência mais performático (automática ou manualmente)
+    e aplicando a lógica de contagem personalizada.
+    """
 
     def __init__(self, trigger_ui_event_func: Callable):
         """
-        Inicializa o serviço de detecção.
+        Inicializa o serviço.
 
         Args:
-            trigger_ui_event_func: Função (geralmente AppController.trigger_ui_event)
-                                   para notificar a UI sobre eventos.
+            trigger_ui_event_func: Função para notificar a UI sobre eventos.
         """
         self.config = config_manager
         self._active_sessions: Dict[int, DetectionSession] = {}
@@ -35,82 +43,102 @@ class DetectionService:
         self.selected_device_args: dict = {}
         self.backend_name: str = "N/A"
 
-        # Chama o método para determinar o backend
-        self._get_best_backend() # Agora este método deve existir na classe
+        self._initialize_backend()
 
-        if self.backend_name != "N/A":
-            log_system_event(f"DETECTION_SERVICE_INITIALIZED_BACKEND_{self.backend_name.upper()}")
-        else:
-            log_error("DetectionService", None, "Falha crítica ao inicializar qualquer backend de detecção.")
-            self.trigger_ui_event("error", "Falha ao inicializar backend de IA.")
+    def _initialize_backend(self):
+        """Determina e configura o backend de detecção."""
+        try:
+            self._get_best_backend()
+            if self.backend_name != "N/A":
+                log_system_event(f"DETECTION_SERVICE_INITIALIZED_BACKEND_{self.backend_name.upper()}")
+            else:
+                # Se _get_best_backend falhou silenciosamente (improvável), loga erro.
+                raise RuntimeError("Nenhum backend de detecção pôde ser selecionado.")
+        except Exception as e:
+            log_error("DetectionService", e, "Falha crítica ao inicializar backend de detecção.")
+            self.backend_name = "N/A" # Garante estado inválido
+            self.trigger_ui_event("error", f"Falha crítica ao inicializar backend de IA: {e}")
 
-    # --- MÉTODO _get_best_backend CORRIGIDO (INDENTAÇÃO CORRETA) ---
     def _get_best_backend(self) -> None:
-        """
-        Detecta ou usa o backend preferido, com fallback automático.
-        Define self.selected_device_args corretamente para cada backend.
-        """
+        """Seleciona o backend (automático ou preferencial) e configura paths/args."""
         cfg = self.config.config.detection
         preference: BackendOption = getattr(cfg, 'preferred_backend', 'auto')
         print("-" * 60 + f"\n⚙️  Selecionando Backend (Preferência: {preference.upper()})\n" + "-" * 60)
-        preferred_backend_set = False
 
-        # --- Tenta usar o Backend Preferido ---
+        # Helper para tentar configurar um backend
+        def try_set_backend(name: str, model_path: str, device_args: dict, check_path: bool = True) -> bool:
+            model_p = Path(model_path)
+            if check_path and not model_p.exists():
+                print(f"   -> Modelo {name} não encontrado em: {model_p}")
+                return False
+            self.backend_name = name
+            self.selected_model_path = str(model_p) # Garante que é string
+            self.selected_device_args = device_args
+            return True
+
+        # 1. Tenta Preferência do Usuário
+        preferred_backend_set = False
         if preference != "auto":
-            if preference == "tensorrt":
-                if torch.cuda.is_available() and Path(cfg.model_path_tensorrt).exists():
-                    self.backend_name = "TensorRT"; self.selected_model_path = cfg.model_path_tensorrt
-                    self.selected_device_args = {'device': 0}; preferred_backend_set = True
-                    print(f"👍 Usando preferência: {self.backend_name} (NVIDIA GPU)")
-                else: print(f"⚠️ Preferência TensorRT falhou (CUDA indisponível ou {cfg.model_path_tensorrt} não encontrado)")
+            print(f"   Tentando backend preferido: {preference.upper()}")
+            if preference == "tensorrt" and torch.cuda.is_available():
+                if try_set_backend("TensorRT", cfg.model_path_tensorrt, {'device': 0}):
+                    preferred_backend_set = True
+                    print(f"   👍 Preferência atendida: {self.backend_name} (NVIDIA GPU)")
+                    try: print(f"      GPU: {torch.cuda.get_device_name(0)}")
+                    except: pass
             elif preference == "directml":
                 try:
                     import torch_directml
                     if torch_directml.is_available():
-                        self.backend_name = "DirectML"; self.selected_model_path = cfg.model_path
-                        self.selected_device_args = {}; preferred_backend_set = True
-                        print(f"👍 Usando preferência: {self.backend_name} (GPU AMD/Outra)")
-                        try: print(f"   Device: {torch_directml.device()}")
-                        except: pass
-                    else: print(f"⚠️ Preferência DirectML falhou (DirectML indisponível)")
-                except (ImportError, AttributeError): print(f"⚠️ Preferência DirectML falhou (torch_directml não instalado)")
+                        # DirectML usa modelo .pt e não precisa de device arg explícito na track()
+                        if try_set_backend("DirectML", cfg.model_path, {}):
+                            preferred_backend_set = True
+                            print(f"   👍 Preferência atendida: {self.backend_name} (GPU AMD/Outra)")
+                            try: print(f"      Device: {torch_directml.device()}")
+                            except: pass
+                except (ImportError, AttributeError): pass # Ignora se torch_directml não estiver instalado
             elif preference == "openvino":
-                if Path(cfg.model_path_openvino).exists():
-                    self.backend_name = "OpenVINO"; self.selected_model_path = cfg.model_path_openvino
-                    self.selected_device_args = {}; preferred_backend_set = True
-                    print(f"👍 Usando preferência: {self.backend_name} (Intel CPU/iGPU)")
-                else: print(f"⚠️ Preferência OpenVINO falhou ({cfg.model_path_openvino} não encontrado)")
+                if try_set_backend("OpenVINO", cfg.model_path_openvino, {}):
+                    preferred_backend_set = True
+                    print(f"   👍 Preferência atendida: {self.backend_name} (Intel CPU/iGPU)")
             elif preference == "cpu":
-                self.backend_name = "CPU"; self.selected_model_path = cfg.model_path
-                self.selected_device_args = {'device': 'cpu'}; preferred_backend_set = True
-                print(f"👍 Usando preferência: {self.backend_name} (PyTorch CPU)")
-            if preferred_backend_set: return # Sai se a preferência funcionou
-            print(f"   ➡️ Preferência '{preference}' falhou. Tentando detecção automática...")
+                if try_set_backend("CPU", cfg.model_path, {'device': 'cpu'}):
+                    preferred_backend_set = True
+                    print(f"   👍 Preferência atendida: {self.backend_name} (PyTorch CPU)")
 
-        # --- Lógica Automática (Fallback) ---
-        print("🤖 Iniciando detecção automática de backend...")
-        if torch.cuda.is_available() and Path(cfg.model_path_tensorrt).exists():
-            self.backend_name = "TensorRT"; self.selected_model_path = cfg.model_path_tensorrt; self.selected_device_args = {'device': 0}
+            if preferred_backend_set: return # Sucesso com preferência
+            print(f"   ⚠️ Preferência '{preference}' falhou ou hardware/modelo incompatível. Tentando detecção automática...")
+
+        # 2. Detecção Automática (Fallback)
+        print("   🤖 Iniciando detecção automática de backend...")
+        # TensorRT
+        if torch.cuda.is_available() and try_set_backend("TensorRT", cfg.model_path_tensorrt, {'device': 0}):
             print(f"   🥇 Detectado: {self.backend_name} (NVIDIA GPU)")
             try: print(f"      GPU: {torch.cuda.get_device_name(0)}")
-            except: pass # Apenas ignora erro de impressão
-            return # Sai da função após configurar TensorRT
+            except: pass
+            return
+        # DirectML
         try:
             import torch_directml
-            if torch_directml.is_available():
-                self.backend_name = "DirectML"; self.selected_model_path = cfg.model_path; self.selected_device_args = {}
+            if torch_directml.is_available() and try_set_backend("DirectML", cfg.model_path, {}):
                 print(f"   🥈 Detectado: {self.backend_name} (GPU AMD/Outra)")
-                try: print(f"      Device: {torch_directml.device()}") # Apenas info
+                try: print(f"      Device: {torch_directml.device()}")
                 except: pass
-                return # Sai após configurar DirectML
+                return
         except (ImportError, AttributeError): pass
-        if Path(cfg.model_path_openvino).exists():
-            self.backend_name = "OpenVINO"; self.selected_model_path = cfg.model_path_openvino; self.selected_device_args = {}
-            print(f"   🥉 Detectado: {self.backend_name} (Intel CPU/iGPU)"); return
-        self.backend_name = "CPU"; self.selected_model_path = cfg.model_path; self.selected_device_args = {'device': 'cpu'}
-        print(f"   🐢 Fallback: {self.backend_name} (PyTorch CPU Padrão)")
-        if preference == 'auto': print("      💡 Para melhor performance, considere instalar dependências de aceleração.")
-    # --- FIM DO MÉTODO _get_best_backend ---
+        # OpenVINO
+        if try_set_backend("OpenVINO", cfg.model_path_openvino, {}):
+            print(f"   🥉 Detectado: {self.backend_name} (Intel CPU/iGPU)")
+            return
+        # CPU (Fallback final)
+        if try_set_backend("CPU", cfg.model_path, {'device': 'cpu'}):
+             print(f"   🐢 Fallback: {self.backend_name} (PyTorch CPU Padrão)")
+             if preference == 'auto': print("      💡 Para melhor performance, considere instalar dependências de aceleração.")
+             return
+
+        # Se chegou aqui, nenhum backend funcionou
+        self.backend_name = "N/A"
+        print(f"   ❌ Nenhum backend de detecção pôde ser configurado!")
 
 
     def start_detection(
@@ -120,17 +148,46 @@ class DetectionService:
             cargo_type: CargoType,
             callback: Optional[Callable[[int, int, np.ndarray], None]] = None
     ) -> bool:
-        """Inicia detecção em uma câmera."""
-        if self.is_detection_active(camera_id): log_error("DetectionService", None, f"Câmera {camera_id} já está ativa"); self.trigger_ui_event("detection_failed", camera_id, "Detecção já está ativa."); return False
+        """Inicia a thread de detecção para uma câmera."""
+        if self.is_detection_active(camera_id):
+            msg = f"Detecção já está ativa para Câmera {camera_id}."
+            log_error("DetectionService", None, msg)
+            self.trigger_ui_event("detection_failed", camera_id, msg)
+            return False
+
         camera_config = self.config.get_camera(camera_id)
-        if not camera_config or not camera_config.enabled: error_msg = f"Câmera {camera_id} não encontrada ou desabilitada"; log_error("DetectionService", None, error_msg); self.trigger_ui_event("detection_failed", camera_id, error_msg); return False
-        if not camera_config.rtsp_url: error_msg = f"Câmera {camera_id} não possui URL RTSP configurada."; log_error("DetectionService", None, error_msg); self.trigger_ui_event("detection_failed", camera_id, error_msg); return False
-        if self.backend_name == "N/A": error_msg = "Nenhum backend de detecção inicializado."; log_error("DetectionService", None, error_msg + f" Não é possível iniciar a câmera {camera_id}."); self.trigger_ui_event("detection_failed", camera_id, error_msg); return False
+        if not camera_config or not camera_config.enabled:
+            msg = f"Câmera {camera_id} não encontrada ou desabilitada."
+            log_error("DetectionService", None, msg)
+            self.trigger_ui_event("detection_failed", camera_id, msg)
+            return False
+
+        # --- CORREÇÃO: Usa camera_config.source ---
+        if not camera_config.source: # Verifica se source está vazio
+            msg = f"Câmera {camera_id} não possui Fonte (URL/Índice) configurada."
+            log_error("DetectionService", None, msg)
+            self.trigger_ui_event("detection_failed", camera_id, msg)
+            return False
+        # --- FIM CORREÇÃO ---
+
+        if self.backend_name == "N/A":
+             msg = "Nenhum backend de detecção inicializado."
+             log_error("DetectionService", None, msg + f" Não é possível iniciar a câmera {camera_id}.")
+             self.trigger_ui_event("detection_failed", camera_id, msg)
+             return False
+
         session = DetectionSession(camera_id=camera_id, user=username, model_version=self.backend_name, cargo_type=cargo_type)
-        stop_event = threading.Event(); thread = threading.Thread(target=self._run_detection_thread, args=(camera_id, session, camera_config, stop_event, callback), daemon=True, name=f"Detection-Cam-{camera_id}")
-        self._active_sessions[camera_id] = session; self._stop_events[camera_id] = stop_event; self._detection_threads[camera_id] = thread
-        self.trigger_ui_event("detection_starting", camera_id); thread.start()
-        log_user_action(username, f"DETECTION_STARTED_CAMERA_{camera_id}_TYPE_{cargo_type.value}_BACKEND_{self.backend_name}"); return True
+        stop_event = threading.Event()
+        thread = threading.Thread(target=self._run_detection_thread, args=(camera_id, session, camera_config, stop_event, callback), daemon=True, name=f"Detection-Cam-{camera_id}")
+
+        self._active_sessions[camera_id] = session
+        self._stop_events[camera_id] = stop_event
+        self._detection_threads[camera_id] = thread
+
+        self.trigger_ui_event("detection_starting", camera_id)
+        thread.start()
+        log_user_action(username, f"DETECTION_STARTED_CAMERA_{camera_id}_TYPE_{cargo_type.value}_BACKEND_{self.backend_name}")
+        return True
 
     def _run_detection_thread(
             self,
@@ -140,74 +197,118 @@ class DetectionService:
             stop_event: threading.Event,
             callback: Optional[Callable[[int, int, np.ndarray], None]]
     ) -> None:
-        """Thread principal de detecção."""
+        """Loop principal da thread de detecção."""
         thread_name = threading.current_thread().name
         log_system_event(f"THREAD_STARTED: {thread_name}", camera_id); print(f"✅ [{thread_name}] Iniciada")
         print(f"   Backend: {self.backend_name}, Modelo: {self.selected_model_path}")
-        cap = None; model = None
+        cap = None; model = None; is_webcam = False
+
         try:
             log_system_event(f"LOADING_MODEL: {thread_name}", camera_id); print(f"🔄 [{thread_name}] Carregando modelo YOLO...")
             model = YOLO(self.selected_model_path); log_system_event(f"MODEL_LOADED: {thread_name}", camera_id); print(f"✅ [{thread_name}] Modelo carregado")
-            log_system_event(f"CONNECTING_RTSP: {thread_name}", camera_id); print(f"🔄 [{thread_name}] Conectando a {camera_config.rtsp_url}...")
-            cap = cv2.VideoCapture(camera_config.rtsp_url, cv2.CAP_FFMPEG)
-            if not cap.isOpened(): raise ConnectionError(f"Falha ao abrir stream RTSP: {camera_config.rtsp_url}")
-            log_system_event(f"RTSP_CONNECTED: {thread_name}", camera_id); print(f"✅ [{thread_name}] Conectado ao stream")
-            cfg = self.config.config.detection; linha_y_pos = max(0.0, min(1.0, cfg.count_line_position)); crossing_threshold = 0.70
+
+            # --- CORREÇÃO: Usa camera_config.source e trata webcam ---
+            source = camera_config.source
+            log_system_event(f"CONNECTING_SOURCE: {thread_name}, Source='{source}'", camera_id)
+            print(f"🔄 [{thread_name}] Conectando a '{source}'...")
+
+            # Tenta converter source para int (índice da webcam)
+            try:
+                webcam_index = int(source)
+                cap = cv2.VideoCapture(webcam_index, cv2.CAP_DSHOW) # Usa DSHOW para melhor compatibilidade no Windows
+                is_webcam = True
+                connection_msg = f"Webcam Índice {webcam_index}"
+            except ValueError:
+                # Se não for int, assume que é URL RTSP ou arquivo
+                cap = cv2.VideoCapture(source, cv2.CAP_FFMPEG)
+                is_webcam = False
+                connection_msg = f"Stream {source}"
+
+            if not cap or not cap.isOpened():
+                raise ConnectionError(f"Falha ao abrir fonte: '{source}'")
+
+            log_system_event(f"SOURCE_CONNECTED: {thread_name}, Source='{source}'", camera_id)
+            print(f"✅ [{thread_name}] Conectado a {connection_msg}")
+            # --- FIM CORREÇÃO ---
+
+            cfg = self.config.config.detection; linha_y_pos = max(0.0, min(1.0, cfg.count_line_position))
             contador = 0; rastreador_estado: Dict[int, Dict[str, Any]] = {}; falhas_consecutivas = 0; max_falhas = cfg.max_detection_failures
+
             self.trigger_ui_event("detection_started", camera_id); log_system_event(f"DETECTION_LOOP_STARTING: {thread_name}", camera_id); print(f"🎬 [{thread_name}] Iniciando loop...")
+
             while not stop_event.is_set():
                 if stop_event.is_set(): break
                 ret, frame = cap.read()
                 if stop_event.is_set(): break
+
                 if not ret or frame is None:
+                    # Lógica de falha na leitura (aumenta robustez)
                     falhas_consecutivas += 1
-                    if falhas_consecutivas > max_falhas: log_error(thread_name, None, f"Stream perdido após {max_falhas} falhas."); self.trigger_ui_event("detection_failed", camera_id, "Stream perdido"); break
-                    stop_event.wait(0.1); continue
-                falhas_consecutivas = 0
+                    log_error(thread_name, None, f"Falha na leitura do frame ({falhas_consecutivas}/{max_falhas})")
+                    if falhas_consecutivas > max_falhas:
+                        error_msg = f"Stream/Webcam perdido após {max_falhas} falhas."
+                        log_error(thread_name, None, error_msg)
+                        self.trigger_ui_event("detection_failed", camera_id, error_msg); break
+                    stop_event.wait(0.5); continue # Espera mais se houver falhas
+                falhas_consecutivas = 0 # Reseta em caso de sucesso
+
+                # Inverte frame da webcam horizontalmente (opcional, comum)
+                if is_webcam:
+                    frame = cv2.flip(frame, 1)
+
                 frame_height, frame_width = frame.shape[:2]; linha_y_pixel = int(frame_height * linha_y_pos)
-                line_width_percent = max(0.0, min(1.0, cfg.count_line_width_percent)); line_pixel_width = frame_width * line_width_percent
+                line_width_percent = np.clip(cfg.count_line_width_percent, 0.0, 1.0); line_pixel_width = frame_width * line_width_percent
                 x_start = int((frame_width - line_pixel_width) / 2); x_end = int(x_start + line_pixel_width)
+
                 if stop_event.is_set(): break
                 track_args = {'conf': cfg.confidence_threshold, 'persist': True, 'verbose': False, 'tracker': 'bytetrack.yaml'}
                 if self.selected_device_args: track_args.update(self.selected_device_args)
                 resultados = model.track(frame, **track_args)
                 if stop_event.is_set(): break
+
                 deteccoes = resultados[0].boxes if resultados and len(resultados) > 0 else None
                 frame_anotado = frame.copy(); current_ids_on_frame = set()
+
                 if deteccoes is not None and deteccoes.id is not None:
-                    frame_anotado = resultados[0].plot(line_width=1, font_size=0.4)
+                    frame_anotado = resultados[0].plot(line_width=1, font_size=0.4) # Usa plot otimizado
                     for box, obj_id_tensor in zip(deteccoes.xyxy, deteccoes.id):
                         obj_id = int(obj_id_tensor.cpu().item()); current_ids_on_frame.add(obj_id)
                         x1, y1, x2, y2 = map(int, box.cpu().numpy()); cx = (x1 + x2) // 2; height = y2 - y1
-                        if height > 0:
+                        if height > 0: # Lógica de contagem 70%
                             pixels_below = max(0, y2 - linha_y_pixel); current_fraction_below = np.clip(pixels_below / height, 0.0, 1.0)
                             if obj_id not in rastreador_estado: rastreador_estado[obj_id] = {'previous_fraction_below': None, 'counted_this_crossing': False}
                             state = rastreador_estado[obj_id]; previous_fraction_below = state['previous_fraction_below']; dentro_limites_x = (x_start <= cx <= x_end)
-                            if (previous_fraction_below is not None and previous_fraction_below < crossing_threshold and current_fraction_below >= crossing_threshold and not state['counted_this_crossing'] and dentro_limites_x):
+                            if (previous_fraction_below is not None and previous_fraction_below < CROSSING_THRESHOLD and current_fraction_below >= CROSSING_THRESHOLD and not state['counted_this_crossing'] and dentro_limites_x):
                                 contador += 1; state['counted_this_crossing'] = True; session.detection_count = contador
                                 log_system_event(f"OBJECT_CROSSED: Cam={camera_id}, ID={obj_id}, Count={contador}", camera_id)
                                 print(f"✅ [{thread_name}] ID {obj_id} CRUZOU ({current_fraction_below:.2f} abaixo)! Total: {contador}")
-                            elif current_fraction_below < crossing_threshold: state['counted_this_crossing'] = False
+                            elif current_fraction_below < CROSSING_THRESHOLD: state['counted_this_crossing'] = False
                             state['previous_fraction_below'] = current_fraction_below
-                ids_to_remove = set(rastreador_estado.keys()) - current_ids_on_frame
+
+                ids_to_remove = set(rastreador_estado.keys()) - current_ids_on_frame # Limpa estado
                 for tid in ids_to_remove: del rastreador_estado[tid]
+
+                # Desenha linha e contagem
                 cv2.line(frame_anotado, (x_start, linha_y_pixel), (x_end, linha_y_pixel), (0, 0, 255), 2)
                 cv2.putText(frame_anotado, f"Contagem: {contador}", (20, 40), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2, cv2.LINE_AA)
-                if stop_event.is_set(): break
+
+                if stop_event.is_set(): break # Verifica antes do callback/display
                 if callback:
                     try: callback(camera_id, contador, frame_anotado)
                     except Exception as e: log_error(thread_name, e, f"Erro no callback")
                 if cfg.show_window:
                     cv2.imshow(f"Camera {camera_id} - {self.backend_name}", frame_anotado)
+                    # Reduz waitKey para potentially melhorar responsividade ao stop_event
                     if cv2.waitKey(1) & 0xFF == ord('q'): stop_event.set(); break
+
         except ConnectionError as conn_e:
-             log_error(thread_name, conn_e, "Erro de conexão RTSP"); self.trigger_ui_event("detection_failed", camera_id, f"Erro de conexão: {conn_e}")
+             log_error(thread_name, conn_e, "Erro de conexão RTSP/Webcam"); self.trigger_ui_event("detection_failed", camera_id, f"Erro de conexão: {conn_e}")
         except Exception as e:
             log_error(thread_name, e, f"Erro fatal na thread"); self.trigger_ui_event("detection_failed", camera_id, f"Erro fatal na thread: {e}")
         finally:
             log_system_event(f"CLEANING_UP_THREAD: {thread_name}", camera_id); print(f"🧹 [{thread_name}] Limpando recursos...")
             try: # Libera câmera
-                if cap is not None and cap.isOpened(): cap.release(); log_system_event(f"RTSP_RELEASED: {thread_name}", camera_id)
+                if cap is not None and cap.isOpened(): cap.release(); log_system_event(f"SOURCE_RELEASED: {thread_name}", camera_id)
             except Exception as cap_e: log_error(thread_name, cap_e, "Erro ao liberar captura de vídeo")
             try: # Fecha janela OpenCV
                 cfg = self.config.config.detection # Garante que cfg esteja definida
@@ -231,7 +332,7 @@ class DetectionService:
             print(f"   Aguardando thread {thread.name} finalizar..."); thread.join(timeout=7.0)
             if thread.is_alive(): log_error("DetectionService", None, f"Thread {thread.name} não finalizou no timeout!")
             else: stopped_cleanly = True; print(f"   Thread {thread.name} finalizada.")
-        else: stopped_cleanly = True
+        else: stopped_cleanly = True # Thread já não estava ativa ou não existia mais
         self._active_sessions.pop(camera_id, None); self._stop_events.pop(camera_id, None); self._detection_threads.pop(camera_id, None)
         log_system_event(f"DETECTION_STOPPED_CONFIRMED: Camera ID: {camera_id}", camera_id); print(f"🛑 [{threading.current_thread().name}] Detecção da Câmera {camera_id} confirmada como parada.")
         if stopped_cleanly: self.trigger_ui_event("detection_stopped", camera_id) # Notifica UI
