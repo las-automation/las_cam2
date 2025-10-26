@@ -399,3 +399,113 @@ Traceback (most recent call last):
 ConnectionError: Falha ao abrir fonte: 'rtsp://admin:admin@192.168.0.100:554/stream1'
 2025-10-26 13:11:05 - ERROR - DetectionService - NoneType: None - Thread Detection-Cam-1 não finalizou no timeout!
 NoneType: None
+2025-10-26 14:38:24 - ERROR - Detection-Cam-1 - LinAlgError: 1-th leading minor of the array is not positive definite - Erro fatal na thread
+Traceback (most recent call last):
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\src\app\services\detection_service.py", line 266, in _run_detection_thread
+    resultados = model.track(frame, **track_args)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\engine\model.py", line 601, in track
+    return self.predict(source=source, stream=stream, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\engine\model.py", line 557, in predict
+    return self.predictor.predict_cli(source=source) if is_cli else self.predictor(source=source, stream=stream)
+                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\engine\predictor.py", line 230, in __call__
+    return list(self.stream_inference(source, model, *args, **kwargs))  # merge list of Result into one
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\torch\utils\_contextlib.py", line 36, in generator_context
+    response = gen.send(None)
+               ^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\engine\predictor.py", line 345, in stream_inference
+    self.run_callbacks("on_predict_postprocess_end")
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\engine\predictor.py", line 514, in run_callbacks
+    callback(self)
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\trackers\track.py", line 95, in on_predict_postprocess_end
+    tracks = tracker.update(det, result.orig_img, getattr(result, "feats", None))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\trackers\byte_tracker.py", line 380, in update
+    unconfirmed[itracked].update(detections[idet], self.frame_id)
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\trackers\byte_tracker.py", line 174, in update
+    self.mean, self.covariance = self.kalman_filter.update(
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\trackers\utils\kalman_filter.py", line 228, in update
+    chol_factor, lower = scipy.linalg.cho_factor(projected_cov, lower=True, check_finite=False)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\scipy\_lib\_util.py", line 1233, in wrapper
+    return f(*arrays, *other_args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\scipy\linalg\_decomp_cholesky.py", line 183, in cho_factor
+    c, lower = _cholesky(a, lower=lower, overwrite_a=overwrite_a, clean=False,
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\scipy\linalg\_decomp_cholesky.py", line 39, in _cholesky
+    raise LinAlgError(
+numpy.linalg.LinAlgError: 1-th leading minor of the array is not positive definite
+2025-10-26 14:39:30 - ERROR - Detection-Cam-1 - LinAlgError: 1-th leading minor of the array is not positive definite - Erro fatal na thread
+Traceback (most recent call last):
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\src\app\services\detection_service.py", line 266, in _run_detection_thread
+    resultados = model.track(frame, **track_args)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\engine\model.py", line 601, in track
+    return self.predict(source=source, stream=stream, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\engine\model.py", line 557, in predict
+    return self.predictor.predict_cli(source=source) if is_cli else self.predictor(source=source, stream=stream)
+                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\engine\predictor.py", line 230, in __call__
+    return list(self.stream_inference(source, model, *args, **kwargs))  # merge list of Result into one
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\torch\utils\_contextlib.py", line 36, in generator_context
+    response = gen.send(None)
+               ^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\engine\predictor.py", line 345, in stream_inference
+    self.run_callbacks("on_predict_postprocess_end")
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\engine\predictor.py", line 514, in run_callbacks
+    callback(self)
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\trackers\track.py", line 95, in on_predict_postprocess_end
+    tracks = tracker.update(det, result.orig_img, getattr(result, "feats", None))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\trackers\byte_tracker.py", line 380, in update
+    unconfirmed[itracked].update(detections[idet], self.frame_id)
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\trackers\byte_tracker.py", line 174, in update
+    self.mean, self.covariance = self.kalman_filter.update(
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\trackers\utils\kalman_filter.py", line 228, in update
+    chol_factor, lower = scipy.linalg.cho_factor(projected_cov, lower=True, check_finite=False)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\scipy\_lib\_util.py", line 1233, in wrapper
+    return f(*arrays, *other_args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\scipy\linalg\_decomp_cholesky.py", line 183, in cho_factor
+    c, lower = _cholesky(a, lower=lower, overwrite_a=overwrite_a, clean=False,
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\scipy\linalg\_decomp_cholesky.py", line 39, in _cholesky
+    raise LinAlgError(
+numpy.linalg.LinAlgError: 1-th leading minor of the array is not positive definite
+2025-10-26 14:41:15 - ERROR - Detection-Cam-1 - ModuleNotFoundError: No module named 'tensorrt' - Erro fatal na thread
+Traceback (most recent call last):
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\nn\autobackend.py", line 340, in __init__
+    import tensorrt as trt
+ModuleNotFoundError: No module named 'tensorrt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\src\app\services\detection_service.py", line 266, in _run_detection_thread
+    resultados = model.track(frame, **track_args)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\engine\model.py", line 601, in track
+    return self.predict(source=source, stream=stream, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\engine\model.py", line 550, in predict
+    self.predictor.setup_model(model=self.model, verbose=is_cli)
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\engine\predictor.py", line 398, in setup_model
+    self.model = AutoBackend(
+                 ^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\torch\utils\_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\nn\autobackend.py", line 344, in __init__
+    import tensorrt as trt
+ModuleNotFoundError: No module named 'tensorrt'
+2025-10-26 14:51:44 - ERROR - DetectionService - NoneType: None - Thread Detection-Cam-1 não finalizou no timeout!
+NoneType: None

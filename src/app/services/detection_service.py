@@ -16,7 +16,7 @@ from ..config.settings import config_manager, BackendOption, CameraConfig
 from ..utils.logger import log_system_event, log_error, log_user_action
 
 # --- Constantes ---
-CROSSING_THRESHOLD = 0.70  # Limiar de 70% para contagem
+CROSSING_THRESHOLD = 0.60  # Limiar de 70% para contagem
 DEFAULT_RTSP_TIMEOUT = 10 # Segundos de timeout para conexão RTSP (ajuste conforme necessário)
 # --- Fim Constantes ---
 
@@ -132,9 +132,9 @@ class DetectionService:
             return
         # CPU (Fallback final)
         if try_set_backend("CPU", cfg.model_path, {'device': 'cpu'}):
-             print(f"   🐢 Fallback: {self.backend_name} (PyTorch CPU Padrão)")
-             if preference == 'auto': print("      💡 Para melhor performance, considere instalar dependências de aceleração.")
-             return
+            print(f"   🐢 Fallback: {self.backend_name} (PyTorch CPU Padrão)")
+            if preference == 'auto': print("      💡 Para melhor performance, considere instalar dependências de aceleração.")
+            return
 
         # Se chegou aqui, nenhum backend funcionou
         self.backend_name = "N/A"

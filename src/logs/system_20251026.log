@@ -1263,3 +1263,198 @@
 2025-10-26 13:49:14 - INFO - System - LOGOUT_ATTEMPT_WITHOUT_USER: 
 2025-10-26 13:49:14 - INFO - System - APP_SHUTDOWN_COMPLETED: 
 2025-10-26 13:49:14 - INFO - System - APPLICATION_CLOSED: 
+2025-10-26 14:37:38 - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-26 14:37:39 - INFO - System - DIRECTML_AVAILABLE: 
+2025-10-26 14:37:39 - INFO - System - APPLICATION_STARTUP: 
+2025-10-26 14:37:39 - INFO - System - DETECTION_SERVICE_INITIALIZED_BACKEND_OPENVINO: 
+2025-10-26 14:37:39 - INFO - System - REPORT_SERVICE_INITIALIZED: Directory=C:\Users\ander\Documents\workspace\ESTAGIO\src\reports: 
+2025-10-26 14:37:39 - INFO - System - APP_CONTROLLER_INITIALIZED: 
+2025-10-26 14:37:39 - INFO - System - UI_CALLBACK_SET: login_success: 
+2025-10-26 14:37:39 - INFO - System - UI_CALLBACK_SET: login_failed: 
+2025-10-26 14:37:39 - INFO - System - UI_CALLBACK_SET: register_success: 
+2025-10-26 14:37:39 - INFO - System - UI_CALLBACK_SET: self_register_success: 
+2025-10-26 14:37:39 - INFO - System - UI_CALLBACK_SET: register_failed: 
+2025-10-26 14:37:39 - INFO - System - UI_CALLBACK_SET: logout_success: 
+2025-10-26 14:37:39 - INFO - System - UI_CALLBACK_SET: detection_starting: 
+2025-10-26 14:37:39 - INFO - System - UI_CALLBACK_SET: detection_started: 
+2025-10-26 14:37:39 - INFO - System - UI_CALLBACK_SET: detection_stopped: 
+2025-10-26 14:37:39 - INFO - System - UI_CALLBACK_SET: detection_failed: 
+2025-10-26 14:37:39 - INFO - System - UI_CALLBACK_SET: detection_update: 
+2025-10-26 14:37:39 - INFO - System - UI_CALLBACK_SET: count_reset: 
+2025-10-26 14:37:39 - INFO - System - UI_CALLBACK_SET: report_generated: 
+2025-10-26 14:37:39 - INFO - System - UI_CALLBACK_SET: report_failed: 
+2025-10-26 14:37:39 - INFO - System - UI_CALLBACK_SET: config_updated: 
+2025-10-26 14:37:39 - INFO - System - UI_CALLBACK_SET: camera_added: 
+2025-10-26 14:37:39 - INFO - System - UI_CALLBACK_SET: camera_removed: 
+2025-10-26 14:37:39 - INFO - System - UI_CALLBACK_SET: error: 
+2025-10-26 14:37:40 - INFO - System - APPLICATION_INITIALIZED: 
+2025-10-26 14:37:40 - INFO - System - APPLICATION_MAINLOOP_START: 
+2025-10-26 14:38:04 - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=1, Data={'name': 'Nova Câmera 1', 'source': '0', 'description': 'Insira a descrição', 'enabled': True}: 1
+2025-10-26 14:38:04 - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=1: 1
+2025-10-26 14:38:04 - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=2, Data={'name': 'Nova Câmera 2', 'source': 'rtsp://admin:admin@192.168.0.5:554/1/2', 'description': 'Insira a descrição', 'enabled': True}: 2
+2025-10-26 14:38:04 - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=2: 2
+2025-10-26 14:38:05 - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=1, Data={'name': 'Nova Câmera 1', 'source': '0', 'description': 'Insira a descrição', 'enabled': True}: 1
+2025-10-26 14:38:05 - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=1: 1
+2025-10-26 14:38:05 - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=2, Data={'name': 'Nova Câmera 2', 'source': 'rtsp://admin:admin@192.168.0.5:554/1/2', 'description': 'Insira a descrição', 'enabled': True}: 2
+2025-10-26 14:38:05 - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=2: 2
+2025-10-26 14:38:11 - INFO - System - THREAD_STARTED: Detection-Cam-1: 1
+2025-10-26 14:38:11 - INFO - System - LOADING_MODEL: Detection-Cam-1: 1
+2025-10-26 14:38:11 - INFO - System - MODEL_LOADED: Detection-Cam-1: 1
+2025-10-26 14:38:11 - INFO - System - CONNECTING_SOURCE: Detection-Cam-1, Source='0': 1
+2025-10-26 14:38:12 - INFO - System - SOURCE_CONNECTED: Detection-Cam-1, Source='0': 1
+2025-10-26 14:38:12 - INFO - System - DETECTION_LOOP_STARTING: Detection-Cam-1: 1
+2025-10-26 14:38:35 - INFO - System - STOP_DETECTION_REQUESTED: Cam=1: 1
+2025-10-26 14:38:35 - INFO - System - STOPPING_DETECTION_REQUESTED: Camera ID: 1: 1
+2025-10-26 14:38:35 - INFO - System - CLEANING_UP_THREAD: Detection-Cam-1: 1
+2025-10-26 14:38:35 - INFO - System - SOURCE_RELEASED: Detection-Cam-1: 1
+2025-10-26 14:38:35 - INFO - System - DETECTION_THREAD_ENDED: Detection-Cam-1: 1
+2025-10-26 14:38:37 - INFO - System - STOP_DETECTION_REQUESTED: Cam=1: 1
+2025-10-26 14:38:37 - INFO - System - STOPPING_DETECTION_REQUESTED: Camera ID: 1: 1
+2025-10-26 14:38:37 - INFO - System - DETECTION_STOPPED_CONFIRMED: Camera ID: 1: 1
+2025-10-26 14:38:37 - INFO - System - SESSION_ENDED: Cam=1, Count=0, Duration=0:00:23.637281: 1
+2025-10-26 14:38:37 - INFO - System - SKIPPING_REPORT_NO_COUNT: Cam=1: 1
+2025-10-26 14:38:41 - INFO - System - APPLICATION_INTERRUPTED: 
+2025-10-26 14:39:16 - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-26 14:39:17 - INFO - System - DIRECTML_AVAILABLE: 
+2025-10-26 14:39:17 - INFO - System - APPLICATION_STARTUP: 
+2025-10-26 14:39:17 - INFO - System - DETECTION_SERVICE_INITIALIZED_BACKEND_OPENVINO: 
+2025-10-26 14:39:17 - INFO - System - REPORT_SERVICE_INITIALIZED: Directory=C:\Users\ander\Documents\workspace\ESTAGIO\src\reports: 
+2025-10-26 14:39:17 - INFO - System - APP_CONTROLLER_INITIALIZED: 
+2025-10-26 14:39:17 - INFO - System - UI_CALLBACK_SET: login_success: 
+2025-10-26 14:39:17 - INFO - System - UI_CALLBACK_SET: login_failed: 
+2025-10-26 14:39:17 - INFO - System - UI_CALLBACK_SET: register_success: 
+2025-10-26 14:39:17 - INFO - System - UI_CALLBACK_SET: self_register_success: 
+2025-10-26 14:39:17 - INFO - System - UI_CALLBACK_SET: register_failed: 
+2025-10-26 14:39:17 - INFO - System - UI_CALLBACK_SET: logout_success: 
+2025-10-26 14:39:17 - INFO - System - UI_CALLBACK_SET: detection_starting: 
+2025-10-26 14:39:17 - INFO - System - UI_CALLBACK_SET: detection_started: 
+2025-10-26 14:39:17 - INFO - System - UI_CALLBACK_SET: detection_stopped: 
+2025-10-26 14:39:17 - INFO - System - UI_CALLBACK_SET: detection_failed: 
+2025-10-26 14:39:17 - INFO - System - UI_CALLBACK_SET: detection_update: 
+2025-10-26 14:39:17 - INFO - System - UI_CALLBACK_SET: count_reset: 
+2025-10-26 14:39:17 - INFO - System - UI_CALLBACK_SET: report_generated: 
+2025-10-26 14:39:17 - INFO - System - UI_CALLBACK_SET: report_failed: 
+2025-10-26 14:39:17 - INFO - System - UI_CALLBACK_SET: config_updated: 
+2025-10-26 14:39:17 - INFO - System - UI_CALLBACK_SET: camera_added: 
+2025-10-26 14:39:17 - INFO - System - UI_CALLBACK_SET: camera_removed: 
+2025-10-26 14:39:17 - INFO - System - UI_CALLBACK_SET: error: 
+2025-10-26 14:39:17 - INFO - System - APPLICATION_INITIALIZED: 
+2025-10-26 14:39:17 - INFO - System - APPLICATION_MAINLOOP_START: 
+2025-10-26 14:39:28 - INFO - System - THREAD_STARTED: Detection-Cam-1: 1
+2025-10-26 14:39:28 - INFO - System - LOADING_MODEL: Detection-Cam-1: 1
+2025-10-26 14:39:28 - INFO - System - MODEL_LOADED: Detection-Cam-1: 1
+2025-10-26 14:39:28 - INFO - System - CONNECTING_SOURCE: Detection-Cam-1, Source='0': 1
+2025-10-26 14:39:29 - INFO - System - SOURCE_CONNECTED: Detection-Cam-1, Source='0': 1
+2025-10-26 14:39:29 - INFO - System - DETECTION_LOOP_STARTING: Detection-Cam-1: 1
+2025-10-26 14:39:40 - INFO - System - STOP_DETECTION_REQUESTED: Cam=1: 1
+2025-10-26 14:39:40 - INFO - System - STOPPING_DETECTION_REQUESTED: Camera ID: 1: 1
+2025-10-26 14:39:40 - INFO - System - CLEANING_UP_THREAD: Detection-Cam-1: 1
+2025-10-26 14:39:40 - INFO - System - SOURCE_RELEASED: Detection-Cam-1: 1
+2025-10-26 14:39:40 - INFO - System - DETECTION_THREAD_ENDED: Detection-Cam-1: 1
+2025-10-26 14:39:43 - INFO - System - STOP_DETECTION_REQUESTED: Cam=1: 1
+2025-10-26 14:39:43 - INFO - System - STOPPING_DETECTION_REQUESTED: Camera ID: 1: 1
+2025-10-26 14:39:43 - INFO - System - DETECTION_STOPPED_CONFIRMED: Camera ID: 1: 1
+2025-10-26 14:39:43 - INFO - System - SESSION_ENDED: Cam=1, Count=0, Duration=0:00:12.008516: 1
+2025-10-26 14:39:43 - INFO - System - SKIPPING_REPORT_NO_COUNT: Cam=1: 1
+2025-10-26 14:39:44 - INFO - System - APPLICATION_INTERRUPTED: 
+2025-10-26 14:40:09 - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-26 14:40:10 - INFO - System - DIRECTML_AVAILABLE: 
+2025-10-26 14:40:10 - INFO - System - APPLICATION_STARTUP: 
+2025-10-26 14:40:10 - INFO - System - DETECTION_SERVICE_INITIALIZED_BACKEND_OPENVINO: 
+2025-10-26 14:40:10 - INFO - System - REPORT_SERVICE_INITIALIZED: Directory=C:\Users\ander\Documents\workspace\ESTAGIO\src\reports: 
+2025-10-26 14:40:10 - INFO - System - APP_CONTROLLER_INITIALIZED: 
+2025-10-26 14:40:10 - INFO - System - UI_CALLBACK_SET: login_success: 
+2025-10-26 14:40:10 - INFO - System - UI_CALLBACK_SET: login_failed: 
+2025-10-26 14:40:10 - INFO - System - UI_CALLBACK_SET: register_success: 
+2025-10-26 14:40:10 - INFO - System - UI_CALLBACK_SET: self_register_success: 
+2025-10-26 14:40:10 - INFO - System - UI_CALLBACK_SET: register_failed: 
+2025-10-26 14:40:10 - INFO - System - UI_CALLBACK_SET: logout_success: 
+2025-10-26 14:40:10 - INFO - System - UI_CALLBACK_SET: detection_starting: 
+2025-10-26 14:40:10 - INFO - System - UI_CALLBACK_SET: detection_started: 
+2025-10-26 14:40:10 - INFO - System - UI_CALLBACK_SET: detection_stopped: 
+2025-10-26 14:40:10 - INFO - System - UI_CALLBACK_SET: detection_failed: 
+2025-10-26 14:40:10 - INFO - System - UI_CALLBACK_SET: detection_update: 
+2025-10-26 14:40:10 - INFO - System - UI_CALLBACK_SET: count_reset: 
+2025-10-26 14:40:10 - INFO - System - UI_CALLBACK_SET: report_generated: 
+2025-10-26 14:40:10 - INFO - System - UI_CALLBACK_SET: report_failed: 
+2025-10-26 14:40:10 - INFO - System - UI_CALLBACK_SET: config_updated: 
+2025-10-26 14:40:10 - INFO - System - UI_CALLBACK_SET: camera_added: 
+2025-10-26 14:40:10 - INFO - System - UI_CALLBACK_SET: camera_removed: 
+2025-10-26 14:40:10 - INFO - System - UI_CALLBACK_SET: error: 
+2025-10-26 14:40:10 - INFO - System - APPLICATION_INITIALIZED: 
+2025-10-26 14:40:10 - INFO - System - APPLICATION_MAINLOOP_START: 
+2025-10-26 14:41:04 - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=1, Data={'name': 'Nova Câmera 1', 'source': '0', 'description': 'Insira a descrição', 'enabled': True}: 1
+2025-10-26 14:41:04 - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=1: 1
+2025-10-26 14:41:04 - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-26 14:41:13 - INFO - System - THREAD_STARTED: Detection-Cam-1: 1
+2025-10-26 14:41:13 - INFO - System - LOADING_MODEL: Detection-Cam-1: 1
+2025-10-26 14:41:13 - INFO - System - MODEL_LOADED: Detection-Cam-1: 1
+2025-10-26 14:41:13 - INFO - System - CONNECTING_SOURCE: Detection-Cam-1, Source='0': 1
+2025-10-26 14:41:14 - INFO - System - SOURCE_CONNECTED: Detection-Cam-1, Source='0': 1
+2025-10-26 14:41:14 - INFO - System - DETECTION_LOOP_STARTING: Detection-Cam-1: 1
+2025-10-26 14:41:23 - INFO - System - STOP_DETECTION_REQUESTED: Cam=1: 1
+2025-10-26 14:41:23 - INFO - System - STOPPING_DETECTION_REQUESTED: Camera ID: 1: 1
+2025-10-26 14:41:23 - INFO - System - CLEANING_UP_THREAD: Detection-Cam-1: 1
+2025-10-26 14:41:24 - INFO - System - SOURCE_RELEASED: Detection-Cam-1: 1
+2025-10-26 14:41:24 - INFO - System - DETECTION_THREAD_ENDED: Detection-Cam-1: 1
+2025-10-26 14:41:27 - INFO - System - STOP_DETECTION_REQUESTED: Cam=1: 1
+2025-10-26 14:41:27 - INFO - System - STOPPING_DETECTION_REQUESTED: Camera ID: 1: 1
+2025-10-26 14:41:27 - INFO - System - DETECTION_STOPPED_CONFIRMED: Camera ID: 1: 1
+2025-10-26 14:41:27 - INFO - System - SESSION_ENDED: Cam=1, Count=0, Duration=0:00:10.263224: 1
+2025-10-26 14:41:27 - INFO - System - SKIPPING_REPORT_NO_COUNT: Cam=1: 1
+2025-10-26 14:41:34 - INFO - System - APPLICATION_INTERRUPTED: 
+2025-10-26 14:42:18 - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-26 14:42:18 - INFO - System - DIRECTML_AVAILABLE: 
+2025-10-26 14:42:18 - INFO - System - APPLICATION_STARTUP: 
+2025-10-26 14:42:18 - INFO - System - DETECTION_SERVICE_INITIALIZED_BACKEND_TENSORRT: 
+2025-10-26 14:42:18 - INFO - System - REPORT_SERVICE_INITIALIZED: Directory=C:\Users\ander\Documents\workspace\ESTAGIO\src\reports: 
+2025-10-26 14:42:18 - INFO - System - APP_CONTROLLER_INITIALIZED: 
+2025-10-26 14:42:18 - INFO - System - UI_CALLBACK_SET: login_success: 
+2025-10-26 14:42:18 - INFO - System - UI_CALLBACK_SET: login_failed: 
+2025-10-26 14:42:18 - INFO - System - UI_CALLBACK_SET: register_success: 
+2025-10-26 14:42:18 - INFO - System - UI_CALLBACK_SET: self_register_success: 
+2025-10-26 14:42:18 - INFO - System - UI_CALLBACK_SET: register_failed: 
+2025-10-26 14:42:18 - INFO - System - UI_CALLBACK_SET: logout_success: 
+2025-10-26 14:42:18 - INFO - System - UI_CALLBACK_SET: detection_starting: 
+2025-10-26 14:42:18 - INFO - System - UI_CALLBACK_SET: detection_started: 
+2025-10-26 14:42:18 - INFO - System - UI_CALLBACK_SET: detection_stopped: 
+2025-10-26 14:42:18 - INFO - System - UI_CALLBACK_SET: detection_failed: 
+2025-10-26 14:42:18 - INFO - System - UI_CALLBACK_SET: detection_update: 
+2025-10-26 14:42:18 - INFO - System - UI_CALLBACK_SET: count_reset: 
+2025-10-26 14:42:18 - INFO - System - UI_CALLBACK_SET: report_generated: 
+2025-10-26 14:42:18 - INFO - System - UI_CALLBACK_SET: report_failed: 
+2025-10-26 14:42:18 - INFO - System - UI_CALLBACK_SET: config_updated: 
+2025-10-26 14:42:18 - INFO - System - UI_CALLBACK_SET: camera_added: 
+2025-10-26 14:42:18 - INFO - System - UI_CALLBACK_SET: camera_removed: 
+2025-10-26 14:42:18 - INFO - System - UI_CALLBACK_SET: error: 
+2025-10-26 14:42:19 - INFO - System - APPLICATION_INITIALIZED: 
+2025-10-26 14:42:19 - INFO - System - APPLICATION_MAINLOOP_START: 
+2025-10-26 14:42:26 - INFO - System - STOP_DETECTION_REQUESTED: Cam=1: 1
+2025-10-26 14:42:26 - INFO - System - STOP_DETECTION_IGNORED: Nenhuma sessão ativa encontrada para Cam=1: 1
+2025-10-26 14:42:41 - INFO - System - THREAD_STARTED: Detection-Cam-1: 1
+2025-10-26 14:42:41 - INFO - System - LOADING_MODEL: Detection-Cam-1: 1
+2025-10-26 14:42:41 - INFO - System - MODEL_LOADED: Detection-Cam-1: 1
+2025-10-26 14:42:41 - INFO - System - CONNECTING_SOURCE: Detection-Cam-1, Source='0': 1
+2025-10-26 14:42:42 - INFO - System - SOURCE_CONNECTED: Detection-Cam-1, Source='0': 1
+2025-10-26 14:42:42 - INFO - System - DETECTION_LOOP_STARTING: Detection-Cam-1: 1
+2025-10-26 14:44:06 - INFO - System - OBJECT_CROSSED: Cam=1, ID=70, Count=1: 1
+2025-10-26 14:50:10 - INFO - System - OBJECT_CROSSED: Cam=1, ID=138, Count=2: 1
+2025-10-26 14:50:12 - INFO - System - OBJECT_CROSSED: Cam=1, ID=138, Count=3: 1
+2025-10-26 14:50:16 - INFO - System - OBJECT_CROSSED: Cam=1, ID=138, Count=4: 1
+2025-10-26 14:50:41 - INFO - System - OBJECT_CROSSED: Cam=1, ID=165, Count=5: 1
+2025-10-26 14:50:46 - INFO - System - OBJECT_CROSSED: Cam=1, ID=165, Count=6: 1
+2025-10-26 14:50:49 - INFO - System - OBJECT_CROSSED: Cam=1, ID=165, Count=7: 1
+2025-10-26 14:50:53 - INFO - System - OBJECT_CROSSED: Cam=1, ID=165, Count=8: 1
+2025-10-26 14:51:04 - INFO - System - OBJECT_CROSSED: Cam=1, ID=165, Count=9: 1
+2025-10-26 14:51:21 - INFO - System - OBJECT_CROSSED: Cam=1, ID=192, Count=10: 1
+2025-10-26 14:51:27 - INFO - System - OBJECT_CROSSED: Cam=1, ID=192, Count=11: 1
+2025-10-26 14:51:33 - INFO - System - OBJECT_CROSSED: Cam=1, ID=192, Count=12: 1
+2025-10-26 14:51:37 - INFO - System - STOP_DETECTION_REQUESTED: Cam=1: 1
+2025-10-26 14:51:37 - INFO - System - STOPPING_DETECTION_REQUESTED: Camera ID: 1: 1
+2025-10-26 14:51:44 - INFO - System - DETECTION_STOPPED_CONFIRMED: Camera ID: 1: 1
+2025-10-26 14:51:44 - INFO - System - CLEANING_UP_THREAD: Detection-Cam-1: 1
+2025-10-26 14:51:44 - INFO - System - STOP_DETECTION_REQUESTED: Cam=1: 1
+2025-10-26 14:51:44 - INFO - System - STOP_DETECTION_IGNORED: Nenhuma sessão ativa encontrada para Cam=1: 1
+2025-10-26 14:51:44 - INFO - System - SOURCE_RELEASED: Detection-Cam-1: 1
+2025-10-26 14:51:44 - INFO - System - DETECTION_THREAD_ENDED: Detection-Cam-1: 1
+2025-10-26 14:51:45 - INFO - System - APPLICATION_INTERRUPTED: 

@@ -1811,3 +1811,329 @@ NoneType: None
 2025-10-26 13:49:14 - system - INFO - System - LOGOUT_ATTEMPT_WITHOUT_USER: 
 2025-10-26 13:49:14 - system - INFO - System - APP_SHUTDOWN_COMPLETED: 
 2025-10-26 13:49:14 - system - INFO - System - APPLICATION_CLOSED: 
+2025-10-26 14:37:38 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-26 14:37:39 - system - INFO - System - DIRECTML_AVAILABLE: 
+2025-10-26 14:37:39 - system - INFO - System - APPLICATION_STARTUP: 
+2025-10-26 14:37:39 - system - INFO - System - DETECTION_SERVICE_INITIALIZED_BACKEND_OPENVINO: 
+2025-10-26 14:37:39 - system - INFO - System - REPORT_SERVICE_INITIALIZED: Directory=C:\Users\ander\Documents\workspace\ESTAGIO\src\reports: 
+2025-10-26 14:37:39 - system - INFO - System - APP_CONTROLLER_INITIALIZED: 
+2025-10-26 14:37:39 - system - INFO - System - UI_CALLBACK_SET: login_success: 
+2025-10-26 14:37:39 - system - INFO - System - UI_CALLBACK_SET: login_failed: 
+2025-10-26 14:37:39 - system - INFO - System - UI_CALLBACK_SET: register_success: 
+2025-10-26 14:37:39 - system - INFO - System - UI_CALLBACK_SET: self_register_success: 
+2025-10-26 14:37:39 - system - INFO - System - UI_CALLBACK_SET: register_failed: 
+2025-10-26 14:37:39 - system - INFO - System - UI_CALLBACK_SET: logout_success: 
+2025-10-26 14:37:39 - system - INFO - System - UI_CALLBACK_SET: detection_starting: 
+2025-10-26 14:37:39 - system - INFO - System - UI_CALLBACK_SET: detection_started: 
+2025-10-26 14:37:39 - system - INFO - System - UI_CALLBACK_SET: detection_stopped: 
+2025-10-26 14:37:39 - system - INFO - System - UI_CALLBACK_SET: detection_failed: 
+2025-10-26 14:37:39 - system - INFO - System - UI_CALLBACK_SET: detection_update: 
+2025-10-26 14:37:39 - system - INFO - System - UI_CALLBACK_SET: count_reset: 
+2025-10-26 14:37:39 - system - INFO - System - UI_CALLBACK_SET: report_generated: 
+2025-10-26 14:37:39 - system - INFO - System - UI_CALLBACK_SET: report_failed: 
+2025-10-26 14:37:39 - system - INFO - System - UI_CALLBACK_SET: config_updated: 
+2025-10-26 14:37:39 - system - INFO - System - UI_CALLBACK_SET: camera_added: 
+2025-10-26 14:37:39 - system - INFO - System - UI_CALLBACK_SET: camera_removed: 
+2025-10-26 14:37:39 - system - INFO - System - UI_CALLBACK_SET: error: 
+2025-10-26 14:37:40 - system - INFO - System - APPLICATION_INITIALIZED: 
+2025-10-26 14:37:40 - system - INFO - System - APPLICATION_MAINLOOP_START: 
+2025-10-26 14:37:44 - user_actions - INFO - User 'ands' - LOGIN_FAILED: Usuário não encontrado ou inativo
+2025-10-26 14:37:52 - user_actions - INFO - User 'ands' - USER_REGISTERED: Role: viewer
+2025-10-26 14:37:52 - user_actions - INFO - User 'ands' - SELF_REGISTER_SUCCESS: 
+2025-10-26 14:37:54 - user_actions - INFO - User 'ands' - LOGIN_SUCCESS: 
+2025-10-26 14:37:54 - user_actions - INFO - User 'ands' - LOGIN_SUCCESS: 
+2025-10-26 14:37:59 - user_actions - INFO - User 'ands' - LOGIN_SUCCESS: 
+2025-10-26 14:37:59 - user_actions - INFO - User 'ands' - LOGIN_SUCCESS: 
+2025-10-26 14:38:04 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=1, Data={'name': 'Nova Câmera 1', 'source': '0', 'description': 'Insira a descrição', 'enabled': True}: 1
+2025-10-26 14:38:04 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=1: 1
+2025-10-26 14:38:04 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=2, Data={'name': 'Nova Câmera 2', 'source': 'rtsp://admin:admin@192.168.0.5:554/1/2', 'description': 'Insira a descrição', 'enabled': True}: 2
+2025-10-26 14:38:04 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=2: 2
+2025-10-26 14:38:05 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=1, Data={'name': 'Nova Câmera 1', 'source': '0', 'description': 'Insira a descrição', 'enabled': True}: 1
+2025-10-26 14:38:05 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=1: 1
+2025-10-26 14:38:05 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=2, Data={'name': 'Nova Câmera 2', 'source': 'rtsp://admin:admin@192.168.0.5:554/1/2', 'description': 'Insira a descrição', 'enabled': True}: 2
+2025-10-26 14:38:05 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=2: 2
+2025-10-26 14:38:11 - user_actions - INFO - User 'ands' - START_DETECTION_REQUESTED: Cam=1, Type=Torta Normal: 
+2025-10-26 14:38:11 - system - INFO - System - THREAD_STARTED: Detection-Cam-1: 1
+2025-10-26 14:38:11 - user_actions - INFO - User 'ands' - DETECTION_STARTED_CAMERA_1_TYPE_Torta Normal_BACKEND_OpenVINO: 
+2025-10-26 14:38:11 - system - INFO - System - LOADING_MODEL: Detection-Cam-1: 1
+2025-10-26 14:38:11 - system - INFO - System - MODEL_LOADED: Detection-Cam-1: 1
+2025-10-26 14:38:11 - system - INFO - System - CONNECTING_SOURCE: Detection-Cam-1, Source='0': 1
+2025-10-26 14:38:12 - system - INFO - System - SOURCE_CONNECTED: Detection-Cam-1, Source='0': 1
+2025-10-26 14:38:12 - system - INFO - System - DETECTION_LOOP_STARTING: Detection-Cam-1: 1
+2025-10-26 14:38:24 - errors - ERROR - Detection-Cam-1 - LinAlgError: 1-th leading minor of the array is not positive definite - Erro fatal na thread
+Traceback (most recent call last):
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\src\app\services\detection_service.py", line 266, in _run_detection_thread
+    resultados = model.track(frame, **track_args)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\engine\model.py", line 601, in track
+    return self.predict(source=source, stream=stream, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\engine\model.py", line 557, in predict
+    return self.predictor.predict_cli(source=source) if is_cli else self.predictor(source=source, stream=stream)
+                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\engine\predictor.py", line 230, in __call__
+    return list(self.stream_inference(source, model, *args, **kwargs))  # merge list of Result into one
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\torch\utils\_contextlib.py", line 36, in generator_context
+    response = gen.send(None)
+               ^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\engine\predictor.py", line 345, in stream_inference
+    self.run_callbacks("on_predict_postprocess_end")
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\engine\predictor.py", line 514, in run_callbacks
+    callback(self)
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\trackers\track.py", line 95, in on_predict_postprocess_end
+    tracks = tracker.update(det, result.orig_img, getattr(result, "feats", None))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\trackers\byte_tracker.py", line 380, in update
+    unconfirmed[itracked].update(detections[idet], self.frame_id)
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\trackers\byte_tracker.py", line 174, in update
+    self.mean, self.covariance = self.kalman_filter.update(
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\trackers\utils\kalman_filter.py", line 228, in update
+    chol_factor, lower = scipy.linalg.cho_factor(projected_cov, lower=True, check_finite=False)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\scipy\_lib\_util.py", line 1233, in wrapper
+    return f(*arrays, *other_args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\scipy\linalg\_decomp_cholesky.py", line 183, in cho_factor
+    c, lower = _cholesky(a, lower=lower, overwrite_a=overwrite_a, clean=False,
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\scipy\linalg\_decomp_cholesky.py", line 39, in _cholesky
+    raise LinAlgError(
+numpy.linalg.LinAlgError: 1-th leading minor of the array is not positive definite
+2025-10-26 14:38:35 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=1: 1
+2025-10-26 14:38:35 - system - INFO - System - STOPPING_DETECTION_REQUESTED: Camera ID: 1: 1
+2025-10-26 14:38:35 - system - INFO - System - CLEANING_UP_THREAD: Detection-Cam-1: 1
+2025-10-26 14:38:35 - system - INFO - System - SOURCE_RELEASED: Detection-Cam-1: 1
+2025-10-26 14:38:35 - system - INFO - System - DETECTION_THREAD_ENDED: Detection-Cam-1: 1
+2025-10-26 14:38:37 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=1: 1
+2025-10-26 14:38:37 - system - INFO - System - STOPPING_DETECTION_REQUESTED: Camera ID: 1: 1
+2025-10-26 14:38:37 - system - INFO - System - DETECTION_STOPPED_CONFIRMED: Camera ID: 1: 1
+2025-10-26 14:38:37 - system - INFO - System - SESSION_ENDED: Cam=1, Count=0, Duration=0:00:23.637281: 1
+2025-10-26 14:38:37 - system - INFO - System - SKIPPING_REPORT_NO_COUNT: Cam=1: 1
+2025-10-26 14:38:41 - system - INFO - System - APPLICATION_INTERRUPTED: 
+2025-10-26 14:39:16 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-26 14:39:17 - system - INFO - System - DIRECTML_AVAILABLE: 
+2025-10-26 14:39:17 - system - INFO - System - APPLICATION_STARTUP: 
+2025-10-26 14:39:17 - system - INFO - System - DETECTION_SERVICE_INITIALIZED_BACKEND_OPENVINO: 
+2025-10-26 14:39:17 - system - INFO - System - REPORT_SERVICE_INITIALIZED: Directory=C:\Users\ander\Documents\workspace\ESTAGIO\src\reports: 
+2025-10-26 14:39:17 - system - INFO - System - APP_CONTROLLER_INITIALIZED: 
+2025-10-26 14:39:17 - system - INFO - System - UI_CALLBACK_SET: login_success: 
+2025-10-26 14:39:17 - system - INFO - System - UI_CALLBACK_SET: login_failed: 
+2025-10-26 14:39:17 - system - INFO - System - UI_CALLBACK_SET: register_success: 
+2025-10-26 14:39:17 - system - INFO - System - UI_CALLBACK_SET: self_register_success: 
+2025-10-26 14:39:17 - system - INFO - System - UI_CALLBACK_SET: register_failed: 
+2025-10-26 14:39:17 - system - INFO - System - UI_CALLBACK_SET: logout_success: 
+2025-10-26 14:39:17 - system - INFO - System - UI_CALLBACK_SET: detection_starting: 
+2025-10-26 14:39:17 - system - INFO - System - UI_CALLBACK_SET: detection_started: 
+2025-10-26 14:39:17 - system - INFO - System - UI_CALLBACK_SET: detection_stopped: 
+2025-10-26 14:39:17 - system - INFO - System - UI_CALLBACK_SET: detection_failed: 
+2025-10-26 14:39:17 - system - INFO - System - UI_CALLBACK_SET: detection_update: 
+2025-10-26 14:39:17 - system - INFO - System - UI_CALLBACK_SET: count_reset: 
+2025-10-26 14:39:17 - system - INFO - System - UI_CALLBACK_SET: report_generated: 
+2025-10-26 14:39:17 - system - INFO - System - UI_CALLBACK_SET: report_failed: 
+2025-10-26 14:39:17 - system - INFO - System - UI_CALLBACK_SET: config_updated: 
+2025-10-26 14:39:17 - system - INFO - System - UI_CALLBACK_SET: camera_added: 
+2025-10-26 14:39:17 - system - INFO - System - UI_CALLBACK_SET: camera_removed: 
+2025-10-26 14:39:17 - system - INFO - System - UI_CALLBACK_SET: error: 
+2025-10-26 14:39:17 - system - INFO - System - APPLICATION_INITIALIZED: 
+2025-10-26 14:39:17 - system - INFO - System - APPLICATION_MAINLOOP_START: 
+2025-10-26 14:39:23 - user_actions - INFO - User 'ands' - LOGIN_SUCCESS: 
+2025-10-26 14:39:23 - user_actions - INFO - User 'ands' - LOGIN_SUCCESS: 
+2025-10-26 14:39:28 - user_actions - INFO - User 'ands' - START_DETECTION_REQUESTED: Cam=1, Type=Torta Normal: 
+2025-10-26 14:39:28 - system - INFO - System - THREAD_STARTED: Detection-Cam-1: 1
+2025-10-26 14:39:28 - user_actions - INFO - User 'ands' - DETECTION_STARTED_CAMERA_1_TYPE_Torta Normal_BACKEND_OpenVINO: 
+2025-10-26 14:39:28 - system - INFO - System - LOADING_MODEL: Detection-Cam-1: 1
+2025-10-26 14:39:28 - system - INFO - System - MODEL_LOADED: Detection-Cam-1: 1
+2025-10-26 14:39:28 - system - INFO - System - CONNECTING_SOURCE: Detection-Cam-1, Source='0': 1
+2025-10-26 14:39:29 - system - INFO - System - SOURCE_CONNECTED: Detection-Cam-1, Source='0': 1
+2025-10-26 14:39:29 - system - INFO - System - DETECTION_LOOP_STARTING: Detection-Cam-1: 1
+2025-10-26 14:39:30 - errors - ERROR - Detection-Cam-1 - LinAlgError: 1-th leading minor of the array is not positive definite - Erro fatal na thread
+Traceback (most recent call last):
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\src\app\services\detection_service.py", line 266, in _run_detection_thread
+    resultados = model.track(frame, **track_args)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\engine\model.py", line 601, in track
+    return self.predict(source=source, stream=stream, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\engine\model.py", line 557, in predict
+    return self.predictor.predict_cli(source=source) if is_cli else self.predictor(source=source, stream=stream)
+                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\engine\predictor.py", line 230, in __call__
+    return list(self.stream_inference(source, model, *args, **kwargs))  # merge list of Result into one
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\torch\utils\_contextlib.py", line 36, in generator_context
+    response = gen.send(None)
+               ^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\engine\predictor.py", line 345, in stream_inference
+    self.run_callbacks("on_predict_postprocess_end")
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\engine\predictor.py", line 514, in run_callbacks
+    callback(self)
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\trackers\track.py", line 95, in on_predict_postprocess_end
+    tracks = tracker.update(det, result.orig_img, getattr(result, "feats", None))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\trackers\byte_tracker.py", line 380, in update
+    unconfirmed[itracked].update(detections[idet], self.frame_id)
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\trackers\byte_tracker.py", line 174, in update
+    self.mean, self.covariance = self.kalman_filter.update(
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\trackers\utils\kalman_filter.py", line 228, in update
+    chol_factor, lower = scipy.linalg.cho_factor(projected_cov, lower=True, check_finite=False)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\scipy\_lib\_util.py", line 1233, in wrapper
+    return f(*arrays, *other_args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\scipy\linalg\_decomp_cholesky.py", line 183, in cho_factor
+    c, lower = _cholesky(a, lower=lower, overwrite_a=overwrite_a, clean=False,
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\scipy\linalg\_decomp_cholesky.py", line 39, in _cholesky
+    raise LinAlgError(
+numpy.linalg.LinAlgError: 1-th leading minor of the array is not positive definite
+2025-10-26 14:39:40 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=1: 1
+2025-10-26 14:39:40 - system - INFO - System - STOPPING_DETECTION_REQUESTED: Camera ID: 1: 1
+2025-10-26 14:39:40 - system - INFO - System - CLEANING_UP_THREAD: Detection-Cam-1: 1
+2025-10-26 14:39:40 - system - INFO - System - SOURCE_RELEASED: Detection-Cam-1: 1
+2025-10-26 14:39:40 - system - INFO - System - DETECTION_THREAD_ENDED: Detection-Cam-1: 1
+2025-10-26 14:39:43 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=1: 1
+2025-10-26 14:39:43 - system - INFO - System - STOPPING_DETECTION_REQUESTED: Camera ID: 1: 1
+2025-10-26 14:39:43 - system - INFO - System - DETECTION_STOPPED_CONFIRMED: Camera ID: 1: 1
+2025-10-26 14:39:43 - system - INFO - System - SESSION_ENDED: Cam=1, Count=0, Duration=0:00:12.008516: 1
+2025-10-26 14:39:43 - system - INFO - System - SKIPPING_REPORT_NO_COUNT: Cam=1: 1
+2025-10-26 14:39:44 - system - INFO - System - APPLICATION_INTERRUPTED: 
+2025-10-26 14:40:09 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-26 14:40:10 - system - INFO - System - DIRECTML_AVAILABLE: 
+2025-10-26 14:40:10 - system - INFO - System - APPLICATION_STARTUP: 
+2025-10-26 14:40:10 - system - INFO - System - DETECTION_SERVICE_INITIALIZED_BACKEND_OPENVINO: 
+2025-10-26 14:40:10 - system - INFO - System - REPORT_SERVICE_INITIALIZED: Directory=C:\Users\ander\Documents\workspace\ESTAGIO\src\reports: 
+2025-10-26 14:40:10 - system - INFO - System - APP_CONTROLLER_INITIALIZED: 
+2025-10-26 14:40:10 - system - INFO - System - UI_CALLBACK_SET: login_success: 
+2025-10-26 14:40:10 - system - INFO - System - UI_CALLBACK_SET: login_failed: 
+2025-10-26 14:40:10 - system - INFO - System - UI_CALLBACK_SET: register_success: 
+2025-10-26 14:40:10 - system - INFO - System - UI_CALLBACK_SET: self_register_success: 
+2025-10-26 14:40:10 - system - INFO - System - UI_CALLBACK_SET: register_failed: 
+2025-10-26 14:40:10 - system - INFO - System - UI_CALLBACK_SET: logout_success: 
+2025-10-26 14:40:10 - system - INFO - System - UI_CALLBACK_SET: detection_starting: 
+2025-10-26 14:40:10 - system - INFO - System - UI_CALLBACK_SET: detection_started: 
+2025-10-26 14:40:10 - system - INFO - System - UI_CALLBACK_SET: detection_stopped: 
+2025-10-26 14:40:10 - system - INFO - System - UI_CALLBACK_SET: detection_failed: 
+2025-10-26 14:40:10 - system - INFO - System - UI_CALLBACK_SET: detection_update: 
+2025-10-26 14:40:10 - system - INFO - System - UI_CALLBACK_SET: count_reset: 
+2025-10-26 14:40:10 - system - INFO - System - UI_CALLBACK_SET: report_generated: 
+2025-10-26 14:40:10 - system - INFO - System - UI_CALLBACK_SET: report_failed: 
+2025-10-26 14:40:10 - system - INFO - System - UI_CALLBACK_SET: config_updated: 
+2025-10-26 14:40:10 - system - INFO - System - UI_CALLBACK_SET: camera_added: 
+2025-10-26 14:40:10 - system - INFO - System - UI_CALLBACK_SET: camera_removed: 
+2025-10-26 14:40:10 - system - INFO - System - UI_CALLBACK_SET: error: 
+2025-10-26 14:40:10 - system - INFO - System - APPLICATION_INITIALIZED: 
+2025-10-26 14:40:10 - system - INFO - System - APPLICATION_MAINLOOP_START: 
+2025-10-26 14:40:15 - user_actions - INFO - User 'ands' - LOGIN_SUCCESS: 
+2025-10-26 14:40:15 - user_actions - INFO - User 'ands' - LOGIN_SUCCESS: 
+2025-10-26 14:41:04 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=1, Data={'name': 'Nova Câmera 1', 'source': '0', 'description': 'Insira a descrição', 'enabled': True}: 1
+2025-10-26 14:41:04 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=1: 1
+2025-10-26 14:41:04 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-26 14:41:13 - user_actions - INFO - User 'ands' - START_DETECTION_REQUESTED: Cam=1, Type=Torta Normal: 
+2025-10-26 14:41:13 - system - INFO - System - THREAD_STARTED: Detection-Cam-1: 1
+2025-10-26 14:41:13 - user_actions - INFO - User 'ands' - DETECTION_STARTED_CAMERA_1_TYPE_Torta Normal_BACKEND_TensorRT: 
+2025-10-26 14:41:13 - system - INFO - System - LOADING_MODEL: Detection-Cam-1: 1
+2025-10-26 14:41:13 - system - INFO - System - MODEL_LOADED: Detection-Cam-1: 1
+2025-10-26 14:41:13 - system - INFO - System - CONNECTING_SOURCE: Detection-Cam-1, Source='0': 1
+2025-10-26 14:41:14 - system - INFO - System - SOURCE_CONNECTED: Detection-Cam-1, Source='0': 1
+2025-10-26 14:41:14 - system - INFO - System - DETECTION_LOOP_STARTING: Detection-Cam-1: 1
+2025-10-26 14:41:15 - errors - ERROR - Detection-Cam-1 - ModuleNotFoundError: No module named 'tensorrt' - Erro fatal na thread
+Traceback (most recent call last):
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\nn\autobackend.py", line 340, in __init__
+    import tensorrt as trt
+ModuleNotFoundError: No module named 'tensorrt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\src\app\services\detection_service.py", line 266, in _run_detection_thread
+    resultados = model.track(frame, **track_args)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\engine\model.py", line 601, in track
+    return self.predict(source=source, stream=stream, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\engine\model.py", line 550, in predict
+    self.predictor.setup_model(model=self.model, verbose=is_cli)
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\engine\predictor.py", line 398, in setup_model
+    self.model = AutoBackend(
+                 ^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\torch\utils\_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ander\Documents\workspace\ESTAGIO\.venv\Lib\site-packages\ultralytics\nn\autobackend.py", line 344, in __init__
+    import tensorrt as trt
+ModuleNotFoundError: No module named 'tensorrt'
+2025-10-26 14:41:23 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=1: 1
+2025-10-26 14:41:23 - system - INFO - System - STOPPING_DETECTION_REQUESTED: Camera ID: 1: 1
+2025-10-26 14:41:23 - system - INFO - System - CLEANING_UP_THREAD: Detection-Cam-1: 1
+2025-10-26 14:41:24 - system - INFO - System - SOURCE_RELEASED: Detection-Cam-1: 1
+2025-10-26 14:41:24 - system - INFO - System - DETECTION_THREAD_ENDED: Detection-Cam-1: 1
+2025-10-26 14:41:27 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=1: 1
+2025-10-26 14:41:27 - system - INFO - System - STOPPING_DETECTION_REQUESTED: Camera ID: 1: 1
+2025-10-26 14:41:27 - system - INFO - System - DETECTION_STOPPED_CONFIRMED: Camera ID: 1: 1
+2025-10-26 14:41:27 - system - INFO - System - SESSION_ENDED: Cam=1, Count=0, Duration=0:00:10.263224: 1
+2025-10-26 14:41:27 - system - INFO - System - SKIPPING_REPORT_NO_COUNT: Cam=1: 1
+2025-10-26 14:41:34 - system - INFO - System - APPLICATION_INTERRUPTED: 
+2025-10-26 14:42:18 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-26 14:42:18 - system - INFO - System - DIRECTML_AVAILABLE: 
+2025-10-26 14:42:18 - system - INFO - System - APPLICATION_STARTUP: 
+2025-10-26 14:42:18 - system - INFO - System - DETECTION_SERVICE_INITIALIZED_BACKEND_TENSORRT: 
+2025-10-26 14:42:18 - system - INFO - System - REPORT_SERVICE_INITIALIZED: Directory=C:\Users\ander\Documents\workspace\ESTAGIO\src\reports: 
+2025-10-26 14:42:18 - system - INFO - System - APP_CONTROLLER_INITIALIZED: 
+2025-10-26 14:42:18 - system - INFO - System - UI_CALLBACK_SET: login_success: 
+2025-10-26 14:42:18 - system - INFO - System - UI_CALLBACK_SET: login_failed: 
+2025-10-26 14:42:18 - system - INFO - System - UI_CALLBACK_SET: register_success: 
+2025-10-26 14:42:18 - system - INFO - System - UI_CALLBACK_SET: self_register_success: 
+2025-10-26 14:42:18 - system - INFO - System - UI_CALLBACK_SET: register_failed: 
+2025-10-26 14:42:18 - system - INFO - System - UI_CALLBACK_SET: logout_success: 
+2025-10-26 14:42:18 - system - INFO - System - UI_CALLBACK_SET: detection_starting: 
+2025-10-26 14:42:18 - system - INFO - System - UI_CALLBACK_SET: detection_started: 
+2025-10-26 14:42:18 - system - INFO - System - UI_CALLBACK_SET: detection_stopped: 
+2025-10-26 14:42:18 - system - INFO - System - UI_CALLBACK_SET: detection_failed: 
+2025-10-26 14:42:18 - system - INFO - System - UI_CALLBACK_SET: detection_update: 
+2025-10-26 14:42:18 - system - INFO - System - UI_CALLBACK_SET: count_reset: 
+2025-10-26 14:42:18 - system - INFO - System - UI_CALLBACK_SET: report_generated: 
+2025-10-26 14:42:18 - system - INFO - System - UI_CALLBACK_SET: report_failed: 
+2025-10-26 14:42:18 - system - INFO - System - UI_CALLBACK_SET: config_updated: 
+2025-10-26 14:42:18 - system - INFO - System - UI_CALLBACK_SET: camera_added: 
+2025-10-26 14:42:18 - system - INFO - System - UI_CALLBACK_SET: camera_removed: 
+2025-10-26 14:42:18 - system - INFO - System - UI_CALLBACK_SET: error: 
+2025-10-26 14:42:19 - system - INFO - System - APPLICATION_INITIALIZED: 
+2025-10-26 14:42:19 - system - INFO - System - APPLICATION_MAINLOOP_START: 
+2025-10-26 14:42:24 - user_actions - INFO - User 'ands' - LOGIN_SUCCESS: 
+2025-10-26 14:42:24 - user_actions - INFO - User 'ands' - LOGIN_SUCCESS: 
+2025-10-26 14:42:26 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=1: 1
+2025-10-26 14:42:26 - system - INFO - System - STOP_DETECTION_IGNORED: Nenhuma sessão ativa encontrada para Cam=1: 1
+2025-10-26 14:42:41 - user_actions - INFO - User 'ands' - START_DETECTION_REQUESTED: Cam=1, Type=Torta Normal: 
+2025-10-26 14:42:41 - system - INFO - System - THREAD_STARTED: Detection-Cam-1: 1
+2025-10-26 14:42:41 - user_actions - INFO - User 'ands' - DETECTION_STARTED_CAMERA_1_TYPE_Torta Normal_BACKEND_TensorRT: 
+2025-10-26 14:42:41 - system - INFO - System - LOADING_MODEL: Detection-Cam-1: 1
+2025-10-26 14:42:41 - system - INFO - System - MODEL_LOADED: Detection-Cam-1: 1
+2025-10-26 14:42:41 - system - INFO - System - CONNECTING_SOURCE: Detection-Cam-1, Source='0': 1
+2025-10-26 14:42:42 - system - INFO - System - SOURCE_CONNECTED: Detection-Cam-1, Source='0': 1
+2025-10-26 14:42:42 - system - INFO - System - DETECTION_LOOP_STARTING: Detection-Cam-1: 1
+2025-10-26 14:44:06 - system - INFO - System - OBJECT_CROSSED: Cam=1, ID=70, Count=1: 1
+2025-10-26 14:50:10 - system - INFO - System - OBJECT_CROSSED: Cam=1, ID=138, Count=2: 1
+2025-10-26 14:50:12 - system - INFO - System - OBJECT_CROSSED: Cam=1, ID=138, Count=3: 1
+2025-10-26 14:50:16 - system - INFO - System - OBJECT_CROSSED: Cam=1, ID=138, Count=4: 1
+2025-10-26 14:50:41 - system - INFO - System - OBJECT_CROSSED: Cam=1, ID=165, Count=5: 1
+2025-10-26 14:50:46 - system - INFO - System - OBJECT_CROSSED: Cam=1, ID=165, Count=6: 1
+2025-10-26 14:50:49 - system - INFO - System - OBJECT_CROSSED: Cam=1, ID=165, Count=7: 1
+2025-10-26 14:50:53 - system - INFO - System - OBJECT_CROSSED: Cam=1, ID=165, Count=8: 1
+2025-10-26 14:51:04 - system - INFO - System - OBJECT_CROSSED: Cam=1, ID=165, Count=9: 1
+2025-10-26 14:51:21 - system - INFO - System - OBJECT_CROSSED: Cam=1, ID=192, Count=10: 1
+2025-10-26 14:51:27 - system - INFO - System - OBJECT_CROSSED: Cam=1, ID=192, Count=11: 1
+2025-10-26 14:51:33 - system - INFO - System - OBJECT_CROSSED: Cam=1, ID=192, Count=12: 1
+2025-10-26 14:51:37 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=1: 1
+2025-10-26 14:51:37 - system - INFO - System - STOPPING_DETECTION_REQUESTED: Camera ID: 1: 1
+2025-10-26 14:51:44 - errors - ERROR - DetectionService - NoneType: None - Thread Detection-Cam-1 não finalizou no timeout!
+NoneType: None
+2025-10-26 14:51:44 - system - INFO - System - DETECTION_STOPPED_CONFIRMED: Camera ID: 1: 1
+2025-10-26 14:51:44 - system - INFO - System - CLEANING_UP_THREAD: Detection-Cam-1: 1
+2025-10-26 14:51:44 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=1: 1
+2025-10-26 14:51:44 - system - INFO - System - STOP_DETECTION_IGNORED: Nenhuma sessão ativa encontrada para Cam=1: 1
+2025-10-26 14:51:44 - system - INFO - System - SOURCE_RELEASED: Detection-Cam-1: 1
+2025-10-26 14:51:44 - system - INFO - System - DETECTION_THREAD_ENDED: Detection-Cam-1: 1
+2025-10-26 14:51:45 - system - INFO - System - APPLICATION_INTERRUPTED: 
