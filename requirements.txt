@@ -3,7 +3,11 @@ customtkinter>=5.2.0
 tkinter-tooltip>=2.0.0
 
 # Visão Computacional e IA
-torch
+torch==2.4.1+cu124
+torchvision==0.19.1+cu124
+torchaudio==2.4.1+cu124
+--extra-index-url https://download.pytorch.org/whl/cu121
+
 torch-directml
 ultralytics>=8.0.0
 opencv-python>=4.8.0

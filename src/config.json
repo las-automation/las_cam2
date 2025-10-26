@@ -16,15 +16,15 @@
         }
     },
     "detection": {
-        "model_path": "modelos/best.pt",
+        "model_path": "C:/Users/cchrr/Documents/GitHub/las_cam2/src/modelos/best.pt",
         "confidence_threshold": 0.5,
         "show_window": false,
         "tracking_enabled": true,
         "count_line_position": 0.4525089605734767,
         "count_line_width_percent": 0.8064516129032258,
-        "preferred_backend": "openvino",
+        "preferred_backend": "auto",
         "model_path_tensorrt": "modelos/best.engine",
-        "model_path_openvino": "modelos/best_openvino_model",
+        "model_path_openvino": "C:/Users/cchrr/Documents/GitHub/las_cam2/src/modelos/best_openvino_model",
         "auto_optimize": true,
         "prefer_gpu": true,
         "max_detection_failures": 150
