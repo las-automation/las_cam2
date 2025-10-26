@@ -53,14 +53,28 @@ def loop_contagem(numero_camera, stop_event, label_contagem):
     margem = 10
     contador = 0
     rastreador_objetos = {}
+    falhas_consecutivas = 0  # Contador de falhas
+    max_falhas = 150         # 150 * 0.2s = 30s de falha antes de desistir
 
     while not stop_event.is_set():
         ret, frame = cap.read()
         if not ret or frame is None:
-            time.sleep(0.2)
+            falhas_consecutivas += 1
+            print(f"⚠️ [Câmera {numero_camera}] Falha ao ler frame ({falhas_consecutivas}/{max_falhas})")
+
+            if falhas_consecutivas > max_falhas:
+                print(f"❌ [Câmera {numero_camera}] Stream perdido ou câmera desconectada. Encerrando thread.")
+                label_contagem.set("Stream perdido.")
+                break  # Sai do loop while e encerra a thread
+
+            time.sleep(0.2)  # Espera um pouco antes de tentar de novo
             continue
 
+        # Se chegou aqui, o frame é bom, então zera o contador de falhas
+        falhas_consecutivas = 0
+
         # --- DETECÇÃO COM YOLO ---
+        # NÃO passa device= aqui! O modelo JÁ está na GPU (config.py fez isso)
         resultados = modelo_yolo.track(frame, conf=CONFIDENCE_THRESHOLD, persist=True, verbose=False)
         deteccoes = resultados[0].boxes
 

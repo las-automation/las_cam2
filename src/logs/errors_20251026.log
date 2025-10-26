@@ -1,0 +1,365 @@
+2025-10-26 00:31:55 - ERROR - DetectionService - NoneType: None - Thread da câmera 3 não finalizou no timeout
+NoneType: None
+2025-10-26 00:32:12 - ERROR - DetectionService - NoneType: None - Falha ao abrir câmera 4
+NoneType: None
+2025-10-26 00:32:12 - ERROR - DetectionService - UnboundLocalError: cannot access local variable 'cfg' where it is not associated with a value - Erro na limpeza da thread 4
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\services\detection_service.py", line 279, in _run_detection_thread
+    if cfg.show_window:
+       ^^^
+UnboundLocalError: cannot access local variable 'cfg' where it is not associated with a value
+2025-10-26 00:33:27 - ERROR - DetectionService - NoneType: None - Falha ao abrir câmera 3
+NoneType: None
+2025-10-26 00:33:27 - ERROR - DetectionService - UnboundLocalError: cannot access local variable 'cfg' where it is not associated with a value - Erro na limpeza da thread 3
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\services\detection_service.py", line 279, in _run_detection_thread
+    if cfg.show_window:
+       ^^^
+UnboundLocalError: cannot access local variable 'cfg' where it is not associated with a value
+2025-10-26 00:34:13 - ERROR - AppController - TclError: invalid command name ".!cameraview4.!ctkframe.!ctkframe2.!ctkframe.!modernlabel.!label" - Erro no callback detection_update
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\controllers\app_controller.py", line 37, in trigger_ui_event
+    self.ui_callbacks[event](*args, **kwargs)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\screen_manager.py", line 243, in _on_detection_update
+    self.camera_windows[camera_id].update_count(count)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\camera_view.py", line 185, in update_count
+    self.count_label.configure(text=f"Contagem: {count}")
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\customtkinter\windows\widgets\ctk_label.py", line 206, in configure
+    self._label.configure(text=self._text)
+  File "C:\Users\cchrr\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1722, in configure
+    return self._configure('configure', cnf, kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cchrr\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1712, in _configure
+    self.tk.call(_flatten((self._w, cmd)) + self._options(cnf))
+_tkinter.TclError: invalid command name ".!cameraview4.!ctkframe.!ctkframe2.!ctkframe.!modernlabel.!label"
+2025-10-26 00:34:13 - ERROR - AppController - TclError: invalid command name ".!cameraview4.!ctkframe.!ctkframe2.!ctkframe.!modernlabel.!label" - Erro no callback detection_update
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\controllers\app_controller.py", line 37, in trigger_ui_event
+    self.ui_callbacks[event](*args, **kwargs)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\screen_manager.py", line 243, in _on_detection_update
+    self.camera_windows[camera_id].update_count(count)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\camera_view.py", line 185, in update_count
+    self.count_label.configure(text=f"Contagem: {count}")
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\customtkinter\windows\widgets\ctk_label.py", line 206, in configure
+    self._label.configure(text=self._text)
+  File "C:\Users\cchrr\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1722, in configure
+    return self._configure('configure', cnf, kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cchrr\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1712, in _configure
+    self.tk.call(_flatten((self._w, cmd)) + self._options(cnf))
+_tkinter.TclError: invalid command name ".!cameraview4.!ctkframe.!ctkframe2.!ctkframe.!modernlabel.!label"
+2025-10-26 00:34:14 - ERROR - AppController - TclError: invalid command name ".!cameraview4.!ctkframe.!ctkframe2.!ctkframe.!modernlabel.!label" - Erro no callback detection_update
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\controllers\app_controller.py", line 37, in trigger_ui_event
+    self.ui_callbacks[event](*args, **kwargs)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\screen_manager.py", line 243, in _on_detection_update
+    self.camera_windows[camera_id].update_count(count)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\camera_view.py", line 185, in update_count
+    self.count_label.configure(text=f"Contagem: {count}")
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\customtkinter\windows\widgets\ctk_label.py", line 206, in configure
+    self._label.configure(text=self._text)
+  File "C:\Users\cchrr\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1722, in configure
+    return self._configure('configure', cnf, kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cchrr\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1712, in _configure
+    self.tk.call(_flatten((self._w, cmd)) + self._options(cnf))
+_tkinter.TclError: invalid command name ".!cameraview4.!ctkframe.!ctkframe2.!ctkframe.!modernlabel.!label"
+2025-10-26 00:34:14 - ERROR - AppController - TclError: invalid command name ".!cameraview4.!ctkframe.!ctkframe2.!ctkframe.!modernlabel.!label" - Erro no callback detection_update
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\controllers\app_controller.py", line 37, in trigger_ui_event
+    self.ui_callbacks[event](*args, **kwargs)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\screen_manager.py", line 243, in _on_detection_update
+    self.camera_windows[camera_id].update_count(count)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\camera_view.py", line 185, in update_count
+    self.count_label.configure(text=f"Contagem: {count}")
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\customtkinter\windows\widgets\ctk_label.py", line 206, in configure
+    self._label.configure(text=self._text)
+  File "C:\Users\cchrr\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1722, in configure
+    return self._configure('configure', cnf, kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cchrr\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1712, in _configure
+    self.tk.call(_flatten((self._w, cmd)) + self._options(cnf))
+_tkinter.TclError: invalid command name ".!cameraview4.!ctkframe.!ctkframe2.!ctkframe.!modernlabel.!label"
+2025-10-26 00:34:14 - ERROR - AppController - TclError: invalid command name ".!cameraview4.!ctkframe.!ctkframe2.!ctkframe.!modernlabel.!label" - Erro no callback detection_update
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\controllers\app_controller.py", line 37, in trigger_ui_event
+    self.ui_callbacks[event](*args, **kwargs)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\screen_manager.py", line 243, in _on_detection_update
+    self.camera_windows[camera_id].update_count(count)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\camera_view.py", line 185, in update_count
+    self.count_label.configure(text=f"Contagem: {count}")
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\customtkinter\windows\widgets\ctk_label.py", line 206, in configure
+    self._label.configure(text=self._text)
+  File "C:\Users\cchrr\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1722, in configure
+    return self._configure('configure', cnf, kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cchrr\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1712, in _configure
+    self.tk.call(_flatten((self._w, cmd)) + self._options(cnf))
+_tkinter.TclError: invalid command name ".!cameraview4.!ctkframe.!ctkframe2.!ctkframe.!modernlabel.!label"
+2025-10-26 00:34:14 - ERROR - AppController - TclError: invalid command name ".!cameraview4.!ctkframe.!ctkframe2.!ctkframe.!modernlabel.!label" - Erro no callback detection_update
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\controllers\app_controller.py", line 37, in trigger_ui_event
+    self.ui_callbacks[event](*args, **kwargs)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\screen_manager.py", line 243, in _on_detection_update
+    self.camera_windows[camera_id].update_count(count)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\camera_view.py", line 185, in update_count
+    self.count_label.configure(text=f"Contagem: {count}")
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\customtkinter\windows\widgets\ctk_label.py", line 206, in configure
+    self._label.configure(text=self._text)
+  File "C:\Users\cchrr\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1722, in configure
+    return self._configure('configure', cnf, kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cchrr\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1712, in _configure
+    self.tk.call(_flatten((self._w, cmd)) + self._options(cnf))
+_tkinter.TclError: invalid command name ".!cameraview4.!ctkframe.!ctkframe2.!ctkframe.!modernlabel.!label"
+2025-10-26 00:34:14 - ERROR - AppController - TclError: invalid command name ".!cameraview4.!ctkframe.!ctkframe2.!ctkframe.!modernlabel.!label" - Erro no callback detection_update
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\controllers\app_controller.py", line 37, in trigger_ui_event
+    self.ui_callbacks[event](*args, **kwargs)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\screen_manager.py", line 243, in _on_detection_update
+    self.camera_windows[camera_id].update_count(count)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\camera_view.py", line 185, in update_count
+    self.count_label.configure(text=f"Contagem: {count}")
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\customtkinter\windows\widgets\ctk_label.py", line 206, in configure
+    self._label.configure(text=self._text)
+  File "C:\Users\cchrr\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1722, in configure
+    return self._configure('configure', cnf, kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cchrr\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1712, in _configure
+    self.tk.call(_flatten((self._w, cmd)) + self._options(cnf))
+_tkinter.TclError: invalid command name ".!cameraview4.!ctkframe.!ctkframe2.!ctkframe.!modernlabel.!label"
+2025-10-26 00:34:14 - ERROR - AppController - TclError: invalid command name ".!cameraview4.!ctkframe.!ctkframe2.!ctkframe.!modernlabel.!label" - Erro no callback detection_update
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\controllers\app_controller.py", line 37, in trigger_ui_event
+    self.ui_callbacks[event](*args, **kwargs)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\screen_manager.py", line 243, in _on_detection_update
+    self.camera_windows[camera_id].update_count(count)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\camera_view.py", line 185, in update_count
+    self.count_label.configure(text=f"Contagem: {count}")
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\customtkinter\windows\widgets\ctk_label.py", line 206, in configure
+    self._label.configure(text=self._text)
+  File "C:\Users\cchrr\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1722, in configure
+    return self._configure('configure', cnf, kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cchrr\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1712, in _configure
+    self.tk.call(_flatten((self._w, cmd)) + self._options(cnf))
+_tkinter.TclError: invalid command name ".!cameraview4.!ctkframe.!ctkframe2.!ctkframe.!modernlabel.!label"
+2025-10-26 00:34:14 - ERROR - AppController - TclError: invalid command name ".!cameraview4.!ctkframe.!ctkframe2.!ctkframe.!modernlabel.!label" - Erro no callback detection_update
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\controllers\app_controller.py", line 37, in trigger_ui_event
+    self.ui_callbacks[event](*args, **kwargs)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\screen_manager.py", line 243, in _on_detection_update
+    self.camera_windows[camera_id].update_count(count)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\camera_view.py", line 185, in update_count
+    self.count_label.configure(text=f"Contagem: {count}")
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\customtkinter\windows\widgets\ctk_label.py", line 206, in configure
+    self._label.configure(text=self._text)
+  File "C:\Users\cchrr\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1722, in configure
+    return self._configure('configure', cnf, kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cchrr\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1712, in _configure
+    self.tk.call(_flatten((self._w, cmd)) + self._options(cnf))
+_tkinter.TclError: invalid command name ".!cameraview4.!ctkframe.!ctkframe2.!ctkframe.!modernlabel.!label"
+2025-10-26 00:34:15 - ERROR - AppController - TclError: invalid command name ".!cameraview4.!ctkframe.!ctkframe2.!ctkframe.!modernlabel.!label" - Erro no callback detection_update
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\controllers\app_controller.py", line 37, in trigger_ui_event
+    self.ui_callbacks[event](*args, **kwargs)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\screen_manager.py", line 243, in _on_detection_update
+    self.camera_windows[camera_id].update_count(count)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\camera_view.py", line 185, in update_count
+    self.count_label.configure(text=f"Contagem: {count}")
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\customtkinter\windows\widgets\ctk_label.py", line 206, in configure
+    self._label.configure(text=self._text)
+  File "C:\Users\cchrr\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1722, in configure
+    return self._configure('configure', cnf, kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cchrr\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1712, in _configure
+    self.tk.call(_flatten((self._w, cmd)) + self._options(cnf))
+_tkinter.TclError: invalid command name ".!cameraview4.!ctkframe.!ctkframe2.!ctkframe.!modernlabel.!label"
+2025-10-26 00:34:18 - ERROR - DetectionService - NoneType: None - Câmera 3 já está ativa
+NoneType: None
+2025-10-26 00:35:25 - ERROR - DetectionService - NoneType: None - Thread da câmera 3 não finalizou no timeout
+NoneType: None
+2025-10-26 00:43:00 - ERROR - DetectionService - NoneType: None - Thread da câmera 3 não finalizou no timeout
+NoneType: None
+2025-10-26 00:51:49 - ERROR - DetectionService - NoneType: None - Thread da câmera 3 não finalizou no timeout
+NoneType: None
+2025-10-26 00:52:58 - ERROR - DetectionService - NoneType: None - Thread da câmera 3 não finalizou no timeout
+NoneType: None
+2025-10-26 00:59:16 - ERROR - DetectionService - NoneType: None - Thread Detection-Camera-3 não finalizou no timeout!
+NoneType: None
+2025-10-26 01:01:01 - ERROR - DetectionService - NoneType: None - Thread Detection-Camera-3 não finalizou no timeout!
+NoneType: None
+2025-10-26 01:07:52 - ERROR - DetectionService - NoneType: None - Thread Detection-Camera-3 não finalizou no timeout!
+NoneType: None
+2025-10-26 01:07:52 - ERROR - AppController - TclError: invalid command name ".!cameraview3.!ctkframe.!ctkframe.!modernlabel.!label" - Erro no callback detection_update
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\controllers\app_controller.py", line 37, in trigger_ui_event
+    self.ui_callbacks[event](*args, **kwargs)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\screen_manager.py", line 245, in _on_detection_update
+    self.camera_windows[camera_id].update_video_frame(frame)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\camera_view.py", line 235, in update_video_frame
+    self.video_label.configure(image=None, text=error_text)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\customtkinter\windows\widgets\ctk_label.py", line 206, in configure
+    self._label.configure(text=self._text)
+  File "C:\Users\cchrr\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1722, in configure
+    return self._configure('configure', cnf, kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cchrr\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1712, in _configure
+    self.tk.call(_flatten((self._w, cmd)) + self._options(cnf))
+_tkinter.TclError: invalid command name ".!cameraview3.!ctkframe.!ctkframe.!modernlabel.!label"
+2025-10-26 01:54:57 - ERROR - AppController - ValueError: ['style'] are not supported arguments. Look at the documentation for supported arguments. - Erro fatal no callback da UI 'detection_started'
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\controllers\app_controller.py", line 46, in trigger_ui_event
+    callback(*args, **kwargs)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\screen_manager.py", line 317, in _on_detection_started
+    self.camera_windows[camera_id].update_detection_status(True)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\camera_view.py", line 168, in update_detection_status
+    self.detection_button.configure(text="Parar Detecção", state="normal", style="danger")
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\customtkinter\windows\widgets\ctk_button.py", line 442, in configure
+    super().configure(require_redraw=require_redraw, **kwargs)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\customtkinter\windows\widgets\core_widget_classes\ctk_base_class.py", line 133, in configure
+    check_kwargs_empty(kwargs, raise_error=True)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\customtkinter\windows\widgets\utility\utility_functions.py", line 18, in check_kwargs_empty
+    raise ValueError(f"{list(kwargs_dict.keys())} are not supported arguments. Look at the documentation for supported arguments.")
+ValueError: ['style'] are not supported arguments. Look at the documentation for supported arguments.
+2025-10-26 01:55:43 - ERROR - DetectionService - NoneType: None - Thread Detection-Cam-3 não finalizou no timeout!
+NoneType: None
+2025-10-26 02:04:01 - ERROR - AppController - ValueError: ['style'] are not supported arguments. Look at the documentation for supported arguments. - Erro fatal no callback da UI 'detection_started'
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\controllers\app_controller.py", line 46, in trigger_ui_event
+    callback(*args, **kwargs)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\screen_manager.py", line 317, in _on_detection_started
+    self.camera_windows[camera_id].update_detection_status(True)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\camera_view.py", line 168, in update_detection_status
+    self.detection_button.configure(text="Parar Detecção", state="normal", style="danger")
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\customtkinter\windows\widgets\ctk_button.py", line 442, in configure
+    super().configure(require_redraw=require_redraw, **kwargs)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\customtkinter\windows\widgets\core_widget_classes\ctk_base_class.py", line 133, in configure
+    check_kwargs_empty(kwargs, raise_error=True)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\customtkinter\windows\widgets\utility\utility_functions.py", line 18, in check_kwargs_empty
+    raise ValueError(f"{list(kwargs_dict.keys())} are not supported arguments. Look at the documentation for supported arguments.")
+ValueError: ['style'] are not supported arguments. Look at the documentation for supported arguments.
+2025-10-26 02:09:48 - ERROR - AppController - ValueError: ['style'] are not supported arguments. Look at the documentation for supported arguments. - Erro fatal no callback da UI 'detection_started'
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\controllers\app_controller.py", line 46, in trigger_ui_event
+    callback(*args, **kwargs)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\screen_manager.py", line 317, in _on_detection_started
+    self.camera_windows[camera_id].update_detection_status(True)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\camera_view.py", line 168, in update_detection_status
+    self.detection_button.configure(text="Parar Detecção", state="normal", style="danger")
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\customtkinter\windows\widgets\ctk_button.py", line 442, in configure
+    super().configure(require_redraw=require_redraw, **kwargs)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\customtkinter\windows\widgets\core_widget_classes\ctk_base_class.py", line 133, in configure
+    check_kwargs_empty(kwargs, raise_error=True)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\customtkinter\windows\widgets\utility\utility_functions.py", line 18, in check_kwargs_empty
+    raise ValueError(f"{list(kwargs_dict.keys())} are not supported arguments. Look at the documentation for supported arguments.")
+ValueError: ['style'] are not supported arguments. Look at the documentation for supported arguments.
+2025-10-26 02:24:13 - ERROR - DetectionService - NoneType: None - Thread da câmera 3 não finalizou no timeout
+NoneType: None
+2025-10-26 02:25:01 - ERROR - DetectionService - NoneType: None - Thread da câmera 3 não finalizou no timeout
+NoneType: None
+2025-10-26 02:30:57 - ERROR - DetectionService - NoneType: None - Thread da câmera 3 não finalizou no timeout
+NoneType: None
+2025-10-26 02:46:49 - ERROR - DetectionService - NoneType: None - Thread Detection-Cam-3 não finalizou no timeout!
+NoneType: None
+2025-10-26 02:56:35 - ERROR - DetectionService - NoneType: None - Câmera 3 já está ativa
+NoneType: None
+2025-10-26 02:56:44 - ERROR - DetectionService - NoneType: None - Thread Detection-Cam-3 não finalizou no timeout!
+NoneType: None
+2025-10-26 02:56:44 - ERROR - AppController - NoneType: None - Falha ao solicitar início da detecção para Cam=3
+NoneType: None
+2025-10-26 02:57:36 - ERROR - Detection-Cam-3 - ConnectionError: Falha ao abrir stream RTSP: rtsp://admin:admin@192.168.0.5:554/1/2 - Erro de conexão RTSP
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\services\detection_service.py", line 161, in _run_detection_thread
+    if not cap.isOpened(): raise ConnectionError(f"Falha ao abrir stream RTSP: {camera_config.rtsp_url}")
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionError: Falha ao abrir stream RTSP: rtsp://admin:admin@192.168.0.5:554/1/2
+2025-10-26 02:58:08 - ERROR - Detection-Cam-3 - ValueError: Invalid CUDA 'device=privateuseone:0' requested. Use 'device=cpu' or pass valid CUDA device(s) if available, i.e. 'device=0' or 'device=0,1,2,3' for Multi-GPU.
+
+torch.cuda.is_available(): False
+torch.cuda.device_count(): 0
+os.environ['CUDA_VISIBLE_DEVICES']: None
+See https://pytorch.org/get-started/locally/ for up-to-date torch install instructions if no CUDA devices are seen by torch.
+ - Erro fatal na thread
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\services\detection_service.py", line 181, in _run_detection_thread
+    resultados = model.track(frame, **track_args)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\ultralytics\engine\model.py", line 601, in track
+    return self.predict(source=source, stream=stream, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\ultralytics\engine\model.py", line 550, in predict
+    self.predictor.setup_model(model=self.model, verbose=is_cli)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\ultralytics\engine\predictor.py", line 400, in setup_model
+    device=select_device(self.args.device, verbose=verbose),
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\ultralytics\utils\torch_utils.py", line 200, in select_device
+    raise ValueError(
+ValueError: Invalid CUDA 'device=privateuseone:0' requested. Use 'device=cpu' or pass valid CUDA device(s) if available, i.e. 'device=0' or 'device=0,1,2,3' for Multi-GPU.
+
+torch.cuda.is_available(): False
+torch.cuda.device_count(): 0
+os.environ['CUDA_VISIBLE_DEVICES']: None
+See https://pytorch.org/get-started/locally/ for up-to-date torch install instructions if no CUDA devices are seen by torch.
+
+2025-10-26 02:59:19 - ERROR - Detection-Cam-3 - ValueError: Invalid CUDA 'device=privateuseone:0' requested. Use 'device=cpu' or pass valid CUDA device(s) if available, i.e. 'device=0' or 'device=0,1,2,3' for Multi-GPU.
+
+torch.cuda.is_available(): False
+torch.cuda.device_count(): 0
+os.environ['CUDA_VISIBLE_DEVICES']: None
+See https://pytorch.org/get-started/locally/ for up-to-date torch install instructions if no CUDA devices are seen by torch.
+ - Erro fatal na thread
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\services\detection_service.py", line 181, in _run_detection_thread
+    resultados = model.track(frame, **track_args)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\ultralytics\engine\model.py", line 601, in track
+    return self.predict(source=source, stream=stream, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\ultralytics\engine\model.py", line 550, in predict
+    self.predictor.setup_model(model=self.model, verbose=is_cli)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\ultralytics\engine\predictor.py", line 400, in setup_model
+    device=select_device(self.args.device, verbose=verbose),
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\ultralytics\utils\torch_utils.py", line 200, in select_device
+    raise ValueError(
+ValueError: Invalid CUDA 'device=privateuseone:0' requested. Use 'device=cpu' or pass valid CUDA device(s) if available, i.e. 'device=0' or 'device=0,1,2,3' for Multi-GPU.
+
+torch.cuda.is_available(): False
+torch.cuda.device_count(): 0
+os.environ['CUDA_VISIBLE_DEVICES']: None
+See https://pytorch.org/get-started/locally/ for up-to-date torch install instructions if no CUDA devices are seen by torch.
+
+2025-10-26 03:05:38 - ERROR - Detection-Cam-3 - ValueError: Invalid CUDA 'device=privateuseone:0' requested. Use 'device=cpu' or pass valid CUDA device(s) if available, i.e. 'device=0' or 'device=0,1,2,3' for Multi-GPU.
+
+torch.cuda.is_available(): False
+torch.cuda.device_count(): 0
+os.environ['CUDA_VISIBLE_DEVICES']: None
+See https://pytorch.org/get-started/locally/ for up-to-date torch install instructions if no CUDA devices are seen by torch.
+ - Erro fatal na thread
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\services\detection_service.py", line 181, in _run_detection_thread
+    resultados = model.track(frame, **track_args)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\ultralytics\engine\model.py", line 601, in track
+    return self.predict(source=source, stream=stream, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\ultralytics\engine\model.py", line 550, in predict
+    self.predictor.setup_model(model=self.model, verbose=is_cli)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\ultralytics\engine\predictor.py", line 400, in setup_model
+    device=select_device(self.args.device, verbose=verbose),
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\ultralytics\utils\torch_utils.py", line 200, in select_device
+    raise ValueError(
+ValueError: Invalid CUDA 'device=privateuseone:0' requested. Use 'device=cpu' or pass valid CUDA device(s) if available, i.e. 'device=0' or 'device=0,1,2,3' for Multi-GPU.
+
+torch.cuda.is_available(): False
+torch.cuda.device_count(): 0
+os.environ['CUDA_VISIBLE_DEVICES']: None
+See https://pytorch.org/get-started/locally/ for up-to-date torch install instructions if no CUDA devices are seen by torch.
+
+2025-10-26 03:12:35 - ERROR - DetectionService - NoneType: None - Câmera 4 não possui URL RTSP configurada.
+NoneType: None
+2025-10-26 03:12:38 - ERROR - AppController - NoneType: None - Falha ao solicitar início da detecção para Cam=4
+NoneType: None
