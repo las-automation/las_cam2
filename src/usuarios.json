@@ -1,8 +1,26 @@
 {
-    "adm": {
-        "senha_hash": "b1b78c42e48d6a8d7a7a646a9d314c2b:35cc5f3a72751e65e6b6b54c73430cb7ab35e00c358ab9e36cc0c6adfc405a74"
+    "admin": {
+        "username": "admin",
+        "password_hash": "0105558c0554f7af739920265835cc41:94261bf6cd757fbdb767b729cbd1122adf2665cea9e45dc878eaa497a60c3da8",
+        "role": "admin",
+        "created_at": "2025-10-24T23:39:16.964095",
+        "last_login": null,
+        "is_active": true
     },
-    "ADM": {
-        "senha_hash": "66aa73bc462709d879013a171a99af36:e4c9ed42d201d20a29543deeccb52c0fc4d12c415d415a62a5ba6d8610893d26"
+    "Gustavo": {
+        "username": "Gustavo",
+        "password_hash": "47f249adebf2cc243972343ea7c39d50:9cbf5e4c1de7fc47dab47320a092b9f77bd1a430d37e09b74f9a5520fd964cc7",
+        "role": "viewer",
+        "created_at": "2025-10-25T00:09:28.339896",
+        "last_login": null,
+        "is_active": true
+    },
+    "gustavo": {
+        "username": "gustavo",
+        "password_hash": "30dcc23ae96add23f5b6e67fe7cb828d:9e1311a85bf34fec505401b36d9e21276fc9ec801f8ebe77344705e782bd3aef",
+        "role": "viewer",
+        "created_at": "2025-10-25T00:18:27.648977",
+        "last_login": "2025-10-26T03:17:44.581655",
+        "is_active": true
     }
 }

@@ -1,0 +1,56 @@
+2025-10-25 00:09:17 - INFO - User admin - LOGIN_FAILED: Senha incorreta
+2025-10-25 00:09:28 - INFO - User Gustavo - USER_REGISTERED: Role: viewer
+2025-10-25 00:09:28 - INFO - User Gustavo - SELF_REGISTER_SUCCESS: 
+2025-10-25 00:18:27 - INFO - User gustavo - USER_REGISTERED: Role: viewer
+2025-10-25 00:18:27 - INFO - User gustavo - SELF_REGISTER_SUCCESS: 
+2025-10-25 00:20:50 - INFO - User gustavo - LOGIN_SUCCESS: 
+2025-10-25 00:20:50 - INFO - User gustavo - LOGIN_SUCCESS: 
+2025-10-25 00:20:56 - INFO - User gustavo - LOGOUT: 
+2025-10-25 00:21:23 - INFO - User gustavo - LOGIN_SUCCESS: 
+2025-10-25 00:21:23 - INFO - User gustavo - LOGIN_SUCCESS: 
+2025-10-25 00:24:36 - INFO - User gustavo - LOGOUT: 
+2025-10-25 00:46:25 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-25 00:46:25 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-25 00:51:38 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-25 00:51:38 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-25 01:04:16 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-25 01:04:16 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-25 01:13:14 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-25 01:13:14 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-25 01:54:04 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-25 01:54:04 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-25 02:03:44 - INFO - User 'gustavo' - LOGOUT: 
+2025-10-25 02:04:01 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-25 02:04:01 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-25 02:15:16 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-25 02:15:16 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-25 02:21:31 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-25 02:21:31 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-25 02:54:06 - INFO - User 'gustavo' - LOGOUT: 
+2025-10-25 14:00:55 - INFO - User 'gustavo' - LOGIN_FAILED: Usuário não encontrado ou inativo
+2025-10-25 14:01:00 - INFO - User 'gustavo' - LOGIN_FAILED: Usuário não encontrado ou inativo
+2025-10-25 14:28:48 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-25 14:28:48 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-25 15:00:42 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-25 15:00:42 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-25 15:06:17 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-25 15:06:17 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-25 15:07:14 - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_2_BACKEND_DirectML: 
+2025-10-25 15:09:07 - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_2_BACKEND_DirectML: 
+2025-10-25 16:38:55 - INFO - User 'gustavo' - LOGOUT: 
+2025-10-25 16:39:14 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-25 16:39:14 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-25 16:55:43 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-25 16:55:43 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-25 16:57:08 - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_3_BACKEND_DirectML: 
+2025-10-25 16:58:12 - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_3_BACKEND_DirectML: 
+2025-10-25 16:58:50 - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_3_BACKEND_DirectML: 
+2025-10-25 17:00:15 - INFO - User 'gustavo' - LOGOUT: 
+2025-10-25 17:00:30 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-25 17:00:30 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-25 17:17:38 - INFO - User 'gustavo' - LOGOUT: 
+2025-10-25 17:17:54 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-25 17:17:54 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-25 17:18:06 - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_3_BACKEND_DirectML: 
+2025-10-25 17:19:12 - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_3_BACKEND_DirectML: 
+2025-10-25 17:35:35 - INFO - User 'gustavo' - LOGOUT: 

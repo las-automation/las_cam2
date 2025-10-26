@@ -1,0 +1,1344 @@
+2025-10-26 00:23:37 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-26 00:23:38 - system - INFO - System - DIRECTML_AVAILABLE: 
+2025-10-26 00:23:38 - system - INFO - System - APPLICATION_STARTUP: 
+2025-10-26 00:23:38 - system - INFO - System - DETECTION_SERVICE_INITIALIZED_BACKEND_DIRECTML: 
+2025-10-26 00:23:38 - system - INFO - System - APP_CONTROLLER_INITIALIZED: 
+2025-10-26 00:23:39 - system - INFO - System - APPLICATION_INITIALIZED: 
+2025-10-26 00:23:39 - system - INFO - System - APPLICATION_MAINLOOP_START: 
+2025-10-26 00:24:35 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-26 00:24:35 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-26 00:24:41 - system - INFO - System - CAMERA_REMOVED_SAVED: ID=1: 
+2025-10-26 00:25:04 - system - INFO - System - APPLICATION_CLOSING: 
+2025-10-26 00:25:04 - system - INFO - System - APP_SHUTDOWN: 
+2025-10-26 00:25:04 - system - INFO - System - STOPPING_ALL_DETECTIONS: Cameras []: 
+2025-10-26 00:25:04 - system - INFO - System - ALL_DETECTIONS_STOPPED_CONFIRMED: 
+2025-10-26 00:25:04 - user_actions - INFO - User 'gustavo' - LOGOUT: 
+2025-10-26 00:25:04 - system - INFO - System - APP_SHUTDOWN: 
+2025-10-26 00:25:04 - system - INFO - System - STOPPING_ALL_DETECTIONS: Cameras []: 
+2025-10-26 00:25:04 - system - INFO - System - ALL_DETECTIONS_STOPPED_CONFIRMED: 
+2025-10-26 00:25:04 - system - INFO - System - APPLICATION_CLOSED: 
+2025-10-26 00:31:11 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-26 00:31:11 - system - INFO - System - DIRECTML_AVAILABLE: 
+2025-10-26 00:31:11 - system - INFO - System - APPLICATION_STARTUP: 
+2025-10-26 00:31:11 - system - INFO - System - DETECTION_SERVICE_INITIALIZED_BACKEND_DIRECTML: 
+2025-10-26 00:31:11 - system - INFO - System - APP_CONTROLLER_INITIALIZED: 
+2025-10-26 00:31:11 - system - INFO - System - APPLICATION_INITIALIZED: 
+2025-10-26 00:31:11 - system - INFO - System - APPLICATION_MAINLOOP_START: 
+2025-10-26 00:31:20 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-26 00:31:20 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-26 00:31:24 - user_actions - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_3_BACKEND_DirectML: 
+2025-10-26 00:31:48 - system - INFO - System - STOPPING_DETECTION: Camera ID: 3: 3
+2025-10-26 00:31:55 - errors - ERROR - DetectionService - NoneType: None - Thread da câmera 3 não finalizou no timeout
+NoneType: None
+2025-10-26 00:31:55 - system - INFO - System - DETECTION_STOPPED_CONFIRMED: Camera ID: 3: 3
+2025-10-26 00:32:05 - system - INFO - System - CAMERA_ADDED_SAVED: ID=4, Name=Nova Câmera 4: 
+2025-10-26 00:32:12 - user_actions - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_4_BACKEND_DirectML: 
+2025-10-26 00:32:12 - errors - ERROR - DetectionService - NoneType: None - Falha ao abrir câmera 4
+NoneType: None
+2025-10-26 00:32:12 - errors - ERROR - DetectionService - UnboundLocalError: cannot access local variable 'cfg' where it is not associated with a value - Erro na limpeza da thread 4
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\services\detection_service.py", line 279, in _run_detection_thread
+    if cfg.show_window:
+       ^^^
+UnboundLocalError: cannot access local variable 'cfg' where it is not associated with a value
+2025-10-26 00:32:12 - system - INFO - System - DETECTION_THREAD_ENDED: Camera 4: 4
+2025-10-26 00:33:27 - errors - ERROR - DetectionService - NoneType: None - Falha ao abrir câmera 3
+NoneType: None
+2025-10-26 00:33:27 - errors - ERROR - DetectionService - UnboundLocalError: cannot access local variable 'cfg' where it is not associated with a value - Erro na limpeza da thread 3
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\services\detection_service.py", line 279, in _run_detection_thread
+    if cfg.show_window:
+       ^^^
+UnboundLocalError: cannot access local variable 'cfg' where it is not associated with a value
+2025-10-26 00:33:27 - system - INFO - System - DETECTION_THREAD_ENDED: Camera 3: 3
+2025-10-26 00:33:46 - user_actions - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_3_BACKEND_DirectML: 
+2025-10-26 00:34:13 - errors - ERROR - AppController - TclError: invalid command name ".!cameraview4.!ctkframe.!ctkframe2.!ctkframe.!modernlabel.!label" - Erro no callback detection_update
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\controllers\app_controller.py", line 37, in trigger_ui_event
+    self.ui_callbacks[event](*args, **kwargs)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\screen_manager.py", line 243, in _on_detection_update
+    self.camera_windows[camera_id].update_count(count)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\camera_view.py", line 185, in update_count
+    self.count_label.configure(text=f"Contagem: {count}")
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\customtkinter\windows\widgets\ctk_label.py", line 206, in configure
+    self._label.configure(text=self._text)
+  File "C:\Users\cchrr\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1722, in configure
+    return self._configure('configure', cnf, kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cchrr\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1712, in _configure
+    self.tk.call(_flatten((self._w, cmd)) + self._options(cnf))
+_tkinter.TclError: invalid command name ".!cameraview4.!ctkframe.!ctkframe2.!ctkframe.!modernlabel.!label"
+2025-10-26 00:34:13 - errors - ERROR - AppController - TclError: invalid command name ".!cameraview4.!ctkframe.!ctkframe2.!ctkframe.!modernlabel.!label" - Erro no callback detection_update
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\controllers\app_controller.py", line 37, in trigger_ui_event
+    self.ui_callbacks[event](*args, **kwargs)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\screen_manager.py", line 243, in _on_detection_update
+    self.camera_windows[camera_id].update_count(count)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\camera_view.py", line 185, in update_count
+    self.count_label.configure(text=f"Contagem: {count}")
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\customtkinter\windows\widgets\ctk_label.py", line 206, in configure
+    self._label.configure(text=self._text)
+  File "C:\Users\cchrr\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1722, in configure
+    return self._configure('configure', cnf, kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cchrr\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1712, in _configure
+    self.tk.call(_flatten((self._w, cmd)) + self._options(cnf))
+_tkinter.TclError: invalid command name ".!cameraview4.!ctkframe.!ctkframe2.!ctkframe.!modernlabel.!label"
+2025-10-26 00:34:14 - errors - ERROR - AppController - TclError: invalid command name ".!cameraview4.!ctkframe.!ctkframe2.!ctkframe.!modernlabel.!label" - Erro no callback detection_update
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\controllers\app_controller.py", line 37, in trigger_ui_event
+    self.ui_callbacks[event](*args, **kwargs)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\screen_manager.py", line 243, in _on_detection_update
+    self.camera_windows[camera_id].update_count(count)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\camera_view.py", line 185, in update_count
+    self.count_label.configure(text=f"Contagem: {count}")
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\customtkinter\windows\widgets\ctk_label.py", line 206, in configure
+    self._label.configure(text=self._text)
+  File "C:\Users\cchrr\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1722, in configure
+    return self._configure('configure', cnf, kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cchrr\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1712, in _configure
+    self.tk.call(_flatten((self._w, cmd)) + self._options(cnf))
+_tkinter.TclError: invalid command name ".!cameraview4.!ctkframe.!ctkframe2.!ctkframe.!modernlabel.!label"
+2025-10-26 00:34:14 - errors - ERROR - AppController - TclError: invalid command name ".!cameraview4.!ctkframe.!ctkframe2.!ctkframe.!modernlabel.!label" - Erro no callback detection_update
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\controllers\app_controller.py", line 37, in trigger_ui_event
+    self.ui_callbacks[event](*args, **kwargs)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\screen_manager.py", line 243, in _on_detection_update
+    self.camera_windows[camera_id].update_count(count)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\camera_view.py", line 185, in update_count
+    self.count_label.configure(text=f"Contagem: {count}")
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\customtkinter\windows\widgets\ctk_label.py", line 206, in configure
+    self._label.configure(text=self._text)
+  File "C:\Users\cchrr\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1722, in configure
+    return self._configure('configure', cnf, kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cchrr\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1712, in _configure
+    self.tk.call(_flatten((self._w, cmd)) + self._options(cnf))
+_tkinter.TclError: invalid command name ".!cameraview4.!ctkframe.!ctkframe2.!ctkframe.!modernlabel.!label"
+2025-10-26 00:34:14 - errors - ERROR - AppController - TclError: invalid command name ".!cameraview4.!ctkframe.!ctkframe2.!ctkframe.!modernlabel.!label" - Erro no callback detection_update
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\controllers\app_controller.py", line 37, in trigger_ui_event
+    self.ui_callbacks[event](*args, **kwargs)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\screen_manager.py", line 243, in _on_detection_update
+    self.camera_windows[camera_id].update_count(count)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\camera_view.py", line 185, in update_count
+    self.count_label.configure(text=f"Contagem: {count}")
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\customtkinter\windows\widgets\ctk_label.py", line 206, in configure
+    self._label.configure(text=self._text)
+  File "C:\Users\cchrr\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1722, in configure
+    return self._configure('configure', cnf, kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cchrr\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1712, in _configure
+    self.tk.call(_flatten((self._w, cmd)) + self._options(cnf))
+_tkinter.TclError: invalid command name ".!cameraview4.!ctkframe.!ctkframe2.!ctkframe.!modernlabel.!label"
+2025-10-26 00:34:14 - errors - ERROR - AppController - TclError: invalid command name ".!cameraview4.!ctkframe.!ctkframe2.!ctkframe.!modernlabel.!label" - Erro no callback detection_update
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\controllers\app_controller.py", line 37, in trigger_ui_event
+    self.ui_callbacks[event](*args, **kwargs)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\screen_manager.py", line 243, in _on_detection_update
+    self.camera_windows[camera_id].update_count(count)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\camera_view.py", line 185, in update_count
+    self.count_label.configure(text=f"Contagem: {count}")
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\customtkinter\windows\widgets\ctk_label.py", line 206, in configure
+    self._label.configure(text=self._text)
+  File "C:\Users\cchrr\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1722, in configure
+    return self._configure('configure', cnf, kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cchrr\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1712, in _configure
+    self.tk.call(_flatten((self._w, cmd)) + self._options(cnf))
+_tkinter.TclError: invalid command name ".!cameraview4.!ctkframe.!ctkframe2.!ctkframe.!modernlabel.!label"
+2025-10-26 00:34:14 - errors - ERROR - AppController - TclError: invalid command name ".!cameraview4.!ctkframe.!ctkframe2.!ctkframe.!modernlabel.!label" - Erro no callback detection_update
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\controllers\app_controller.py", line 37, in trigger_ui_event
+    self.ui_callbacks[event](*args, **kwargs)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\screen_manager.py", line 243, in _on_detection_update
+    self.camera_windows[camera_id].update_count(count)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\camera_view.py", line 185, in update_count
+    self.count_label.configure(text=f"Contagem: {count}")
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\customtkinter\windows\widgets\ctk_label.py", line 206, in configure
+    self._label.configure(text=self._text)
+  File "C:\Users\cchrr\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1722, in configure
+    return self._configure('configure', cnf, kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cchrr\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1712, in _configure
+    self.tk.call(_flatten((self._w, cmd)) + self._options(cnf))
+_tkinter.TclError: invalid command name ".!cameraview4.!ctkframe.!ctkframe2.!ctkframe.!modernlabel.!label"
+2025-10-26 00:34:14 - errors - ERROR - AppController - TclError: invalid command name ".!cameraview4.!ctkframe.!ctkframe2.!ctkframe.!modernlabel.!label" - Erro no callback detection_update
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\controllers\app_controller.py", line 37, in trigger_ui_event
+    self.ui_callbacks[event](*args, **kwargs)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\screen_manager.py", line 243, in _on_detection_update
+    self.camera_windows[camera_id].update_count(count)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\camera_view.py", line 185, in update_count
+    self.count_label.configure(text=f"Contagem: {count}")
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\customtkinter\windows\widgets\ctk_label.py", line 206, in configure
+    self._label.configure(text=self._text)
+  File "C:\Users\cchrr\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1722, in configure
+    return self._configure('configure', cnf, kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cchrr\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1712, in _configure
+    self.tk.call(_flatten((self._w, cmd)) + self._options(cnf))
+_tkinter.TclError: invalid command name ".!cameraview4.!ctkframe.!ctkframe2.!ctkframe.!modernlabel.!label"
+2025-10-26 00:34:14 - errors - ERROR - AppController - TclError: invalid command name ".!cameraview4.!ctkframe.!ctkframe2.!ctkframe.!modernlabel.!label" - Erro no callback detection_update
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\controllers\app_controller.py", line 37, in trigger_ui_event
+    self.ui_callbacks[event](*args, **kwargs)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\screen_manager.py", line 243, in _on_detection_update
+    self.camera_windows[camera_id].update_count(count)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\camera_view.py", line 185, in update_count
+    self.count_label.configure(text=f"Contagem: {count}")
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\customtkinter\windows\widgets\ctk_label.py", line 206, in configure
+    self._label.configure(text=self._text)
+  File "C:\Users\cchrr\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1722, in configure
+    return self._configure('configure', cnf, kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cchrr\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1712, in _configure
+    self.tk.call(_flatten((self._w, cmd)) + self._options(cnf))
+_tkinter.TclError: invalid command name ".!cameraview4.!ctkframe.!ctkframe2.!ctkframe.!modernlabel.!label"
+2025-10-26 00:34:15 - errors - ERROR - AppController - TclError: invalid command name ".!cameraview4.!ctkframe.!ctkframe2.!ctkframe.!modernlabel.!label" - Erro no callback detection_update
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\controllers\app_controller.py", line 37, in trigger_ui_event
+    self.ui_callbacks[event](*args, **kwargs)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\screen_manager.py", line 243, in _on_detection_update
+    self.camera_windows[camera_id].update_count(count)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\camera_view.py", line 185, in update_count
+    self.count_label.configure(text=f"Contagem: {count}")
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\customtkinter\windows\widgets\ctk_label.py", line 206, in configure
+    self._label.configure(text=self._text)
+  File "C:\Users\cchrr\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1722, in configure
+    return self._configure('configure', cnf, kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cchrr\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1712, in _configure
+    self.tk.call(_flatten((self._w, cmd)) + self._options(cnf))
+_tkinter.TclError: invalid command name ".!cameraview4.!ctkframe.!ctkframe2.!ctkframe.!modernlabel.!label"
+2025-10-26 00:34:18 - errors - ERROR - DetectionService - NoneType: None - Câmera 3 já está ativa
+NoneType: None
+2025-10-26 00:34:23 - system - INFO - System - APPLICATION_CLOSING: 
+2025-10-26 00:34:25 - system - INFO - System - APP_SHUTDOWN: 
+2025-10-26 00:34:25 - system - INFO - System - STOPPING_ALL_DETECTIONS: Cameras [3]: 
+2025-10-26 00:34:25 - system - INFO - System - DETECTION_THREAD_ENDED: Camera 3: 3
+2025-10-26 00:34:25 - system - INFO - System - ALL_DETECTIONS_STOPPED_CONFIRMED: 
+2025-10-26 00:34:25 - user_actions - INFO - User 'gustavo' - LOGOUT: 
+2025-10-26 00:34:25 - system - INFO - System - APP_SHUTDOWN: 
+2025-10-26 00:34:25 - system - INFO - System - STOPPING_ALL_DETECTIONS: Cameras []: 
+2025-10-26 00:34:25 - system - INFO - System - ALL_DETECTIONS_STOPPED_CONFIRMED: 
+2025-10-26 00:34:25 - system - INFO - System - APPLICATION_CLOSED: 
+2025-10-26 00:34:31 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-26 00:34:31 - system - INFO - System - DIRECTML_AVAILABLE: 
+2025-10-26 00:34:31 - system - INFO - System - APPLICATION_STARTUP: 
+2025-10-26 00:34:31 - system - INFO - System - DETECTION_SERVICE_INITIALIZED_BACKEND_DIRECTML: 
+2025-10-26 00:34:31 - system - INFO - System - APP_CONTROLLER_INITIALIZED: 
+2025-10-26 00:34:32 - system - INFO - System - APPLICATION_INITIALIZED: 
+2025-10-26 00:34:32 - system - INFO - System - APPLICATION_MAINLOOP_START: 
+2025-10-26 00:34:42 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-26 00:34:42 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-26 00:34:45 - user_actions - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_3_BACKEND_DirectML: 
+2025-10-26 00:35:18 - system - INFO - System - STOPPING_DETECTION: Camera ID: 3: 3
+2025-10-26 00:35:25 - errors - ERROR - DetectionService - NoneType: None - Thread da câmera 3 não finalizou no timeout
+NoneType: None
+2025-10-26 00:35:25 - system - INFO - System - DETECTION_STOPPED_CONFIRMED: Camera ID: 3: 3
+2025-10-26 00:35:25 - system - INFO - System - DETECTION_THREAD_ENDED: Camera 3: 3
+2025-10-26 00:38:39 - system - INFO - System - APPLICATION_CLOSING: 
+2025-10-26 00:38:41 - system - INFO - System - APP_SHUTDOWN: 
+2025-10-26 00:38:41 - system - INFO - System - STOPPING_ALL_DETECTIONS: Cameras []: 
+2025-10-26 00:38:41 - system - INFO - System - ALL_DETECTIONS_STOPPED_CONFIRMED: 
+2025-10-26 00:38:41 - user_actions - INFO - User 'gustavo' - LOGOUT: 
+2025-10-26 00:38:41 - system - INFO - System - APP_SHUTDOWN: 
+2025-10-26 00:38:41 - system - INFO - System - STOPPING_ALL_DETECTIONS: Cameras []: 
+2025-10-26 00:38:41 - system - INFO - System - ALL_DETECTIONS_STOPPED_CONFIRMED: 
+2025-10-26 00:38:41 - system - INFO - System - APPLICATION_CLOSED: 
+2025-10-26 00:38:53 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-26 00:38:53 - system - INFO - System - DIRECTML_AVAILABLE: 
+2025-10-26 00:38:53 - system - INFO - System - APPLICATION_STARTUP: 
+2025-10-26 00:38:53 - system - INFO - System - DETECTION_SERVICE_INITIALIZED_BACKEND_DIRECTML: 
+2025-10-26 00:38:53 - system - INFO - System - APP_CONTROLLER_INITIALIZED: 
+2025-10-26 00:38:53 - system - INFO - System - APPLICATION_INITIALIZED: 
+2025-10-26 00:38:53 - system - INFO - System - APPLICATION_MAINLOOP_START: 
+2025-10-26 00:39:02 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-26 00:39:02 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-26 00:39:06 - system - INFO - System - CAMERA_REMOVED_SAVED: ID=4: 
+2025-10-26 00:39:16 - user_actions - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_3_BACKEND_DirectML: 
+2025-10-26 00:42:53 - system - INFO - System - STOPPING_DETECTION: Camera ID: 3: 3
+2025-10-26 00:43:00 - errors - ERROR - DetectionService - NoneType: None - Thread da câmera 3 não finalizou no timeout
+NoneType: None
+2025-10-26 00:43:00 - system - INFO - System - DETECTION_STOPPED_CONFIRMED: Camera ID: 3: 3
+2025-10-26 00:43:00 - system - INFO - System - DETECTION_THREAD_ENDED: Camera 3: 3
+2025-10-26 00:46:53 - system - INFO - System - APPLICATION_INTERRUPTED: 
+2025-10-26 00:46:57 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-26 00:46:57 - system - INFO - System - DIRECTML_AVAILABLE: 
+2025-10-26 00:46:57 - system - INFO - System - APPLICATION_STARTUP: 
+2025-10-26 00:46:57 - system - INFO - System - DETECTION_SERVICE_INITIALIZED_BACKEND_DIRECTML: 
+2025-10-26 00:46:57 - system - INFO - System - APP_CONTROLLER_INITIALIZED: 
+2025-10-26 00:46:58 - system - INFO - System - APPLICATION_INITIALIZED: 
+2025-10-26 00:46:58 - system - INFO - System - APPLICATION_MAINLOOP_START: 
+2025-10-26 00:47:05 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-26 00:47:05 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-26 00:47:33 - user_actions - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_3_BACKEND_OpenVINO: 
+2025-10-26 00:51:42 - system - INFO - System - STOPPING_DETECTION: Camera ID: 3: 3
+2025-10-26 00:51:49 - errors - ERROR - DetectionService - NoneType: None - Thread da câmera 3 não finalizou no timeout
+NoneType: None
+2025-10-26 00:51:49 - system - INFO - System - DETECTION_STOPPED_CONFIRMED: Camera ID: 3: 3
+2025-10-26 00:51:49 - system - INFO - System - DETECTION_THREAD_ENDED: Camera 3: 3
+2025-10-26 00:52:04 - user_actions - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_3_BACKEND_DirectML: 
+2025-10-26 00:52:51 - system - INFO - System - STOPPING_DETECTION: Camera ID: 3: 3
+2025-10-26 00:52:58 - errors - ERROR - DetectionService - NoneType: None - Thread da câmera 3 não finalizou no timeout
+NoneType: None
+2025-10-26 00:52:58 - system - INFO - System - DETECTION_STOPPED_CONFIRMED: Camera ID: 3: 3
+2025-10-26 00:52:58 - system - INFO - System - DETECTION_THREAD_ENDED: Camera 3: 3
+2025-10-26 00:58:21 - system - INFO - System - APPLICATION_INTERRUPTED: 
+2025-10-26 00:58:28 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-26 00:58:28 - system - INFO - System - DIRECTML_AVAILABLE: 
+2025-10-26 00:58:28 - system - INFO - System - APPLICATION_STARTUP: 
+2025-10-26 00:58:28 - system - INFO - System - DETECTION_SERVICE_INITIALIZED_BACKEND_DIRECTML: 
+2025-10-26 00:58:28 - system - INFO - System - APP_CONTROLLER_INITIALIZED: 
+2025-10-26 00:58:29 - system - INFO - System - APPLICATION_INITIALIZED: 
+2025-10-26 00:58:29 - system - INFO - System - APPLICATION_MAINLOOP_START: 
+2025-10-26 00:58:41 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-26 00:58:41 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-26 00:58:45 - user_actions - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_3_BACKEND_DirectML: 
+2025-10-26 00:58:45 - system - INFO - System - THREAD_STARTED: Detection-Camera-3: 3
+2025-10-26 00:58:45 - system - INFO - System - LOADING_MODEL: Detection-Camera-3: 3
+2025-10-26 00:58:45 - system - INFO - System - MODEL_LOADED: Detection-Camera-3: 3
+2025-10-26 00:58:45 - system - INFO - System - CONNECTING_RTSP: Detection-Camera-3: 3
+2025-10-26 00:58:51 - system - INFO - System - RTSP_CONNECTED: Detection-Camera-3: 3
+2025-10-26 00:58:51 - system - INFO - System - DETECTION_LOOP_STARTING: Detection-Camera-3: 3
+2025-10-26 00:59:09 - system - INFO - System - STOPPING_DETECTION_REQUESTED: Camera ID: 3: 3
+2025-10-26 00:59:16 - errors - ERROR - DetectionService - NoneType: None - Thread Detection-Camera-3 não finalizou no timeout!
+NoneType: None
+2025-10-26 00:59:16 - system - INFO - System - DETECTION_STOPPED_CONFIRMED: Camera ID: 3: 3
+2025-10-26 00:59:16 - system - INFO - System - CLEANING_UP_THREAD: Detection-Camera-3: 3
+2025-10-26 00:59:16 - system - INFO - System - RTSP_RELEASED: Detection-Camera-3: 3
+2025-10-26 00:59:16 - system - INFO - System - DETECTION_THREAD_ENDED: Detection-Camera-3: 3
+2025-10-26 00:59:32 - user_actions - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_3_BACKEND_OpenVINO: 
+2025-10-26 00:59:32 - system - INFO - System - THREAD_STARTED: Detection-Camera-3: 3
+2025-10-26 00:59:32 - system - INFO - System - LOADING_MODEL: Detection-Camera-3: 3
+2025-10-26 00:59:32 - system - INFO - System - MODEL_LOADED: Detection-Camera-3: 3
+2025-10-26 00:59:32 - system - INFO - System - CONNECTING_RTSP: Detection-Camera-3: 3
+2025-10-26 00:59:38 - system - INFO - System - RTSP_CONNECTED: Detection-Camera-3: 3
+2025-10-26 00:59:38 - system - INFO - System - DETECTION_LOOP_STARTING: Detection-Camera-3: 3
+2025-10-26 01:00:34 - system - INFO - System - OBJECT_CROSSED: Cam=3, ID=18, Count=1: 3
+2025-10-26 01:00:54 - system - INFO - System - STOPPING_DETECTION_REQUESTED: Camera ID: 3: 3
+2025-10-26 01:01:01 - errors - ERROR - DetectionService - NoneType: None - Thread Detection-Camera-3 não finalizou no timeout!
+NoneType: None
+2025-10-26 01:01:01 - system - INFO - System - DETECTION_STOPPED_CONFIRMED: Camera ID: 3: 3
+2025-10-26 01:01:01 - system - INFO - System - CLEANING_UP_THREAD: Detection-Camera-3: 3
+2025-10-26 01:01:01 - system - INFO - System - RTSP_RELEASED: Detection-Camera-3: 3
+2025-10-26 01:01:01 - system - INFO - System - DETECTION_THREAD_ENDED: Detection-Camera-3: 3
+2025-10-26 01:02:08 - user_actions - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_3_BACKEND_OpenVINO: 
+2025-10-26 01:02:08 - system - INFO - System - THREAD_STARTED: Detection-Camera-3: 3
+2025-10-26 01:02:08 - system - INFO - System - LOADING_MODEL: Detection-Camera-3: 3
+2025-10-26 01:02:08 - system - INFO - System - MODEL_LOADED: Detection-Camera-3: 3
+2025-10-26 01:02:08 - system - INFO - System - CONNECTING_RTSP: Detection-Camera-3: 3
+2025-10-26 01:02:15 - system - INFO - System - RTSP_CONNECTED: Detection-Camera-3: 3
+2025-10-26 01:02:15 - system - INFO - System - DETECTION_LOOP_STARTING: Detection-Camera-3: 3
+2025-10-26 01:07:45 - system - INFO - System - STOPPING_DETECTION_REQUESTED: Camera ID: 3: 3
+2025-10-26 01:07:52 - errors - ERROR - DetectionService - NoneType: None - Thread Detection-Camera-3 não finalizou no timeout!
+NoneType: None
+2025-10-26 01:07:52 - system - INFO - System - DETECTION_STOPPED_CONFIRMED: Camera ID: 3: 3
+2025-10-26 01:07:52 - errors - ERROR - AppController - TclError: invalid command name ".!cameraview3.!ctkframe.!ctkframe.!modernlabel.!label" - Erro no callback detection_update
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\controllers\app_controller.py", line 37, in trigger_ui_event
+    self.ui_callbacks[event](*args, **kwargs)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\screen_manager.py", line 245, in _on_detection_update
+    self.camera_windows[camera_id].update_video_frame(frame)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\camera_view.py", line 235, in update_video_frame
+    self.video_label.configure(image=None, text=error_text)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\customtkinter\windows\widgets\ctk_label.py", line 206, in configure
+    self._label.configure(text=self._text)
+  File "C:\Users\cchrr\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1722, in configure
+    return self._configure('configure', cnf, kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cchrr\AppData\Local\Programs\Python\Python312\Lib\tkinter\__init__.py", line 1712, in _configure
+    self.tk.call(_flatten((self._w, cmd)) + self._options(cnf))
+_tkinter.TclError: invalid command name ".!cameraview3.!ctkframe.!ctkframe.!modernlabel.!label"
+2025-10-26 01:07:52 - system - INFO - System - CLEANING_UP_THREAD: Detection-Camera-3: 3
+2025-10-26 01:07:52 - system - INFO - System - RTSP_RELEASED: Detection-Camera-3: 3
+2025-10-26 01:07:52 - system - INFO - System - DETECTION_THREAD_ENDED: Detection-Camera-3: 3
+2025-10-26 01:07:57 - system - INFO - System - APPLICATION_CLOSING: 
+2025-10-26 01:07:57 - system - INFO - System - APP_SHUTDOWN: 
+2025-10-26 01:07:57 - system - INFO - System - STOP_ALL_DETECTIONS: Nenhuma detecção ativa.: 
+2025-10-26 01:07:57 - user_actions - INFO - User 'gustavo' - LOGOUT: 
+2025-10-26 01:07:57 - system - INFO - System - APP_SHUTDOWN: 
+2025-10-26 01:07:57 - system - INFO - System - STOP_ALL_DETECTIONS: Nenhuma detecção ativa.: 
+2025-10-26 01:07:57 - system - INFO - System - APPLICATION_CLOSED: 
+2025-10-26 01:38:55 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-26 01:38:56 - system - INFO - System - DIRECTML_AVAILABLE: 
+2025-10-26 01:38:56 - system - INFO - System - APPLICATION_STARTUP: 
+2025-10-26 01:38:56 - system - INFO - System - DETECTION_SERVICE_INITIALIZED_BACKEND_OPENVINO: 
+2025-10-26 01:38:56 - system - INFO - System - REPORT_SERVICE_INITIALIZED: Directory=C:\Users\cchrr\Documents\GitHub\las_cam2\src\reports: 
+2025-10-26 01:38:56 - system - INFO - System - APP_CONTROLLER_INITIALIZED: 
+2025-10-26 01:38:56 - system - INFO - System - UI_CALLBACK_SET: login_success: 
+2025-10-26 01:38:56 - system - INFO - System - UI_CALLBACK_SET: login_failed: 
+2025-10-26 01:38:56 - system - INFO - System - UI_CALLBACK_SET: register_success: 
+2025-10-26 01:38:56 - system - INFO - System - UI_CALLBACK_SET: self_register_success: 
+2025-10-26 01:38:56 - system - INFO - System - UI_CALLBACK_SET: register_failed: 
+2025-10-26 01:38:56 - system - INFO - System - UI_CALLBACK_SET: logout_success: 
+2025-10-26 01:38:56 - system - INFO - System - UI_CALLBACK_SET: detection_starting: 
+2025-10-26 01:38:56 - system - INFO - System - UI_CALLBACK_SET: detection_started: 
+2025-10-26 01:38:56 - system - INFO - System - UI_CALLBACK_SET: detection_stopped: 
+2025-10-26 01:38:56 - system - INFO - System - UI_CALLBACK_SET: detection_failed: 
+2025-10-26 01:38:56 - system - INFO - System - UI_CALLBACK_SET: detection_update: 
+2025-10-26 01:38:56 - system - INFO - System - UI_CALLBACK_SET: count_reset: 
+2025-10-26 01:38:56 - system - INFO - System - UI_CALLBACK_SET: report_generated: 
+2025-10-26 01:38:56 - system - INFO - System - UI_CALLBACK_SET: report_failed: 
+2025-10-26 01:38:56 - system - INFO - System - UI_CALLBACK_SET: config_updated: 
+2025-10-26 01:38:56 - system - INFO - System - UI_CALLBACK_SET: camera_added: 
+2025-10-26 01:38:56 - system - INFO - System - UI_CALLBACK_SET: camera_removed: 
+2025-10-26 01:38:56 - system - INFO - System - UI_CALLBACK_SET: error: 
+2025-10-26 01:38:56 - system - INFO - System - APPLICATION_INITIALIZED: 
+2025-10-26 01:38:56 - system - INFO - System - APPLICATION_MAINLOOP_START: 
+2025-10-26 01:39:07 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-26 01:39:07 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-26 01:39:26 - user_actions - INFO - User 'gustavo' - START_DETECTION_REQUESTED: Cam=3, Type=Torta Normal: 
+2025-10-26 01:41:40 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=3: 3
+2025-10-26 01:41:40 - system - INFO - System - STOP_DETECTION_IGNORED: Nenhuma sessão ativa para Cam=3: 3
+2025-10-26 01:41:40 - system - INFO - System - APPLICATION_CLOSING: 
+2025-10-26 01:41:40 - system - INFO - System - APP_SHUTDOWN_REQUESTED: 
+2025-10-26 01:41:40 - system - INFO - System - STOP_ALL_DETECTIONS: Nenhuma detecção ativa.: 
+2025-10-26 01:41:40 - user_actions - INFO - User 'gustavo' - LOGOUT_REQUESTED: 
+2025-10-26 01:41:40 - system - INFO - System - STOP_ALL_DETECTIONS: Nenhuma detecção ativa.: 
+2025-10-26 01:41:40 - user_actions - INFO - User 'gustavo' - LOGOUT_COMPLETED: 
+2025-10-26 01:41:40 - system - INFO - System - APP_SHUTDOWN_COMPLETED: 
+2025-10-26 01:41:40 - system - INFO - System - APP_SHUTDOWN_REQUESTED: 
+2025-10-26 01:41:40 - system - INFO - System - STOP_ALL_DETECTIONS: Nenhuma detecção ativa.: 
+2025-10-26 01:41:40 - system - INFO - System - LOGOUT_ATTEMPT_WITHOUT_USER: 
+2025-10-26 01:41:40 - system - INFO - System - APP_SHUTDOWN_COMPLETED: 
+2025-10-26 01:41:41 - system - INFO - System - APPLICATION_CLOSED: 
+2025-10-26 01:41:49 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-26 01:41:49 - system - INFO - System - DIRECTML_AVAILABLE: 
+2025-10-26 01:41:49 - system - INFO - System - APPLICATION_STARTUP: 
+2025-10-26 01:41:49 - system - INFO - System - DETECTION_SERVICE_INITIALIZED_BACKEND_OPENVINO: 
+2025-10-26 01:41:49 - system - INFO - System - REPORT_SERVICE_INITIALIZED: Directory=C:\Users\cchrr\Documents\GitHub\las_cam2\src\reports: 
+2025-10-26 01:41:49 - system - INFO - System - APP_CONTROLLER_INITIALIZED: 
+2025-10-26 01:41:49 - system - INFO - System - UI_CALLBACK_SET: login_success: 
+2025-10-26 01:41:49 - system - INFO - System - UI_CALLBACK_SET: login_failed: 
+2025-10-26 01:41:49 - system - INFO - System - UI_CALLBACK_SET: register_success: 
+2025-10-26 01:41:49 - system - INFO - System - UI_CALLBACK_SET: self_register_success: 
+2025-10-26 01:41:49 - system - INFO - System - UI_CALLBACK_SET: register_failed: 
+2025-10-26 01:41:49 - system - INFO - System - UI_CALLBACK_SET: logout_success: 
+2025-10-26 01:41:49 - system - INFO - System - UI_CALLBACK_SET: detection_starting: 
+2025-10-26 01:41:49 - system - INFO - System - UI_CALLBACK_SET: detection_started: 
+2025-10-26 01:41:49 - system - INFO - System - UI_CALLBACK_SET: detection_stopped: 
+2025-10-26 01:41:49 - system - INFO - System - UI_CALLBACK_SET: detection_failed: 
+2025-10-26 01:41:49 - system - INFO - System - UI_CALLBACK_SET: detection_update: 
+2025-10-26 01:41:49 - system - INFO - System - UI_CALLBACK_SET: count_reset: 
+2025-10-26 01:41:49 - system - INFO - System - UI_CALLBACK_SET: report_generated: 
+2025-10-26 01:41:49 - system - INFO - System - UI_CALLBACK_SET: report_failed: 
+2025-10-26 01:41:49 - system - INFO - System - UI_CALLBACK_SET: config_updated: 
+2025-10-26 01:41:49 - system - INFO - System - UI_CALLBACK_SET: camera_added: 
+2025-10-26 01:41:49 - system - INFO - System - UI_CALLBACK_SET: camera_removed: 
+2025-10-26 01:41:49 - system - INFO - System - UI_CALLBACK_SET: error: 
+2025-10-26 01:41:49 - system - INFO - System - APPLICATION_INITIALIZED: 
+2025-10-26 01:41:49 - system - INFO - System - APPLICATION_MAINLOOP_START: 
+2025-10-26 01:42:01 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-26 01:42:01 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-26 01:42:07 - user_actions - INFO - User 'gustavo' - START_DETECTION_REQUESTED: Cam=3, Type=Torta Normal: 
+2025-10-26 01:49:20 - system - INFO - System - APPLICATION_INTERRUPTED: 
+2025-10-26 01:51:23 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-26 01:51:24 - system - INFO - System - DIRECTML_AVAILABLE: 
+2025-10-26 01:51:24 - system - INFO - System - APPLICATION_STARTUP: 
+2025-10-26 01:51:24 - system - INFO - System - APPLICATION_FATAL_ERROR: 'DetectionService' object has no attribute '_get_best_backend': 
+2025-10-26 01:54:37 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-26 01:54:38 - system - INFO - System - DIRECTML_AVAILABLE: 
+2025-10-26 01:54:38 - system - INFO - System - APPLICATION_STARTUP: 
+2025-10-26 01:54:38 - system - INFO - System - DETECTION_SERVICE_INITIALIZED_BACKEND_OPENVINO: 
+2025-10-26 01:54:38 - system - INFO - System - REPORT_SERVICE_INITIALIZED: Directory=C:\Users\cchrr\Documents\GitHub\las_cam2\src\reports: 
+2025-10-26 01:54:38 - system - INFO - System - APP_CONTROLLER_INITIALIZED: 
+2025-10-26 01:54:38 - system - INFO - System - UI_CALLBACK_SET: login_success: 
+2025-10-26 01:54:38 - system - INFO - System - UI_CALLBACK_SET: login_failed: 
+2025-10-26 01:54:38 - system - INFO - System - UI_CALLBACK_SET: register_success: 
+2025-10-26 01:54:38 - system - INFO - System - UI_CALLBACK_SET: self_register_success: 
+2025-10-26 01:54:38 - system - INFO - System - UI_CALLBACK_SET: register_failed: 
+2025-10-26 01:54:38 - system - INFO - System - UI_CALLBACK_SET: logout_success: 
+2025-10-26 01:54:38 - system - INFO - System - UI_CALLBACK_SET: detection_starting: 
+2025-10-26 01:54:38 - system - INFO - System - UI_CALLBACK_SET: detection_started: 
+2025-10-26 01:54:38 - system - INFO - System - UI_CALLBACK_SET: detection_stopped: 
+2025-10-26 01:54:38 - system - INFO - System - UI_CALLBACK_SET: detection_failed: 
+2025-10-26 01:54:38 - system - INFO - System - UI_CALLBACK_SET: detection_update: 
+2025-10-26 01:54:38 - system - INFO - System - UI_CALLBACK_SET: count_reset: 
+2025-10-26 01:54:38 - system - INFO - System - UI_CALLBACK_SET: report_generated: 
+2025-10-26 01:54:38 - system - INFO - System - UI_CALLBACK_SET: report_failed: 
+2025-10-26 01:54:38 - system - INFO - System - UI_CALLBACK_SET: config_updated: 
+2025-10-26 01:54:38 - system - INFO - System - UI_CALLBACK_SET: camera_added: 
+2025-10-26 01:54:38 - system - INFO - System - UI_CALLBACK_SET: camera_removed: 
+2025-10-26 01:54:38 - system - INFO - System - UI_CALLBACK_SET: error: 
+2025-10-26 01:54:38 - system - INFO - System - APPLICATION_INITIALIZED: 
+2025-10-26 01:54:38 - system - INFO - System - APPLICATION_MAINLOOP_START: 
+2025-10-26 01:54:47 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-26 01:54:47 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-26 01:54:51 - user_actions - INFO - User 'gustavo' - START_DETECTION_REQUESTED: Cam=3, Type=Torta Normal: 
+2025-10-26 01:54:51 - system - INFO - System - THREAD_STARTED: Detection-Cam-3: 3
+2025-10-26 01:54:51 - user_actions - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_3_TYPE_Torta Normal_BACKEND_OpenVINO: 
+2025-10-26 01:54:51 - system - INFO - System - LOADING_MODEL: Detection-Cam-3: 3
+2025-10-26 01:54:51 - system - INFO - System - MODEL_LOADED: Detection-Cam-3: 3
+2025-10-26 01:54:51 - system - INFO - System - CONNECTING_RTSP: Detection-Cam-3: 3
+2025-10-26 01:54:57 - system - INFO - System - RTSP_CONNECTED: Detection-Cam-3: 3
+2025-10-26 01:54:57 - errors - ERROR - AppController - ValueError: ['style'] are not supported arguments. Look at the documentation for supported arguments. - Erro fatal no callback da UI 'detection_started'
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\controllers\app_controller.py", line 46, in trigger_ui_event
+    callback(*args, **kwargs)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\screen_manager.py", line 317, in _on_detection_started
+    self.camera_windows[camera_id].update_detection_status(True)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\camera_view.py", line 168, in update_detection_status
+    self.detection_button.configure(text="Parar Detecção", state="normal", style="danger")
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\customtkinter\windows\widgets\ctk_button.py", line 442, in configure
+    super().configure(require_redraw=require_redraw, **kwargs)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\customtkinter\windows\widgets\core_widget_classes\ctk_base_class.py", line 133, in configure
+    check_kwargs_empty(kwargs, raise_error=True)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\customtkinter\windows\widgets\utility\utility_functions.py", line 18, in check_kwargs_empty
+    raise ValueError(f"{list(kwargs_dict.keys())} are not supported arguments. Look at the documentation for supported arguments.")
+ValueError: ['style'] are not supported arguments. Look at the documentation for supported arguments.
+2025-10-26 01:54:57 - system - INFO - System - DETECTION_LOOP_STARTING: Detection-Cam-3: 3
+2025-10-26 01:55:36 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=3: 3
+2025-10-26 01:55:36 - system - INFO - System - STOPPING_DETECTION_REQUESTED: Camera ID: 3: 3
+2025-10-26 01:55:43 - errors - ERROR - DetectionService - NoneType: None - Thread Detection-Cam-3 não finalizou no timeout!
+NoneType: None
+2025-10-26 01:55:43 - system - INFO - System - DETECTION_STOPPED_CONFIRMED: Camera ID: 3: 3
+2025-10-26 01:55:44 - system - INFO - System - CLEANING_UP_THREAD: Detection-Cam-3: 3
+2025-10-26 01:55:44 - system - INFO - System - RTSP_RELEASED: Detection-Cam-3: 3
+2025-10-26 01:55:44 - system - INFO - System - DETECTION_THREAD_ENDED: Detection-Cam-3: 3
+2025-10-26 01:55:56 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=3: 3
+2025-10-26 01:55:56 - system - INFO - System - STOP_DETECTION_IGNORED: Nenhuma sessão ativa encontrada para Cam=3: 3
+2025-10-26 01:55:59 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=3: 3
+2025-10-26 01:55:59 - system - INFO - System - STOP_DETECTION_IGNORED: Nenhuma sessão ativa encontrada para Cam=3: 3
+2025-10-26 01:56:15 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=3: 3
+2025-10-26 01:56:15 - system - INFO - System - STOP_DETECTION_IGNORED: Nenhuma sessão ativa encontrada para Cam=3: 3
+2025-10-26 01:56:26 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=3: 3
+2025-10-26 01:56:26 - system - INFO - System - STOP_DETECTION_IGNORED: Nenhuma sessão ativa encontrada para Cam=3: 3
+2025-10-26 01:56:27 - system - INFO - System - APPLICATION_CLOSING: 
+2025-10-26 01:56:27 - system - INFO - System - APP_SHUTDOWN_REQUESTED: 
+2025-10-26 01:56:27 - system - INFO - System - STOP_ALL_DETECTIONS: Nenhuma detecção ativa.: 
+2025-10-26 01:56:27 - user_actions - INFO - User 'gustavo' - LOGOUT_REQUESTED: 
+2025-10-26 01:56:27 - system - INFO - System - STOP_ALL_DETECTIONS: Nenhuma detecção ativa.: 
+2025-10-26 01:56:27 - user_actions - INFO - User 'gustavo' - LOGOUT_COMPLETED: 
+2025-10-26 01:56:27 - system - INFO - System - APP_SHUTDOWN_COMPLETED: 
+2025-10-26 01:56:27 - system - INFO - System - APP_SHUTDOWN_REQUESTED: 
+2025-10-26 01:56:27 - system - INFO - System - STOP_ALL_DETECTIONS: Nenhuma detecção ativa.: 
+2025-10-26 01:56:27 - system - INFO - System - LOGOUT_ATTEMPT_WITHOUT_USER: 
+2025-10-26 01:56:27 - system - INFO - System - APP_SHUTDOWN_COMPLETED: 
+2025-10-26 01:56:27 - system - INFO - System - APPLICATION_CLOSED: 
+2025-10-26 02:03:21 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-26 02:03:21 - system - INFO - System - DIRECTML_AVAILABLE: 
+2025-10-26 02:03:21 - system - INFO - System - APPLICATION_STARTUP: 
+2025-10-26 02:03:21 - system - INFO - System - DETECTION_SERVICE_INITIALIZED_BACKEND_OPENVINO: 
+2025-10-26 02:03:21 - system - INFO - System - REPORT_SERVICE_INITIALIZED: Directory=C:\Users\cchrr\Documents\GitHub\las_cam2\src\reports: 
+2025-10-26 02:03:21 - system - INFO - System - APP_CONTROLLER_INITIALIZED: 
+2025-10-26 02:03:21 - system - INFO - System - UI_CALLBACK_SET: login_success: 
+2025-10-26 02:03:21 - system - INFO - System - UI_CALLBACK_SET: login_failed: 
+2025-10-26 02:03:21 - system - INFO - System - UI_CALLBACK_SET: register_success: 
+2025-10-26 02:03:21 - system - INFO - System - UI_CALLBACK_SET: self_register_success: 
+2025-10-26 02:03:21 - system - INFO - System - UI_CALLBACK_SET: register_failed: 
+2025-10-26 02:03:21 - system - INFO - System - UI_CALLBACK_SET: logout_success: 
+2025-10-26 02:03:21 - system - INFO - System - UI_CALLBACK_SET: detection_starting: 
+2025-10-26 02:03:21 - system - INFO - System - UI_CALLBACK_SET: detection_started: 
+2025-10-26 02:03:21 - system - INFO - System - UI_CALLBACK_SET: detection_stopped: 
+2025-10-26 02:03:21 - system - INFO - System - UI_CALLBACK_SET: detection_failed: 
+2025-10-26 02:03:21 - system - INFO - System - UI_CALLBACK_SET: detection_update: 
+2025-10-26 02:03:21 - system - INFO - System - UI_CALLBACK_SET: count_reset: 
+2025-10-26 02:03:21 - system - INFO - System - UI_CALLBACK_SET: report_generated: 
+2025-10-26 02:03:21 - system - INFO - System - UI_CALLBACK_SET: report_failed: 
+2025-10-26 02:03:21 - system - INFO - System - UI_CALLBACK_SET: config_updated: 
+2025-10-26 02:03:21 - system - INFO - System - UI_CALLBACK_SET: camera_added: 
+2025-10-26 02:03:21 - system - INFO - System - UI_CALLBACK_SET: camera_removed: 
+2025-10-26 02:03:21 - system - INFO - System - UI_CALLBACK_SET: error: 
+2025-10-26 02:03:22 - system - INFO - System - APPLICATION_INITIALIZED: 
+2025-10-26 02:03:22 - system - INFO - System - APPLICATION_MAINLOOP_START: 
+2025-10-26 02:03:29 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-26 02:03:29 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-26 02:03:55 - user_actions - INFO - User 'gustavo' - START_DETECTION_REQUESTED: Cam=3, Type=Torta Normal: 
+2025-10-26 02:03:55 - system - INFO - System - THREAD_STARTED: Detection-Cam-3: 3
+2025-10-26 02:03:55 - user_actions - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_3_TYPE_Torta Normal_BACKEND_DirectML: 
+2025-10-26 02:03:55 - system - INFO - System - LOADING_MODEL: Detection-Cam-3: 3
+2025-10-26 02:03:55 - system - INFO - System - MODEL_LOADED: Detection-Cam-3: 3
+2025-10-26 02:03:55 - system - INFO - System - CONNECTING_RTSP: Detection-Cam-3: 3
+2025-10-26 02:04:01 - system - INFO - System - RTSP_CONNECTED: Detection-Cam-3: 3
+2025-10-26 02:04:01 - errors - ERROR - AppController - ValueError: ['style'] are not supported arguments. Look at the documentation for supported arguments. - Erro fatal no callback da UI 'detection_started'
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\controllers\app_controller.py", line 46, in trigger_ui_event
+    callback(*args, **kwargs)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\screen_manager.py", line 317, in _on_detection_started
+    self.camera_windows[camera_id].update_detection_status(True)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\camera_view.py", line 168, in update_detection_status
+    self.detection_button.configure(text="Parar Detecção", state="normal", style="danger")
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\customtkinter\windows\widgets\ctk_button.py", line 442, in configure
+    super().configure(require_redraw=require_redraw, **kwargs)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\customtkinter\windows\widgets\core_widget_classes\ctk_base_class.py", line 133, in configure
+    check_kwargs_empty(kwargs, raise_error=True)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\customtkinter\windows\widgets\utility\utility_functions.py", line 18, in check_kwargs_empty
+    raise ValueError(f"{list(kwargs_dict.keys())} are not supported arguments. Look at the documentation for supported arguments.")
+ValueError: ['style'] are not supported arguments. Look at the documentation for supported arguments.
+2025-10-26 02:04:01 - system - INFO - System - DETECTION_LOOP_STARTING: Detection-Cam-3: 3
+2025-10-26 02:04:10 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=3: 3
+2025-10-26 02:04:29 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=3: 3
+2025-10-26 02:04:34 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=3: 3
+2025-10-26 02:06:08 - system - INFO - System - APPLICATION_INTERRUPTED: 
+2025-10-26 02:09:27 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-26 02:09:27 - system - INFO - System - DIRECTML_AVAILABLE: 
+2025-10-26 02:09:27 - system - INFO - System - APPLICATION_STARTUP: 
+2025-10-26 02:09:28 - system - INFO - System - DETECTION_SERVICE_INITIALIZED_BACKEND_DIRECTML: 
+2025-10-26 02:09:28 - system - INFO - System - REPORT_SERVICE_INITIALIZED: Directory=C:\Users\cchrr\Documents\GitHub\las_cam2\src\reports: 
+2025-10-26 02:09:28 - system - INFO - System - APP_CONTROLLER_INITIALIZED: 
+2025-10-26 02:09:28 - system - INFO - System - UI_CALLBACK_SET: login_success: 
+2025-10-26 02:09:28 - system - INFO - System - UI_CALLBACK_SET: login_failed: 
+2025-10-26 02:09:28 - system - INFO - System - UI_CALLBACK_SET: register_success: 
+2025-10-26 02:09:28 - system - INFO - System - UI_CALLBACK_SET: self_register_success: 
+2025-10-26 02:09:28 - system - INFO - System - UI_CALLBACK_SET: register_failed: 
+2025-10-26 02:09:28 - system - INFO - System - UI_CALLBACK_SET: logout_success: 
+2025-10-26 02:09:28 - system - INFO - System - UI_CALLBACK_SET: detection_starting: 
+2025-10-26 02:09:28 - system - INFO - System - UI_CALLBACK_SET: detection_started: 
+2025-10-26 02:09:28 - system - INFO - System - UI_CALLBACK_SET: detection_stopped: 
+2025-10-26 02:09:28 - system - INFO - System - UI_CALLBACK_SET: detection_failed: 
+2025-10-26 02:09:28 - system - INFO - System - UI_CALLBACK_SET: detection_update: 
+2025-10-26 02:09:28 - system - INFO - System - UI_CALLBACK_SET: count_reset: 
+2025-10-26 02:09:28 - system - INFO - System - UI_CALLBACK_SET: report_generated: 
+2025-10-26 02:09:28 - system - INFO - System - UI_CALLBACK_SET: report_failed: 
+2025-10-26 02:09:28 - system - INFO - System - UI_CALLBACK_SET: config_updated: 
+2025-10-26 02:09:28 - system - INFO - System - UI_CALLBACK_SET: camera_added: 
+2025-10-26 02:09:28 - system - INFO - System - UI_CALLBACK_SET: camera_removed: 
+2025-10-26 02:09:28 - system - INFO - System - UI_CALLBACK_SET: error: 
+2025-10-26 02:09:28 - system - INFO - System - APPLICATION_INITIALIZED: 
+2025-10-26 02:09:28 - system - INFO - System - APPLICATION_MAINLOOP_START: 
+2025-10-26 02:09:35 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-26 02:09:35 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-26 02:09:41 - user_actions - INFO - User 'gustavo' - START_DETECTION_REQUESTED: Cam=3, Type=Torta Normal: 
+2025-10-26 02:09:41 - system - INFO - System - THREAD_STARTED: Detection-Cam-3: 3
+2025-10-26 02:09:41 - user_actions - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_3_TYPE_Torta Normal_BACKEND_DirectML: 
+2025-10-26 02:09:41 - system - INFO - System - LOADING_MODEL: Detection-Cam-3: 3
+2025-10-26 02:09:41 - system - INFO - System - MODEL_LOADED: Detection-Cam-3: 3
+2025-10-26 02:09:41 - system - INFO - System - CONNECTING_RTSP: Detection-Cam-3: 3
+2025-10-26 02:09:48 - system - INFO - System - RTSP_CONNECTED: Detection-Cam-3: 3
+2025-10-26 02:09:48 - errors - ERROR - AppController - ValueError: ['style'] are not supported arguments. Look at the documentation for supported arguments. - Erro fatal no callback da UI 'detection_started'
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\controllers\app_controller.py", line 46, in trigger_ui_event
+    callback(*args, **kwargs)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\screen_manager.py", line 317, in _on_detection_started
+    self.camera_windows[camera_id].update_detection_status(True)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\camera_view.py", line 168, in update_detection_status
+    self.detection_button.configure(text="Parar Detecção", state="normal", style="danger")
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\customtkinter\windows\widgets\ctk_button.py", line 442, in configure
+    super().configure(require_redraw=require_redraw, **kwargs)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\customtkinter\windows\widgets\core_widget_classes\ctk_base_class.py", line 133, in configure
+    check_kwargs_empty(kwargs, raise_error=True)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\customtkinter\windows\widgets\utility\utility_functions.py", line 18, in check_kwargs_empty
+    raise ValueError(f"{list(kwargs_dict.keys())} are not supported arguments. Look at the documentation for supported arguments.")
+ValueError: ['style'] are not supported arguments. Look at the documentation for supported arguments.
+2025-10-26 02:09:48 - system - INFO - System - DETECTION_LOOP_STARTING: Detection-Cam-3: 3
+2025-10-26 02:09:52 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=3: 3
+2025-10-26 02:10:15 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=3: 3
+2025-10-26 02:19:46 - system - INFO - System - APPLICATION_INTERRUPTED: 
+2025-10-26 02:19:55 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-26 02:19:55 - system - INFO - System - DIRECTML_AVAILABLE: 
+2025-10-26 02:19:55 - system - INFO - System - APPLICATION_STARTUP: 
+2025-10-26 02:19:55 - system - INFO - System - APPLICATION_FATAL_ERROR: DetectionService.__init__() got an unexpected keyword argument 'trigger_ui_event_func': 
+2025-10-26 02:23:18 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-26 02:23:18 - system - INFO - System - DIRECTML_AVAILABLE: 
+2025-10-26 02:23:18 - system - INFO - System - APPLICATION_STARTUP: 
+2025-10-26 02:23:18 - system - INFO - System - DETECTION_SERVICE_INITIALIZED_BACKEND_DIRECTML: 
+2025-10-26 02:23:18 - system - INFO - System - REPORT_SERVICE_INITIALIZED: Directory=C:\Users\cchrr\Documents\GitHub\las_cam2\src\reports: 
+2025-10-26 02:23:18 - system - INFO - System - APP_CONTROLLER_INITIALIZED: 
+2025-10-26 02:23:18 - system - INFO - System - UI_CALLBACK_SET: login_success: 
+2025-10-26 02:23:18 - system - INFO - System - UI_CALLBACK_SET: login_failed: 
+2025-10-26 02:23:18 - system - INFO - System - UI_CALLBACK_SET: register_success: 
+2025-10-26 02:23:18 - system - INFO - System - UI_CALLBACK_SET: self_register_success: 
+2025-10-26 02:23:18 - system - INFO - System - UI_CALLBACK_SET: register_failed: 
+2025-10-26 02:23:18 - system - INFO - System - UI_CALLBACK_SET: logout_success: 
+2025-10-26 02:23:18 - system - INFO - System - UI_CALLBACK_SET: detection_starting: 
+2025-10-26 02:23:18 - system - INFO - System - UI_CALLBACK_SET: detection_started: 
+2025-10-26 02:23:18 - system - INFO - System - UI_CALLBACK_SET: detection_stopped: 
+2025-10-26 02:23:18 - system - INFO - System - UI_CALLBACK_SET: detection_failed: 
+2025-10-26 02:23:18 - system - INFO - System - UI_CALLBACK_SET: detection_update: 
+2025-10-26 02:23:18 - system - INFO - System - UI_CALLBACK_SET: count_reset: 
+2025-10-26 02:23:18 - system - INFO - System - UI_CALLBACK_SET: report_generated: 
+2025-10-26 02:23:18 - system - INFO - System - UI_CALLBACK_SET: report_failed: 
+2025-10-26 02:23:18 - system - INFO - System - UI_CALLBACK_SET: config_updated: 
+2025-10-26 02:23:18 - system - INFO - System - UI_CALLBACK_SET: camera_added: 
+2025-10-26 02:23:18 - system - INFO - System - UI_CALLBACK_SET: camera_removed: 
+2025-10-26 02:23:18 - system - INFO - System - UI_CALLBACK_SET: error: 
+2025-10-26 02:23:19 - system - INFO - System - APPLICATION_INITIALIZED: 
+2025-10-26 02:23:19 - system - INFO - System - APPLICATION_MAINLOOP_START: 
+2025-10-26 02:23:26 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-26 02:23:26 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-26 02:23:34 - user_actions - INFO - User 'gustavo' - START_DETECTION_REQUESTED: Cam=3, Type=Torta Normal: 
+2025-10-26 02:23:34 - user_actions - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_3_TYPE_Torta Normal_BACKEND_DirectML: 
+2025-10-26 02:24:07 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=3: 3
+2025-10-26 02:24:13 - errors - ERROR - DetectionService - NoneType: None - Thread da câmera 3 não finalizou no timeout
+NoneType: None
+2025-10-26 02:24:13 - system - INFO - System - DETECTION_STOPPED_CAMERA_3: 
+2025-10-26 02:24:13 - system - INFO - System - SESSION_ENDED: Cam=3, Count=0, Duration=0:00:38.335426: 3
+2025-10-26 02:24:13 - system - INFO - System - SKIPPING_REPORT_NO_COUNT: Cam=3: 3
+2025-10-26 02:24:38 - user_actions - INFO - User 'gustavo' - START_DETECTION_REQUESTED: Cam=3, Type=Torta Normal: 
+2025-10-26 02:24:38 - user_actions - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_3_TYPE_Torta Normal_BACKEND_DirectML: 
+2025-10-26 02:24:56 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=3: 3
+2025-10-26 02:25:01 - errors - ERROR - DetectionService - NoneType: None - Thread da câmera 3 não finalizou no timeout
+NoneType: None
+2025-10-26 02:25:01 - system - INFO - System - DETECTION_STOPPED_CAMERA_3: 
+2025-10-26 02:25:01 - system - INFO - System - SESSION_ENDED: Cam=3, Count=0, Duration=0:00:23.566167: 3
+2025-10-26 02:25:01 - system - INFO - System - SKIPPING_REPORT_NO_COUNT: Cam=3: 3
+2025-10-26 02:29:37 - system - INFO - System - APPLICATION_INTERRUPTED: 
+2025-10-26 02:29:47 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-26 02:29:47 - system - INFO - System - DIRECTML_AVAILABLE: 
+2025-10-26 02:29:47 - system - INFO - System - APPLICATION_STARTUP: 
+2025-10-26 02:29:47 - system - INFO - System - DETECTION_SERVICE_INITIALIZED_BACKEND_OPENVINO: 
+2025-10-26 02:29:47 - system - INFO - System - REPORT_SERVICE_INITIALIZED: Directory=C:\Users\cchrr\Documents\GitHub\las_cam2\src\reports: 
+2025-10-26 02:29:47 - system - INFO - System - APP_CONTROLLER_INITIALIZED: 
+2025-10-26 02:29:47 - system - INFO - System - UI_CALLBACK_SET: login_success: 
+2025-10-26 02:29:47 - system - INFO - System - UI_CALLBACK_SET: login_failed: 
+2025-10-26 02:29:47 - system - INFO - System - UI_CALLBACK_SET: register_success: 
+2025-10-26 02:29:47 - system - INFO - System - UI_CALLBACK_SET: self_register_success: 
+2025-10-26 02:29:47 - system - INFO - System - UI_CALLBACK_SET: register_failed: 
+2025-10-26 02:29:47 - system - INFO - System - UI_CALLBACK_SET: logout_success: 
+2025-10-26 02:29:47 - system - INFO - System - UI_CALLBACK_SET: detection_starting: 
+2025-10-26 02:29:47 - system - INFO - System - UI_CALLBACK_SET: detection_started: 
+2025-10-26 02:29:47 - system - INFO - System - UI_CALLBACK_SET: detection_stopped: 
+2025-10-26 02:29:47 - system - INFO - System - UI_CALLBACK_SET: detection_failed: 
+2025-10-26 02:29:47 - system - INFO - System - UI_CALLBACK_SET: detection_update: 
+2025-10-26 02:29:47 - system - INFO - System - UI_CALLBACK_SET: count_reset: 
+2025-10-26 02:29:47 - system - INFO - System - UI_CALLBACK_SET: report_generated: 
+2025-10-26 02:29:47 - system - INFO - System - UI_CALLBACK_SET: report_failed: 
+2025-10-26 02:29:47 - system - INFO - System - UI_CALLBACK_SET: config_updated: 
+2025-10-26 02:29:47 - system - INFO - System - UI_CALLBACK_SET: camera_added: 
+2025-10-26 02:29:47 - system - INFO - System - UI_CALLBACK_SET: camera_removed: 
+2025-10-26 02:29:47 - system - INFO - System - UI_CALLBACK_SET: error: 
+2025-10-26 02:29:47 - system - INFO - System - APPLICATION_INITIALIZED: 
+2025-10-26 02:29:47 - system - INFO - System - APPLICATION_MAINLOOP_START: 
+2025-10-26 02:30:02 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-26 02:30:02 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-26 02:30:06 - user_actions - INFO - User 'gustavo' - START_DETECTION_REQUESTED: Cam=3, Type=Torta Normal: 
+2025-10-26 02:30:06 - user_actions - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_3_TYPE_Torta Normal_BACKEND_OpenVINO: 
+2025-10-26 02:30:52 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=3: 3
+2025-10-26 02:30:57 - errors - ERROR - DetectionService - NoneType: None - Thread da câmera 3 não finalizou no timeout
+NoneType: None
+2025-10-26 02:30:57 - system - INFO - System - DETECTION_STOPPED_CAMERA_3: 
+2025-10-26 02:30:57 - system - INFO - System - SESSION_ENDED: Cam=3, Count=0, Duration=0:00:50.389652: 3
+2025-10-26 02:30:57 - system - INFO - System - SKIPPING_REPORT_NO_COUNT: Cam=3: 3
+2025-10-26 02:31:08 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=3: 3
+2025-10-26 02:31:08 - system - INFO - System - STOP_DETECTION_IGNORED: Nenhuma sessão ativa encontrada para Cam=3: 3
+2025-10-26 02:37:58 - system - INFO - System - APPLICATION_INTERRUPTED: 
+2025-10-26 02:41:40 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-26 02:41:40 - system - INFO - System - DIRECTML_AVAILABLE: 
+2025-10-26 02:41:40 - system - INFO - System - APPLICATION_STARTUP: 
+2025-10-26 02:41:41 - system - INFO - System - DETECTION_SERVICE_INITIALIZED_BACKEND_OPENVINO: 
+2025-10-26 02:41:41 - system - INFO - System - REPORT_SERVICE_INITIALIZED: Directory=C:\Users\cchrr\Documents\GitHub\las_cam2\src\reports: 
+2025-10-26 02:41:41 - system - INFO - System - APP_CONTROLLER_INITIALIZED: 
+2025-10-26 02:41:41 - system - INFO - System - UI_CALLBACK_SET: login_success: 
+2025-10-26 02:41:41 - system - INFO - System - UI_CALLBACK_SET: login_failed: 
+2025-10-26 02:41:41 - system - INFO - System - UI_CALLBACK_SET: register_success: 
+2025-10-26 02:41:41 - system - INFO - System - UI_CALLBACK_SET: self_register_success: 
+2025-10-26 02:41:41 - system - INFO - System - UI_CALLBACK_SET: register_failed: 
+2025-10-26 02:41:41 - system - INFO - System - UI_CALLBACK_SET: logout_success: 
+2025-10-26 02:41:41 - system - INFO - System - UI_CALLBACK_SET: detection_starting: 
+2025-10-26 02:41:41 - system - INFO - System - UI_CALLBACK_SET: detection_started: 
+2025-10-26 02:41:41 - system - INFO - System - UI_CALLBACK_SET: detection_stopped: 
+2025-10-26 02:41:41 - system - INFO - System - UI_CALLBACK_SET: detection_failed: 
+2025-10-26 02:41:41 - system - INFO - System - UI_CALLBACK_SET: detection_update: 
+2025-10-26 02:41:41 - system - INFO - System - UI_CALLBACK_SET: count_reset: 
+2025-10-26 02:41:41 - system - INFO - System - UI_CALLBACK_SET: report_generated: 
+2025-10-26 02:41:41 - system - INFO - System - UI_CALLBACK_SET: report_failed: 
+2025-10-26 02:41:41 - system - INFO - System - UI_CALLBACK_SET: config_updated: 
+2025-10-26 02:41:41 - system - INFO - System - UI_CALLBACK_SET: camera_added: 
+2025-10-26 02:41:41 - system - INFO - System - UI_CALLBACK_SET: camera_removed: 
+2025-10-26 02:41:41 - system - INFO - System - UI_CALLBACK_SET: error: 
+2025-10-26 02:41:41 - system - INFO - System - APPLICATION_INITIALIZED: 
+2025-10-26 02:41:41 - system - INFO - System - APPLICATION_MAINLOOP_START: 
+2025-10-26 02:41:50 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-26 02:41:50 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-26 02:42:10 - user_actions - INFO - User 'gustavo' - START_DETECTION_REQUESTED: Cam=3, Type=Torta Normal: 
+2025-10-26 02:42:10 - system - INFO - System - THREAD_STARTED: Detection-Cam-3: 3
+2025-10-26 02:42:10 - user_actions - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_3_TYPE_Torta Normal_BACKEND_DirectML: 
+2025-10-26 02:42:10 - system - INFO - System - LOADING_MODEL: Detection-Cam-3: 3
+2025-10-26 02:42:10 - system - INFO - System - MODEL_LOADED: Detection-Cam-3: 3
+2025-10-26 02:42:10 - system - INFO - System - CONNECTING_RTSP: Detection-Cam-3: 3
+2025-10-26 02:42:16 - system - INFO - System - RTSP_CONNECTED: Detection-Cam-3: 3
+2025-10-26 02:42:17 - system - INFO - System - DETECTION_LOOP_STARTING: Detection-Cam-3: 3
+2025-10-26 02:42:44 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=3: 3
+2025-10-26 02:42:44 - system - INFO - System - STOPPING_DETECTION_REQUESTED: Camera ID: 3: 3
+2025-10-26 02:42:44 - system - INFO - System - CLEANING_UP_THREAD: Detection-Cam-3: 3
+2025-10-26 02:42:44 - system - INFO - System - RTSP_RELEASED: Detection-Cam-3: 3
+2025-10-26 02:42:44 - system - INFO - System - DETECTION_THREAD_ENDED: Detection-Cam-3: 3
+2025-10-26 02:42:44 - system - INFO - System - DETECTION_STOPPED_CONFIRMED: Camera ID: 3: 3
+2025-10-26 02:42:44 - system - INFO - System - SESSION_ENDED: Cam=3, Count=0, Duration=0:00:34.448856: 3
+2025-10-26 02:42:44 - system - INFO - System - SKIPPING_REPORT_NO_COUNT: Cam=3: 3
+2025-10-26 02:43:20 - user_actions - INFO - User 'gustavo' - START_DETECTION_REQUESTED: Cam=3, Type=Torta Normal: 
+2025-10-26 02:43:20 - system - INFO - System - THREAD_STARTED: Detection-Cam-3: 3
+2025-10-26 02:43:20 - user_actions - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_3_TYPE_Torta Normal_BACKEND_OpenVINO: 
+2025-10-26 02:43:20 - system - INFO - System - LOADING_MODEL: Detection-Cam-3: 3
+2025-10-26 02:43:20 - system - INFO - System - MODEL_LOADED: Detection-Cam-3: 3
+2025-10-26 02:43:20 - system - INFO - System - CONNECTING_RTSP: Detection-Cam-3: 3
+2025-10-26 02:43:26 - system - INFO - System - RTSP_CONNECTED: Detection-Cam-3: 3
+2025-10-26 02:43:26 - system - INFO - System - DETECTION_LOOP_STARTING: Detection-Cam-3: 3
+2025-10-26 02:43:50 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=3: 3
+2025-10-26 02:43:50 - system - INFO - System - STOPPING_DETECTION_REQUESTED: Camera ID: 3: 3
+2025-10-26 02:43:50 - system - INFO - System - CLEANING_UP_THREAD: Detection-Cam-3: 3
+2025-10-26 02:43:50 - system - INFO - System - RTSP_RELEASED: Detection-Cam-3: 3
+2025-10-26 02:43:50 - system - INFO - System - DETECTION_THREAD_ENDED: Detection-Cam-3: 3
+2025-10-26 02:43:50 - system - INFO - System - DETECTION_STOPPED_CONFIRMED: Camera ID: 3: 3
+2025-10-26 02:43:50 - system - INFO - System - SESSION_ENDED: Cam=3, Count=0, Duration=0:00:30.525289: 3
+2025-10-26 02:43:50 - system - INFO - System - SKIPPING_REPORT_NO_COUNT: Cam=3: 3
+2025-10-26 02:44:10 - user_actions - INFO - User 'gustavo' - START_DETECTION_REQUESTED: Cam=3, Type=Torta Normal: 
+2025-10-26 02:44:10 - system - INFO - System - THREAD_STARTED: Detection-Cam-3: 3
+2025-10-26 02:44:10 - user_actions - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_3_TYPE_Torta Normal_BACKEND_CPU: 
+2025-10-26 02:44:10 - system - INFO - System - LOADING_MODEL: Detection-Cam-3: 3
+2025-10-26 02:44:10 - system - INFO - System - MODEL_LOADED: Detection-Cam-3: 3
+2025-10-26 02:44:10 - system - INFO - System - CONNECTING_RTSP: Detection-Cam-3: 3
+2025-10-26 02:44:16 - system - INFO - System - RTSP_CONNECTED: Detection-Cam-3: 3
+2025-10-26 02:44:16 - system - INFO - System - DETECTION_LOOP_STARTING: Detection-Cam-3: 3
+2025-10-26 02:44:58 - system - INFO - System - OBJECT_CROSSED: Cam=3, ID=8, Count=1: 3
+2025-10-26 02:45:37 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=3: 3
+2025-10-26 02:45:37 - system - INFO - System - STOPPING_DETECTION_REQUESTED: Camera ID: 3: 3
+2025-10-26 02:45:37 - system - INFO - System - CLEANING_UP_THREAD: Detection-Cam-3: 3
+2025-10-26 02:45:37 - system - INFO - System - RTSP_RELEASED: Detection-Cam-3: 3
+2025-10-26 02:45:37 - system - INFO - System - DETECTION_THREAD_ENDED: Detection-Cam-3: 3
+2025-10-26 02:45:37 - system - INFO - System - DETECTION_STOPPED_CONFIRMED: Camera ID: 3: 3
+2025-10-26 02:45:37 - system - INFO - System - SESSION_ENDED: Cam=3, Count=1, Duration=0:01:27.252014: 3
+2025-10-26 02:45:37 - system - INFO - System - GENERATING_DAILY_REPORT: Cam=3: 3
+2025-10-26 02:45:37 - system - INFO - System - GENERATING_ENHANCED_REPORT: reports\Relatorio_Nova_Câmera_3_20251026_024410.pdf: 
+2025-10-26 02:45:37 - system - INFO - System - ENHANCED_REPORT_GENERATED: reports\Relatorio_Nova_Câmera_3_20251026_024410.pdf: 
+2025-10-26 02:45:37 - system - INFO - System - REPORT_GENERATED: reports\Relatorio_Nova_Câmera_3_20251026_024410.pdf: 3
+2025-10-26 02:46:28 - user_actions - INFO - User 'gustavo' - START_DETECTION_REQUESTED: Cam=3, Type=Torta Moída: 
+2025-10-26 02:46:28 - system - INFO - System - THREAD_STARTED: Detection-Cam-3: 3
+2025-10-26 02:46:28 - user_actions - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_3_TYPE_Torta Moída_BACKEND_DirectML: 
+2025-10-26 02:46:28 - system - INFO - System - LOADING_MODEL: Detection-Cam-3: 3
+2025-10-26 02:46:28 - system - INFO - System - MODEL_LOADED: Detection-Cam-3: 3
+2025-10-26 02:46:28 - system - INFO - System - CONNECTING_RTSP: Detection-Cam-3: 3
+2025-10-26 02:46:35 - system - INFO - System - RTSP_CONNECTED: Detection-Cam-3: 3
+2025-10-26 02:46:35 - system - INFO - System - DETECTION_LOOP_STARTING: Detection-Cam-3: 3
+2025-10-26 02:46:42 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=3: 3
+2025-10-26 02:46:42 - system - INFO - System - STOPPING_DETECTION_REQUESTED: Camera ID: 3: 3
+2025-10-26 02:46:49 - errors - ERROR - DetectionService - NoneType: None - Thread Detection-Cam-3 não finalizou no timeout!
+NoneType: None
+2025-10-26 02:46:49 - system - INFO - System - DETECTION_STOPPED_CONFIRMED: Camera ID: 3: 3
+2025-10-26 02:46:49 - system - INFO - System - CLEANING_UP_THREAD: Detection-Cam-3: 3
+2025-10-26 02:46:49 - system - INFO - System - RTSP_RELEASED: Detection-Cam-3: 3
+2025-10-26 02:46:49 - system - INFO - System - DETECTION_THREAD_ENDED: Detection-Cam-3: 3
+2025-10-26 02:46:52 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=3: 3
+2025-10-26 02:46:52 - system - INFO - System - STOP_DETECTION_IGNORED: Nenhuma sessão ativa encontrada para Cam=3: 3
+2025-10-26 02:47:04 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=3: 3
+2025-10-26 02:47:04 - system - INFO - System - STOP_DETECTION_IGNORED: Nenhuma sessão ativa encontrada para Cam=3: 3
+2025-10-26 02:47:04 - system - INFO - System - APPLICATION_CLOSING: 
+2025-10-26 02:47:04 - system - INFO - System - APP_SHUTDOWN_REQUESTED: 
+2025-10-26 02:47:04 - system - INFO - System - STOP_ALL_DETECTIONS: Nenhuma detecção ativa.: 
+2025-10-26 02:47:04 - user_actions - INFO - User 'gustavo' - LOGOUT_REQUESTED: 
+2025-10-26 02:47:04 - system - INFO - System - STOP_ALL_DETECTIONS: Nenhuma detecção ativa.: 
+2025-10-26 02:47:04 - user_actions - INFO - User 'gustavo' - LOGOUT_COMPLETED: 
+2025-10-26 02:47:04 - system - INFO - System - APP_SHUTDOWN_COMPLETED: 
+2025-10-26 02:47:04 - system - INFO - System - APP_SHUTDOWN_REQUESTED: 
+2025-10-26 02:47:04 - system - INFO - System - STOP_ALL_DETECTIONS: Nenhuma detecção ativa.: 
+2025-10-26 02:47:04 - system - INFO - System - LOGOUT_ATTEMPT_WITHOUT_USER: 
+2025-10-26 02:47:04 - system - INFO - System - APP_SHUTDOWN_COMPLETED: 
+2025-10-26 02:47:04 - system - INFO - System - APPLICATION_CLOSED: 
+2025-10-26 02:47:26 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-26 02:47:27 - system - INFO - System - DIRECTML_AVAILABLE: 
+2025-10-26 02:47:27 - system - INFO - System - APPLICATION_STARTUP: 
+2025-10-26 02:47:27 - system - INFO - System - DETECTION_SERVICE_INITIALIZED_BACKEND_DIRECTML: 
+2025-10-26 02:47:27 - system - INFO - System - REPORT_SERVICE_INITIALIZED: Directory=C:\Users\cchrr\Documents\GitHub\las_cam2\src\reports: 
+2025-10-26 02:47:27 - system - INFO - System - APP_CONTROLLER_INITIALIZED: 
+2025-10-26 02:47:27 - system - INFO - System - UI_CALLBACK_SET: login_success: 
+2025-10-26 02:47:27 - system - INFO - System - UI_CALLBACK_SET: login_failed: 
+2025-10-26 02:47:27 - system - INFO - System - UI_CALLBACK_SET: register_success: 
+2025-10-26 02:47:27 - system - INFO - System - UI_CALLBACK_SET: self_register_success: 
+2025-10-26 02:47:27 - system - INFO - System - UI_CALLBACK_SET: register_failed: 
+2025-10-26 02:47:27 - system - INFO - System - UI_CALLBACK_SET: logout_success: 
+2025-10-26 02:47:27 - system - INFO - System - UI_CALLBACK_SET: detection_starting: 
+2025-10-26 02:47:27 - system - INFO - System - UI_CALLBACK_SET: detection_started: 
+2025-10-26 02:47:27 - system - INFO - System - UI_CALLBACK_SET: detection_stopped: 
+2025-10-26 02:47:27 - system - INFO - System - UI_CALLBACK_SET: detection_failed: 
+2025-10-26 02:47:27 - system - INFO - System - UI_CALLBACK_SET: detection_update: 
+2025-10-26 02:47:27 - system - INFO - System - UI_CALLBACK_SET: count_reset: 
+2025-10-26 02:47:27 - system - INFO - System - UI_CALLBACK_SET: report_generated: 
+2025-10-26 02:47:27 - system - INFO - System - UI_CALLBACK_SET: report_failed: 
+2025-10-26 02:47:27 - system - INFO - System - UI_CALLBACK_SET: config_updated: 
+2025-10-26 02:47:27 - system - INFO - System - UI_CALLBACK_SET: camera_added: 
+2025-10-26 02:47:27 - system - INFO - System - UI_CALLBACK_SET: camera_removed: 
+2025-10-26 02:47:27 - system - INFO - System - UI_CALLBACK_SET: error: 
+2025-10-26 02:47:27 - system - INFO - System - APPLICATION_INITIALIZED: 
+2025-10-26 02:47:27 - system - INFO - System - APPLICATION_MAINLOOP_START: 
+2025-10-26 02:47:35 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-26 02:47:35 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-26 02:47:42 - user_actions - INFO - User 'gustavo' - START_DETECTION_REQUESTED: Cam=3, Type=Torta Normal: 
+2025-10-26 02:47:42 - system - INFO - System - THREAD_STARTED: Detection-Cam-3: 3
+2025-10-26 02:47:42 - user_actions - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_3_TYPE_Torta Normal_BACKEND_DirectML: 
+2025-10-26 02:47:42 - system - INFO - System - LOADING_MODEL: Detection-Cam-3: 3
+2025-10-26 02:47:42 - system - INFO - System - MODEL_LOADED: Detection-Cam-3: 3
+2025-10-26 02:47:42 - system - INFO - System - CONNECTING_RTSP: Detection-Cam-3: 3
+2025-10-26 02:47:49 - system - INFO - System - RTSP_CONNECTED: Detection-Cam-3: 3
+2025-10-26 02:47:49 - system - INFO - System - DETECTION_LOOP_STARTING: Detection-Cam-3: 3
+2025-10-26 02:49:21 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=3: 3
+2025-10-26 02:49:21 - system - INFO - System - STOPPING_DETECTION_REQUESTED: Camera ID: 3: 3
+2025-10-26 02:49:21 - system - INFO - System - CLEANING_UP_THREAD: Detection-Cam-3: 3
+2025-10-26 02:49:21 - system - INFO - System - RTSP_RELEASED: Detection-Cam-3: 3
+2025-10-26 02:49:21 - system - INFO - System - DETECTION_THREAD_ENDED: Detection-Cam-3: 3
+2025-10-26 02:49:21 - system - INFO - System - DETECTION_STOPPED_CONFIRMED: Camera ID: 3: 3
+2025-10-26 02:49:21 - system - INFO - System - SESSION_ENDED: Cam=3, Count=0, Duration=0:01:38.888601: 3
+2025-10-26 02:49:21 - system - INFO - System - SKIPPING_REPORT_NO_COUNT: Cam=3: 3
+2025-10-26 02:49:24 - system - INFO - System - APPLICATION_CLOSING: 
+2025-10-26 02:49:24 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=3: 3
+2025-10-26 02:49:24 - system - INFO - System - STOP_DETECTION_IGNORED: Nenhuma sessão ativa encontrada para Cam=3: 3
+2025-10-26 02:49:24 - system - INFO - System - APP_SHUTDOWN_REQUESTED: 
+2025-10-26 02:49:24 - system - INFO - System - STOP_ALL_DETECTIONS: Nenhuma detecção ativa.: 
+2025-10-26 02:49:24 - user_actions - INFO - User 'gustavo' - LOGOUT_REQUESTED: 
+2025-10-26 02:49:24 - system - INFO - System - STOP_ALL_DETECTIONS: Nenhuma detecção ativa.: 
+2025-10-26 02:49:24 - user_actions - INFO - User 'gustavo' - LOGOUT_COMPLETED: 
+2025-10-26 02:49:24 - system - INFO - System - APP_SHUTDOWN_COMPLETED: 
+2025-10-26 02:49:24 - system - INFO - System - APP_SHUTDOWN_REQUESTED: 
+2025-10-26 02:49:24 - system - INFO - System - STOP_ALL_DETECTIONS: Nenhuma detecção ativa.: 
+2025-10-26 02:49:24 - system - INFO - System - LOGOUT_ATTEMPT_WITHOUT_USER: 
+2025-10-26 02:49:24 - system - INFO - System - APP_SHUTDOWN_COMPLETED: 
+2025-10-26 02:49:24 - system - INFO - System - APPLICATION_CLOSED: 
+2025-10-26 02:55:11 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-26 02:55:11 - system - INFO - System - DIRECTML_AVAILABLE: 
+2025-10-26 02:55:11 - system - INFO - System - APPLICATION_STARTUP: 
+2025-10-26 02:55:11 - system - INFO - System - DETECTION_SERVICE_INITIALIZED_BACKEND_DIRECTML: 
+2025-10-26 02:55:11 - system - INFO - System - REPORT_SERVICE_INITIALIZED: Directory=C:\Users\cchrr\Documents\GitHub\las_cam2\src\reports: 
+2025-10-26 02:55:11 - system - INFO - System - APP_CONTROLLER_INITIALIZED: 
+2025-10-26 02:55:11 - system - INFO - System - UI_CALLBACK_SET: login_success: 
+2025-10-26 02:55:11 - system - INFO - System - UI_CALLBACK_SET: login_failed: 
+2025-10-26 02:55:11 - system - INFO - System - UI_CALLBACK_SET: register_success: 
+2025-10-26 02:55:11 - system - INFO - System - UI_CALLBACK_SET: self_register_success: 
+2025-10-26 02:55:11 - system - INFO - System - UI_CALLBACK_SET: register_failed: 
+2025-10-26 02:55:11 - system - INFO - System - UI_CALLBACK_SET: logout_success: 
+2025-10-26 02:55:11 - system - INFO - System - UI_CALLBACK_SET: detection_starting: 
+2025-10-26 02:55:11 - system - INFO - System - UI_CALLBACK_SET: detection_started: 
+2025-10-26 02:55:11 - system - INFO - System - UI_CALLBACK_SET: detection_stopped: 
+2025-10-26 02:55:11 - system - INFO - System - UI_CALLBACK_SET: detection_failed: 
+2025-10-26 02:55:11 - system - INFO - System - UI_CALLBACK_SET: detection_update: 
+2025-10-26 02:55:11 - system - INFO - System - UI_CALLBACK_SET: count_reset: 
+2025-10-26 02:55:11 - system - INFO - System - UI_CALLBACK_SET: report_generated: 
+2025-10-26 02:55:11 - system - INFO - System - UI_CALLBACK_SET: report_failed: 
+2025-10-26 02:55:11 - system - INFO - System - UI_CALLBACK_SET: config_updated: 
+2025-10-26 02:55:11 - system - INFO - System - UI_CALLBACK_SET: camera_added: 
+2025-10-26 02:55:11 - system - INFO - System - UI_CALLBACK_SET: camera_removed: 
+2025-10-26 02:55:11 - system - INFO - System - UI_CALLBACK_SET: error: 
+2025-10-26 02:55:12 - system - INFO - System - APPLICATION_INITIALIZED: 
+2025-10-26 02:55:12 - system - INFO - System - APPLICATION_MAINLOOP_START: 
+2025-10-26 02:55:21 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-26 02:55:21 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-26 02:56:15 - user_actions - INFO - User 'gustavo' - START_DETECTION_REQUESTED: Cam=3, Type=Torta Normal: 
+2025-10-26 02:56:15 - system - INFO - System - THREAD_STARTED: Detection-Cam-3: 3
+2025-10-26 02:56:15 - user_actions - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_3_TYPE_Torta Normal_BACKEND_DirectML: 
+2025-10-26 02:56:15 - system - INFO - System - LOADING_MODEL: Detection-Cam-3: 3
+2025-10-26 02:56:15 - system - INFO - System - MODEL_LOADED: Detection-Cam-3: 3
+2025-10-26 02:56:15 - system - INFO - System - CONNECTING_RTSP: Detection-Cam-3: 3
+2025-10-26 02:56:35 - user_actions - INFO - User 'gustavo' - START_DETECTION_REQUESTED: Cam=3, Type=Torta Normal: 
+2025-10-26 02:56:35 - errors - ERROR - DetectionService - NoneType: None - Câmera 3 já está ativa
+NoneType: None
+2025-10-26 02:56:37 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=3: 3
+2025-10-26 02:56:37 - system - INFO - System - STOPPING_DETECTION_REQUESTED: Camera ID: 3: 3
+2025-10-26 02:56:44 - errors - ERROR - DetectionService - NoneType: None - Thread Detection-Cam-3 não finalizou no timeout!
+NoneType: None
+2025-10-26 02:56:44 - system - INFO - System - DETECTION_STOPPED_CONFIRMED: Camera ID: 3: 3
+2025-10-26 02:56:44 - errors - ERROR - AppController - NoneType: None - Falha ao solicitar início da detecção para Cam=3
+NoneType: None
+2025-10-26 02:56:45 - system - INFO - System - APPLICATION_CLOSING: 
+2025-10-26 02:56:45 - system - INFO - System - APP_SHUTDOWN_REQUESTED: 
+2025-10-26 02:56:45 - system - INFO - System - STOP_ALL_DETECTIONS: Nenhuma detecção ativa.: 
+2025-10-26 02:56:45 - user_actions - INFO - User 'gustavo' - LOGOUT_REQUESTED: 
+2025-10-26 02:56:45 - system - INFO - System - STOP_ALL_DETECTIONS: Nenhuma detecção ativa.: 
+2025-10-26 02:56:45 - user_actions - INFO - User 'gustavo' - LOGOUT_COMPLETED: 
+2025-10-26 02:56:45 - system - INFO - System - APP_SHUTDOWN_COMPLETED: 
+2025-10-26 02:56:45 - system - INFO - System - APP_SHUTDOWN_REQUESTED: 
+2025-10-26 02:56:45 - system - INFO - System - STOP_ALL_DETECTIONS: Nenhuma detecção ativa.: 
+2025-10-26 02:56:45 - system - INFO - System - LOGOUT_ATTEMPT_WITHOUT_USER: 
+2025-10-26 02:56:45 - system - INFO - System - APP_SHUTDOWN_COMPLETED: 
+2025-10-26 02:56:45 - system - INFO - System - APPLICATION_CLOSED: 
+2025-10-26 02:56:51 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-26 02:56:51 - system - INFO - System - DIRECTML_AVAILABLE: 
+2025-10-26 02:56:51 - system - INFO - System - APPLICATION_STARTUP: 
+2025-10-26 02:56:51 - system - INFO - System - DETECTION_SERVICE_INITIALIZED_BACKEND_DIRECTML: 
+2025-10-26 02:56:51 - system - INFO - System - REPORT_SERVICE_INITIALIZED: Directory=C:\Users\cchrr\Documents\GitHub\las_cam2\src\reports: 
+2025-10-26 02:56:51 - system - INFO - System - APP_CONTROLLER_INITIALIZED: 
+2025-10-26 02:56:51 - system - INFO - System - UI_CALLBACK_SET: login_success: 
+2025-10-26 02:56:51 - system - INFO - System - UI_CALLBACK_SET: login_failed: 
+2025-10-26 02:56:51 - system - INFO - System - UI_CALLBACK_SET: register_success: 
+2025-10-26 02:56:51 - system - INFO - System - UI_CALLBACK_SET: self_register_success: 
+2025-10-26 02:56:51 - system - INFO - System - UI_CALLBACK_SET: register_failed: 
+2025-10-26 02:56:51 - system - INFO - System - UI_CALLBACK_SET: logout_success: 
+2025-10-26 02:56:51 - system - INFO - System - UI_CALLBACK_SET: detection_starting: 
+2025-10-26 02:56:51 - system - INFO - System - UI_CALLBACK_SET: detection_started: 
+2025-10-26 02:56:51 - system - INFO - System - UI_CALLBACK_SET: detection_stopped: 
+2025-10-26 02:56:51 - system - INFO - System - UI_CALLBACK_SET: detection_failed: 
+2025-10-26 02:56:51 - system - INFO - System - UI_CALLBACK_SET: detection_update: 
+2025-10-26 02:56:51 - system - INFO - System - UI_CALLBACK_SET: count_reset: 
+2025-10-26 02:56:51 - system - INFO - System - UI_CALLBACK_SET: report_generated: 
+2025-10-26 02:56:51 - system - INFO - System - UI_CALLBACK_SET: report_failed: 
+2025-10-26 02:56:51 - system - INFO - System - UI_CALLBACK_SET: config_updated: 
+2025-10-26 02:56:51 - system - INFO - System - UI_CALLBACK_SET: camera_added: 
+2025-10-26 02:56:51 - system - INFO - System - UI_CALLBACK_SET: camera_removed: 
+2025-10-26 02:56:51 - system - INFO - System - UI_CALLBACK_SET: error: 
+2025-10-26 02:56:51 - system - INFO - System - APPLICATION_INITIALIZED: 
+2025-10-26 02:56:51 - system - INFO - System - APPLICATION_MAINLOOP_START: 
+2025-10-26 02:57:01 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-26 02:57:01 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-26 02:57:06 - user_actions - INFO - User 'gustavo' - START_DETECTION_REQUESTED: Cam=3, Type=Torta Normal: 
+2025-10-26 02:57:06 - system - INFO - System - THREAD_STARTED: Detection-Cam-3: 3
+2025-10-26 02:57:06 - user_actions - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_3_TYPE_Torta Normal_BACKEND_DirectML: 
+2025-10-26 02:57:06 - system - INFO - System - LOADING_MODEL: Detection-Cam-3: 3
+2025-10-26 02:57:06 - system - INFO - System - MODEL_LOADED: Detection-Cam-3: 3
+2025-10-26 02:57:06 - system - INFO - System - CONNECTING_RTSP: Detection-Cam-3: 3
+2025-10-26 02:57:36 - errors - ERROR - Detection-Cam-3 - ConnectionError: Falha ao abrir stream RTSP: rtsp://admin:admin@192.168.0.5:554/1/2 - Erro de conexão RTSP
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\services\detection_service.py", line 161, in _run_detection_thread
+    if not cap.isOpened(): raise ConnectionError(f"Falha ao abrir stream RTSP: {camera_config.rtsp_url}")
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionError: Falha ao abrir stream RTSP: rtsp://admin:admin@192.168.0.5:554/1/2
+2025-10-26 02:57:59 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=3: 3
+2025-10-26 02:57:59 - system - INFO - System - STOPPING_DETECTION_REQUESTED: Camera ID: 3: 3
+2025-10-26 02:57:59 - system - INFO - System - CLEANING_UP_THREAD: Detection-Cam-3: 3
+2025-10-26 02:57:59 - system - INFO - System - DETECTION_THREAD_ENDED: Detection-Cam-3: 3
+2025-10-26 02:58:01 - user_actions - INFO - User 'gustavo' - START_DETECTION_REQUESTED: Cam=3, Type=Torta Normal: 
+2025-10-26 02:58:01 - system - INFO - System - THREAD_STARTED: Detection-Cam-3: 3
+2025-10-26 02:58:01 - user_actions - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_3_TYPE_Torta Normal_BACKEND_DirectML: 
+2025-10-26 02:58:01 - system - INFO - System - LOADING_MODEL: Detection-Cam-3: 3
+2025-10-26 02:58:01 - system - INFO - System - MODEL_LOADED: Detection-Cam-3: 3
+2025-10-26 02:58:01 - system - INFO - System - CONNECTING_RTSP: Detection-Cam-3: 3
+2025-10-26 02:58:08 - system - INFO - System - RTSP_CONNECTED: Detection-Cam-3: 3
+2025-10-26 02:58:08 - system - INFO - System - DETECTION_LOOP_STARTING: Detection-Cam-3: 3
+2025-10-26 02:58:08 - errors - ERROR - Detection-Cam-3 - ValueError: Invalid CUDA 'device=privateuseone:0' requested. Use 'device=cpu' or pass valid CUDA device(s) if available, i.e. 'device=0' or 'device=0,1,2,3' for Multi-GPU.
+
+torch.cuda.is_available(): False
+torch.cuda.device_count(): 0
+os.environ['CUDA_VISIBLE_DEVICES']: None
+See https://pytorch.org/get-started/locally/ for up-to-date torch install instructions if no CUDA devices are seen by torch.
+ - Erro fatal na thread
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\services\detection_service.py", line 181, in _run_detection_thread
+    resultados = model.track(frame, **track_args)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\ultralytics\engine\model.py", line 601, in track
+    return self.predict(source=source, stream=stream, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\ultralytics\engine\model.py", line 550, in predict
+    self.predictor.setup_model(model=self.model, verbose=is_cli)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\ultralytics\engine\predictor.py", line 400, in setup_model
+    device=select_device(self.args.device, verbose=verbose),
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\ultralytics\utils\torch_utils.py", line 200, in select_device
+    raise ValueError(
+ValueError: Invalid CUDA 'device=privateuseone:0' requested. Use 'device=cpu' or pass valid CUDA device(s) if available, i.e. 'device=0' or 'device=0,1,2,3' for Multi-GPU.
+
+torch.cuda.is_available(): False
+torch.cuda.device_count(): 0
+os.environ['CUDA_VISIBLE_DEVICES']: None
+See https://pytorch.org/get-started/locally/ for up-to-date torch install instructions if no CUDA devices are seen by torch.
+
+2025-10-26 02:58:21 - system - INFO - System - CLEANING_UP_THREAD: Detection-Cam-3: 3
+2025-10-26 02:58:21 - system - INFO - System - RTSP_RELEASED: Detection-Cam-3: 3
+2025-10-26 02:58:21 - system - INFO - System - DETECTION_THREAD_ENDED: Detection-Cam-3: 3
+2025-10-26 02:58:21 - system - INFO - System - THREAD_ENDED_UNEXPECTEDLY: Detection-Cam-3, notifying UI and cleaning up.: 3
+2025-10-26 02:58:40 - system - INFO - System - APPLICATION_CLOSING: 
+2025-10-26 02:58:40 - system - INFO - System - APP_SHUTDOWN_REQUESTED: 
+2025-10-26 02:58:40 - system - INFO - System - STOP_ALL_DETECTIONS: Nenhuma detecção ativa.: 
+2025-10-26 02:58:40 - user_actions - INFO - User 'gustavo' - LOGOUT_REQUESTED: 
+2025-10-26 02:58:40 - system - INFO - System - STOP_ALL_DETECTIONS: Nenhuma detecção ativa.: 
+2025-10-26 02:58:40 - user_actions - INFO - User 'gustavo' - LOGOUT_COMPLETED: 
+2025-10-26 02:58:40 - system - INFO - System - APP_SHUTDOWN_COMPLETED: 
+2025-10-26 02:58:40 - system - INFO - System - APP_SHUTDOWN_REQUESTED: 
+2025-10-26 02:58:40 - system - INFO - System - STOP_ALL_DETECTIONS: Nenhuma detecção ativa.: 
+2025-10-26 02:58:40 - system - INFO - System - LOGOUT_ATTEMPT_WITHOUT_USER: 
+2025-10-26 02:58:40 - system - INFO - System - APP_SHUTDOWN_COMPLETED: 
+2025-10-26 02:58:40 - system - INFO - System - APPLICATION_CLOSED: 
+2025-10-26 02:58:44 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-26 02:58:44 - system - INFO - System - DIRECTML_AVAILABLE: 
+2025-10-26 02:58:44 - system - INFO - System - APPLICATION_STARTUP: 
+2025-10-26 02:58:44 - system - INFO - System - DETECTION_SERVICE_INITIALIZED_BACKEND_DIRECTML: 
+2025-10-26 02:58:44 - system - INFO - System - REPORT_SERVICE_INITIALIZED: Directory=C:\Users\cchrr\Documents\GitHub\las_cam2\src\reports: 
+2025-10-26 02:58:44 - system - INFO - System - APP_CONTROLLER_INITIALIZED: 
+2025-10-26 02:58:44 - system - INFO - System - UI_CALLBACK_SET: login_success: 
+2025-10-26 02:58:44 - system - INFO - System - UI_CALLBACK_SET: login_failed: 
+2025-10-26 02:58:44 - system - INFO - System - UI_CALLBACK_SET: register_success: 
+2025-10-26 02:58:44 - system - INFO - System - UI_CALLBACK_SET: self_register_success: 
+2025-10-26 02:58:44 - system - INFO - System - UI_CALLBACK_SET: register_failed: 
+2025-10-26 02:58:44 - system - INFO - System - UI_CALLBACK_SET: logout_success: 
+2025-10-26 02:58:44 - system - INFO - System - UI_CALLBACK_SET: detection_starting: 
+2025-10-26 02:58:44 - system - INFO - System - UI_CALLBACK_SET: detection_started: 
+2025-10-26 02:58:44 - system - INFO - System - UI_CALLBACK_SET: detection_stopped: 
+2025-10-26 02:58:44 - system - INFO - System - UI_CALLBACK_SET: detection_failed: 
+2025-10-26 02:58:44 - system - INFO - System - UI_CALLBACK_SET: detection_update: 
+2025-10-26 02:58:44 - system - INFO - System - UI_CALLBACK_SET: count_reset: 
+2025-10-26 02:58:44 - system - INFO - System - UI_CALLBACK_SET: report_generated: 
+2025-10-26 02:58:44 - system - INFO - System - UI_CALLBACK_SET: report_failed: 
+2025-10-26 02:58:44 - system - INFO - System - UI_CALLBACK_SET: config_updated: 
+2025-10-26 02:58:44 - system - INFO - System - UI_CALLBACK_SET: camera_added: 
+2025-10-26 02:58:44 - system - INFO - System - UI_CALLBACK_SET: camera_removed: 
+2025-10-26 02:58:44 - system - INFO - System - UI_CALLBACK_SET: error: 
+2025-10-26 02:58:45 - system - INFO - System - APPLICATION_INITIALIZED: 
+2025-10-26 02:58:45 - system - INFO - System - APPLICATION_MAINLOOP_START: 
+2025-10-26 02:58:57 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-26 02:58:57 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-26 02:59:12 - user_actions - INFO - User 'gustavo' - START_DETECTION_REQUESTED: Cam=3, Type=Torta Normal: 
+2025-10-26 02:59:12 - system - INFO - System - THREAD_STARTED: Detection-Cam-3: 3
+2025-10-26 02:59:12 - user_actions - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_3_TYPE_Torta Normal_BACKEND_DirectML: 
+2025-10-26 02:59:12 - system - INFO - System - LOADING_MODEL: Detection-Cam-3: 3
+2025-10-26 02:59:12 - system - INFO - System - MODEL_LOADED: Detection-Cam-3: 3
+2025-10-26 02:59:12 - system - INFO - System - CONNECTING_RTSP: Detection-Cam-3: 3
+2025-10-26 02:59:18 - system - INFO - System - RTSP_CONNECTED: Detection-Cam-3: 3
+2025-10-26 02:59:18 - system - INFO - System - DETECTION_LOOP_STARTING: Detection-Cam-3: 3
+2025-10-26 02:59:19 - errors - ERROR - Detection-Cam-3 - ValueError: Invalid CUDA 'device=privateuseone:0' requested. Use 'device=cpu' or pass valid CUDA device(s) if available, i.e. 'device=0' or 'device=0,1,2,3' for Multi-GPU.
+
+torch.cuda.is_available(): False
+torch.cuda.device_count(): 0
+os.environ['CUDA_VISIBLE_DEVICES']: None
+See https://pytorch.org/get-started/locally/ for up-to-date torch install instructions if no CUDA devices are seen by torch.
+ - Erro fatal na thread
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\services\detection_service.py", line 181, in _run_detection_thread
+    resultados = model.track(frame, **track_args)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\ultralytics\engine\model.py", line 601, in track
+    return self.predict(source=source, stream=stream, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\ultralytics\engine\model.py", line 550, in predict
+    self.predictor.setup_model(model=self.model, verbose=is_cli)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\ultralytics\engine\predictor.py", line 400, in setup_model
+    device=select_device(self.args.device, verbose=verbose),
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\ultralytics\utils\torch_utils.py", line 200, in select_device
+    raise ValueError(
+ValueError: Invalid CUDA 'device=privateuseone:0' requested. Use 'device=cpu' or pass valid CUDA device(s) if available, i.e. 'device=0' or 'device=0,1,2,3' for Multi-GPU.
+
+torch.cuda.is_available(): False
+torch.cuda.device_count(): 0
+os.environ['CUDA_VISIBLE_DEVICES']: None
+See https://pytorch.org/get-started/locally/ for up-to-date torch install instructions if no CUDA devices are seen by torch.
+
+2025-10-26 02:59:28 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=3: 3
+2025-10-26 02:59:28 - system - INFO - System - STOPPING_DETECTION_REQUESTED: Camera ID: 3: 3
+2025-10-26 02:59:28 - system - INFO - System - CLEANING_UP_THREAD: Detection-Cam-3: 3
+2025-10-26 02:59:28 - system - INFO - System - RTSP_RELEASED: Detection-Cam-3: 3
+2025-10-26 02:59:28 - system - INFO - System - DETECTION_THREAD_ENDED: Detection-Cam-3: 3
+2025-10-26 02:59:33 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=3: 3
+2025-10-26 02:59:33 - system - INFO - System - STOPPING_DETECTION_REQUESTED: Camera ID: 3: 3
+2025-10-26 02:59:33 - system - INFO - System - DETECTION_STOPPED_CONFIRMED: Camera ID: 3: 3
+2025-10-26 02:59:33 - system - INFO - System - SESSION_ENDED: Cam=3, Count=0, Duration=0:00:16.721484: 3
+2025-10-26 02:59:33 - system - INFO - System - SKIPPING_REPORT_NO_COUNT: Cam=3: 3
+2025-10-26 03:04:07 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=3: 3
+2025-10-26 03:04:07 - system - INFO - System - STOP_DETECTION_IGNORED: Nenhuma sessão ativa encontrada para Cam=3: 3
+2025-10-26 03:04:20 - system - INFO - System - APPLICATION_INTERRUPTED: 
+2025-10-26 03:04:28 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-26 03:04:28 - system - INFO - System - DIRECTML_AVAILABLE: 
+2025-10-26 03:04:28 - system - INFO - System - APPLICATION_STARTUP: 
+2025-10-26 03:04:28 - system - INFO - System - DETECTION_SERVICE_INITIALIZED_BACKEND_DIRECTML: 
+2025-10-26 03:04:28 - system - INFO - System - REPORT_SERVICE_INITIALIZED: Directory=C:\Users\cchrr\Documents\GitHub\las_cam2\src\reports: 
+2025-10-26 03:04:28 - system - INFO - System - APP_CONTROLLER_INITIALIZED: 
+2025-10-26 03:04:28 - system - INFO - System - UI_CALLBACK_SET: login_success: 
+2025-10-26 03:04:28 - system - INFO - System - UI_CALLBACK_SET: login_failed: 
+2025-10-26 03:04:28 - system - INFO - System - UI_CALLBACK_SET: register_success: 
+2025-10-26 03:04:28 - system - INFO - System - UI_CALLBACK_SET: self_register_success: 
+2025-10-26 03:04:28 - system - INFO - System - UI_CALLBACK_SET: register_failed: 
+2025-10-26 03:04:28 - system - INFO - System - UI_CALLBACK_SET: logout_success: 
+2025-10-26 03:04:28 - system - INFO - System - UI_CALLBACK_SET: detection_starting: 
+2025-10-26 03:04:28 - system - INFO - System - UI_CALLBACK_SET: detection_started: 
+2025-10-26 03:04:28 - system - INFO - System - UI_CALLBACK_SET: detection_stopped: 
+2025-10-26 03:04:28 - system - INFO - System - UI_CALLBACK_SET: detection_failed: 
+2025-10-26 03:04:28 - system - INFO - System - UI_CALLBACK_SET: detection_update: 
+2025-10-26 03:04:28 - system - INFO - System - UI_CALLBACK_SET: count_reset: 
+2025-10-26 03:04:28 - system - INFO - System - UI_CALLBACK_SET: report_generated: 
+2025-10-26 03:04:28 - system - INFO - System - UI_CALLBACK_SET: report_failed: 
+2025-10-26 03:04:28 - system - INFO - System - UI_CALLBACK_SET: config_updated: 
+2025-10-26 03:04:28 - system - INFO - System - UI_CALLBACK_SET: camera_added: 
+2025-10-26 03:04:28 - system - INFO - System - UI_CALLBACK_SET: camera_removed: 
+2025-10-26 03:04:28 - system - INFO - System - UI_CALLBACK_SET: error: 
+2025-10-26 03:04:28 - system - INFO - System - APPLICATION_INITIALIZED: 
+2025-10-26 03:04:28 - system - INFO - System - APPLICATION_MAINLOOP_START: 
+2025-10-26 03:04:36 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-26 03:04:36 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-26 03:04:56 - user_actions - INFO - User 'gustavo' - START_DETECTION_REQUESTED: Cam=3, Type=Torta Moída: 
+2025-10-26 03:04:56 - user_actions - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_3_TYPE_Torta Moída_BACKEND_OpenVINO: 
+2025-10-26 03:04:56 - system - INFO - System - THREAD_STARTED: Detection-Cam-3: 3
+2025-10-26 03:04:56 - system - INFO - System - LOADING_MODEL: Detection-Cam-3: 3
+2025-10-26 03:04:56 - system - INFO - System - MODEL_LOADED: Detection-Cam-3: 3
+2025-10-26 03:04:56 - system - INFO - System - CONNECTING_RTSP: Detection-Cam-3: 3
+2025-10-26 03:05:03 - system - INFO - System - RTSP_CONNECTED: Detection-Cam-3: 3
+2025-10-26 03:05:03 - system - INFO - System - DETECTION_LOOP_STARTING: Detection-Cam-3: 3
+2025-10-26 03:05:13 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=3: 3
+2025-10-26 03:05:13 - system - INFO - System - STOPPING_DETECTION_REQUESTED: Camera ID: 3: 3
+2025-10-26 03:05:13 - system - INFO - System - CLEANING_UP_THREAD: Detection-Cam-3: 3
+2025-10-26 03:05:13 - system - INFO - System - RTSP_RELEASED: Detection-Cam-3: 3
+2025-10-26 03:05:13 - system - INFO - System - DETECTION_THREAD_ENDED: Detection-Cam-3: 3
+2025-10-26 03:05:13 - system - INFO - System - DETECTION_STOPPED_CONFIRMED: Camera ID: 3: 3
+2025-10-26 03:05:13 - system - INFO - System - SESSION_ENDED: Cam=3, Count=0, Duration=0:00:16.928127: 3
+2025-10-26 03:05:13 - system - INFO - System - SKIPPING_REPORT_NO_COUNT: Cam=3: 3
+2025-10-26 03:05:32 - user_actions - INFO - User 'gustavo' - START_DETECTION_REQUESTED: Cam=3, Type=Torta Moída: 
+2025-10-26 03:05:32 - system - INFO - System - THREAD_STARTED: Detection-Cam-3: 3
+2025-10-26 03:05:32 - user_actions - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_3_TYPE_Torta Moída_BACKEND_DirectML: 
+2025-10-26 03:05:32 - system - INFO - System - LOADING_MODEL: Detection-Cam-3: 3
+2025-10-26 03:05:32 - system - INFO - System - MODEL_LOADED: Detection-Cam-3: 3
+2025-10-26 03:05:32 - system - INFO - System - CONNECTING_RTSP: Detection-Cam-3: 3
+2025-10-26 03:05:38 - system - INFO - System - RTSP_CONNECTED: Detection-Cam-3: 3
+2025-10-26 03:05:38 - system - INFO - System - DETECTION_LOOP_STARTING: Detection-Cam-3: 3
+2025-10-26 03:05:38 - errors - ERROR - Detection-Cam-3 - ValueError: Invalid CUDA 'device=privateuseone:0' requested. Use 'device=cpu' or pass valid CUDA device(s) if available, i.e. 'device=0' or 'device=0,1,2,3' for Multi-GPU.
+
+torch.cuda.is_available(): False
+torch.cuda.device_count(): 0
+os.environ['CUDA_VISIBLE_DEVICES']: None
+See https://pytorch.org/get-started/locally/ for up-to-date torch install instructions if no CUDA devices are seen by torch.
+ - Erro fatal na thread
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\services\detection_service.py", line 181, in _run_detection_thread
+    resultados = model.track(frame, **track_args)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\ultralytics\engine\model.py", line 601, in track
+    return self.predict(source=source, stream=stream, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\ultralytics\engine\model.py", line 550, in predict
+    self.predictor.setup_model(model=self.model, verbose=is_cli)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\ultralytics\engine\predictor.py", line 400, in setup_model
+    device=select_device(self.args.device, verbose=verbose),
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\ultralytics\utils\torch_utils.py", line 200, in select_device
+    raise ValueError(
+ValueError: Invalid CUDA 'device=privateuseone:0' requested. Use 'device=cpu' or pass valid CUDA device(s) if available, i.e. 'device=0' or 'device=0,1,2,3' for Multi-GPU.
+
+torch.cuda.is_available(): False
+torch.cuda.device_count(): 0
+os.environ['CUDA_VISIBLE_DEVICES']: None
+See https://pytorch.org/get-started/locally/ for up-to-date torch install instructions if no CUDA devices are seen by torch.
+
+2025-10-26 03:05:51 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=3: 3
+2025-10-26 03:05:51 - system - INFO - System - STOPPING_DETECTION_REQUESTED: Camera ID: 3: 3
+2025-10-26 03:05:51 - system - INFO - System - CLEANING_UP_THREAD: Detection-Cam-3: 3
+2025-10-26 03:05:51 - system - INFO - System - RTSP_RELEASED: Detection-Cam-3: 3
+2025-10-26 03:05:51 - system - INFO - System - DETECTION_THREAD_ENDED: Detection-Cam-3: 3
+2025-10-26 03:05:56 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=3: 3
+2025-10-26 03:05:56 - system - INFO - System - STOPPING_DETECTION_REQUESTED: Camera ID: 3: 3
+2025-10-26 03:05:56 - system - INFO - System - DETECTION_STOPPED_CONFIRMED: Camera ID: 3: 3
+2025-10-26 03:05:56 - system - INFO - System - SESSION_ENDED: Cam=3, Count=0, Duration=0:00:19.464394: 3
+2025-10-26 03:05:56 - system - INFO - System - SKIPPING_REPORT_NO_COUNT: Cam=3: 3
+2025-10-26 03:06:00 - system - INFO - System - APPLICATION_INTERRUPTED: 
+2025-10-26 03:10:50 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-26 03:10:50 - system - INFO - System - DIRECTML_AVAILABLE: 
+2025-10-26 03:10:50 - system - INFO - System - APPLICATION_STARTUP: 
+2025-10-26 03:10:50 - system - INFO - System - DETECTION_SERVICE_INITIALIZED_BACKEND_DIRECTML: 
+2025-10-26 03:10:50 - system - INFO - System - REPORT_SERVICE_INITIALIZED: Directory=C:\Users\cchrr\Documents\GitHub\las_cam2\src\reports: 
+2025-10-26 03:10:50 - system - INFO - System - APP_CONTROLLER_INITIALIZED: 
+2025-10-26 03:10:50 - system - INFO - System - UI_CALLBACK_SET: login_success: 
+2025-10-26 03:10:50 - system - INFO - System - UI_CALLBACK_SET: login_failed: 
+2025-10-26 03:10:50 - system - INFO - System - UI_CALLBACK_SET: register_success: 
+2025-10-26 03:10:50 - system - INFO - System - UI_CALLBACK_SET: self_register_success: 
+2025-10-26 03:10:50 - system - INFO - System - UI_CALLBACK_SET: register_failed: 
+2025-10-26 03:10:50 - system - INFO - System - UI_CALLBACK_SET: logout_success: 
+2025-10-26 03:10:50 - system - INFO - System - UI_CALLBACK_SET: detection_starting: 
+2025-10-26 03:10:50 - system - INFO - System - UI_CALLBACK_SET: detection_started: 
+2025-10-26 03:10:50 - system - INFO - System - UI_CALLBACK_SET: detection_stopped: 
+2025-10-26 03:10:50 - system - INFO - System - UI_CALLBACK_SET: detection_failed: 
+2025-10-26 03:10:50 - system - INFO - System - UI_CALLBACK_SET: detection_update: 
+2025-10-26 03:10:50 - system - INFO - System - UI_CALLBACK_SET: count_reset: 
+2025-10-26 03:10:50 - system - INFO - System - UI_CALLBACK_SET: report_generated: 
+2025-10-26 03:10:50 - system - INFO - System - UI_CALLBACK_SET: report_failed: 
+2025-10-26 03:10:50 - system - INFO - System - UI_CALLBACK_SET: config_updated: 
+2025-10-26 03:10:50 - system - INFO - System - UI_CALLBACK_SET: camera_added: 
+2025-10-26 03:10:50 - system - INFO - System - UI_CALLBACK_SET: camera_removed: 
+2025-10-26 03:10:50 - system - INFO - System - UI_CALLBACK_SET: error: 
+2025-10-26 03:10:50 - system - INFO - System - APPLICATION_INITIALIZED: 
+2025-10-26 03:10:50 - system - INFO - System - APPLICATION_MAINLOOP_START: 
+2025-10-26 03:11:03 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-26 03:11:03 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-26 03:11:08 - user_actions - INFO - User 'gustavo' - START_DETECTION_REQUESTED: Cam=3, Type=Torta Normal: 
+2025-10-26 03:11:08 - system - INFO - System - THREAD_STARTED: Detection-Cam-3: 3
+2025-10-26 03:11:08 - user_actions - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_3_TYPE_Torta Normal_BACKEND_DirectML: 
+2025-10-26 03:11:08 - system - INFO - System - LOADING_MODEL: Detection-Cam-3: 3
+2025-10-26 03:11:08 - system - INFO - System - MODEL_LOADED: Detection-Cam-3: 3
+2025-10-26 03:11:08 - system - INFO - System - CONNECTING_RTSP: Detection-Cam-3: 3
+2025-10-26 03:11:15 - system - INFO - System - RTSP_CONNECTED: Detection-Cam-3: 3
+2025-10-26 03:11:15 - system - INFO - System - DETECTION_LOOP_STARTING: Detection-Cam-3: 3
+2025-10-26 03:11:53 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=3: 3
+2025-10-26 03:11:53 - system - INFO - System - STOPPING_DETECTION_REQUESTED: Camera ID: 3: 3
+2025-10-26 03:11:53 - system - INFO - System - CLEANING_UP_THREAD: Detection-Cam-3: 3
+2025-10-26 03:11:53 - system - INFO - System - RTSP_RELEASED: Detection-Cam-3: 3
+2025-10-26 03:11:53 - system - INFO - System - DETECTION_THREAD_ENDED: Detection-Cam-3: 3
+2025-10-26 03:11:53 - system - INFO - System - DETECTION_STOPPED_CONFIRMED: Camera ID: 3: 3
+2025-10-26 03:11:53 - system - INFO - System - SESSION_ENDED: Cam=3, Count=0, Duration=0:00:45.146384: 3
+2025-10-26 03:11:53 - system - INFO - System - SKIPPING_REPORT_NO_COUNT: Cam=3: 3
+2025-10-26 03:12:23 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=3, Data={'name': 'Nova Câmera 3', 'rtsp_url': 'rtsp://admin:admin@192.168.0.5:554/1/2', 'description': 'Insira a descrição', 'enabled': True}: 3
+2025-10-26 03:12:23 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=3: 3
+2025-10-26 03:12:23 - system - INFO - System - ADD_CAMERA_REQUESTED: ID=4, Name=Nova Câmera 4: 
+2025-10-26 03:12:23 - system - INFO - System - CAMERA_ADDED_SAVED: ID=4, Name=Nova Câmera 4: 
+2025-10-26 03:12:23 - system - INFO - System - ADD_CAMERA_SUCCESS: ID=4: 
+2025-10-26 03:12:23 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=3, Data={'name': 'Nova Câmera 3', 'rtsp_url': 'rtsp://admin:admin@192.168.0.5:554/1/2', 'description': 'Insira a descrição', 'enabled': True}: 3
+2025-10-26 03:12:23 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=3: 3
+2025-10-26 03:12:35 - user_actions - INFO - User 'gustavo' - START_DETECTION_REQUESTED: Cam=4, Type=Torta Normal: 
+2025-10-26 03:12:35 - errors - ERROR - DetectionService - NoneType: None - Câmera 4 não possui URL RTSP configurada.
+NoneType: None
+2025-10-26 03:12:38 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=4: 4
+2025-10-26 03:12:38 - system - INFO - System - STOP_DETECTION_IGNORED: Nenhuma sessão ativa encontrada para Cam=4: 4
+2025-10-26 03:12:38 - errors - ERROR - AppController - NoneType: None - Falha ao solicitar início da detecção para Cam=4
+NoneType: None
+2025-10-26 03:12:40 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=4: 4
+2025-10-26 03:12:40 - system - INFO - System - STOP_DETECTION_IGNORED: Nenhuma sessão ativa encontrada para Cam=4: 4
+2025-10-26 03:12:40 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=4, Data={'name': 'Nova Câmera 4', 'rtsp_url': 'rtsp://admin:admin@192.168.0.5:554/1/4', 'description': 'Insira a descrição', 'enabled': True}: 4
+2025-10-26 03:12:40 - system - INFO - System - CAMERA_CONFIG_UPDATED_SAVED: ID=4: 
+2025-10-26 03:12:40 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=4: 4
+2025-10-26 03:12:42 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=3, Data={'name': 'Nova Câmera 3', 'rtsp_url': 'rtsp://admin:admin@192.168.0.5:554/1/2', 'description': 'Insira a descrição', 'enabled': True}: 3
+2025-10-26 03:12:42 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=3: 3
+2025-10-26 03:12:46 - system - INFO - System - APPLICATION_CLOSING: 
+2025-10-26 03:12:46 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=3: 3
+2025-10-26 03:12:46 - system - INFO - System - STOP_DETECTION_IGNORED: Nenhuma sessão ativa encontrada para Cam=3: 3
+2025-10-26 03:12:46 - system - INFO - System - APP_SHUTDOWN_REQUESTED: 
+2025-10-26 03:12:46 - system - INFO - System - STOP_ALL_DETECTIONS: Nenhuma detecção ativa.: 
+2025-10-26 03:12:46 - user_actions - INFO - User 'gustavo' - LOGOUT_REQUESTED: 
+2025-10-26 03:12:46 - system - INFO - System - STOP_ALL_DETECTIONS: Nenhuma detecção ativa.: 
+2025-10-26 03:12:46 - user_actions - INFO - User 'gustavo' - LOGOUT_COMPLETED: 
+2025-10-26 03:12:46 - system - INFO - System - APP_SHUTDOWN_COMPLETED: 
+2025-10-26 03:12:46 - system - INFO - System - APP_SHUTDOWN_REQUESTED: 
+2025-10-26 03:12:46 - system - INFO - System - STOP_ALL_DETECTIONS: Nenhuma detecção ativa.: 
+2025-10-26 03:12:46 - system - INFO - System - LOGOUT_ATTEMPT_WITHOUT_USER: 
+2025-10-26 03:12:46 - system - INFO - System - APP_SHUTDOWN_COMPLETED: 
+2025-10-26 03:12:46 - system - INFO - System - APPLICATION_CLOSED: 
+2025-10-26 03:17:34 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-26 03:17:34 - system - INFO - System - DIRECTML_AVAILABLE: 
+2025-10-26 03:17:34 - system - INFO - System - APPLICATION_STARTUP: 
+2025-10-26 03:17:34 - system - INFO - System - DETECTION_SERVICE_INITIALIZED_BACKEND_DIRECTML: 
+2025-10-26 03:17:34 - system - INFO - System - REPORT_SERVICE_INITIALIZED: Directory=C:\Users\cchrr\Documents\GitHub\las_cam2\src\reports: 
+2025-10-26 03:17:34 - system - INFO - System - APP_CONTROLLER_INITIALIZED: 
+2025-10-26 03:17:34 - system - INFO - System - UI_CALLBACK_SET: login_success: 
+2025-10-26 03:17:34 - system - INFO - System - UI_CALLBACK_SET: login_failed: 
+2025-10-26 03:17:34 - system - INFO - System - UI_CALLBACK_SET: register_success: 
+2025-10-26 03:17:34 - system - INFO - System - UI_CALLBACK_SET: self_register_success: 
+2025-10-26 03:17:34 - system - INFO - System - UI_CALLBACK_SET: register_failed: 
+2025-10-26 03:17:34 - system - INFO - System - UI_CALLBACK_SET: logout_success: 
+2025-10-26 03:17:34 - system - INFO - System - UI_CALLBACK_SET: detection_starting: 
+2025-10-26 03:17:34 - system - INFO - System - UI_CALLBACK_SET: detection_started: 
+2025-10-26 03:17:34 - system - INFO - System - UI_CALLBACK_SET: detection_stopped: 
+2025-10-26 03:17:34 - system - INFO - System - UI_CALLBACK_SET: detection_failed: 
+2025-10-26 03:17:34 - system - INFO - System - UI_CALLBACK_SET: detection_update: 
+2025-10-26 03:17:34 - system - INFO - System - UI_CALLBACK_SET: count_reset: 
+2025-10-26 03:17:34 - system - INFO - System - UI_CALLBACK_SET: report_generated: 
+2025-10-26 03:17:34 - system - INFO - System - UI_CALLBACK_SET: report_failed: 
+2025-10-26 03:17:34 - system - INFO - System - UI_CALLBACK_SET: config_updated: 
+2025-10-26 03:17:34 - system - INFO - System - UI_CALLBACK_SET: camera_added: 
+2025-10-26 03:17:34 - system - INFO - System - UI_CALLBACK_SET: camera_removed: 
+2025-10-26 03:17:34 - system - INFO - System - UI_CALLBACK_SET: error: 
+2025-10-26 03:17:34 - system - INFO - System - APPLICATION_INITIALIZED: 
+2025-10-26 03:17:34 - system - INFO - System - APPLICATION_MAINLOOP_START: 
+2025-10-26 03:17:44 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-26 03:17:44 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-26 03:17:48 - user_actions - INFO - User 'gustavo' - START_DETECTION_REQUESTED: Cam=4, Type=Torta Normal: 
+2025-10-26 03:17:48 - system - INFO - System - THREAD_STARTED: Detection-Cam-4: 4
+2025-10-26 03:17:48 - user_actions - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_4_TYPE_Torta Normal_BACKEND_DirectML: 
+2025-10-26 03:17:48 - system - INFO - System - LOADING_MODEL: Detection-Cam-4: 4
+2025-10-26 03:17:48 - system - INFO - System - MODEL_LOADED: Detection-Cam-4: 4
+2025-10-26 03:17:48 - system - INFO - System - CONNECTING_RTSP: Detection-Cam-4: 4
+2025-10-26 03:17:55 - system - INFO - System - RTSP_CONNECTED: Detection-Cam-4: 4
+2025-10-26 03:17:55 - system - INFO - System - DETECTION_LOOP_STARTING: Detection-Cam-4: 4
+2025-10-26 03:18:00 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=4: 4
+2025-10-26 03:18:00 - system - INFO - System - STOPPING_DETECTION_REQUESTED: Camera ID: 4: 4
+2025-10-26 03:18:00 - system - INFO - System - CLEANING_UP_THREAD: Detection-Cam-4: 4
+2025-10-26 03:18:00 - system - INFO - System - RTSP_RELEASED: Detection-Cam-4: 4
+2025-10-26 03:18:00 - system - INFO - System - DETECTION_THREAD_ENDED: Detection-Cam-4: 4
+2025-10-26 03:18:00 - system - INFO - System - DETECTION_STOPPED_CONFIRMED: Camera ID: 4: 4
+2025-10-26 03:18:00 - system - INFO - System - SESSION_ENDED: Cam=4, Count=0, Duration=0:00:12.395193: 4
+2025-10-26 03:18:00 - system - INFO - System - SKIPPING_REPORT_NO_COUNT: Cam=4: 4
+2025-10-26 03:18:04 - system - INFO - System - APPLICATION_CLOSING: 
+2025-10-26 03:18:04 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=4: 4
+2025-10-26 03:18:04 - system - INFO - System - STOP_DETECTION_IGNORED: Nenhuma sessão ativa encontrada para Cam=4: 4
+2025-10-26 03:18:04 - system - INFO - System - APP_SHUTDOWN_REQUESTED: 
+2025-10-26 03:18:04 - system - INFO - System - STOP_ALL_DETECTIONS: Nenhuma detecção ativa.: 
+2025-10-26 03:18:04 - user_actions - INFO - User 'gustavo' - LOGOUT_REQUESTED: 
+2025-10-26 03:18:04 - system - INFO - System - STOP_ALL_DETECTIONS: Nenhuma detecção ativa.: 
+2025-10-26 03:18:04 - user_actions - INFO - User 'gustavo' - LOGOUT_COMPLETED: 
+2025-10-26 03:18:04 - system - INFO - System - APP_SHUTDOWN_COMPLETED: 
+2025-10-26 03:18:04 - system - INFO - System - APP_SHUTDOWN_REQUESTED: 
+2025-10-26 03:18:04 - system - INFO - System - STOP_ALL_DETECTIONS: Nenhuma detecção ativa.: 
+2025-10-26 03:18:04 - system - INFO - System - LOGOUT_ATTEMPT_WITHOUT_USER: 
+2025-10-26 03:18:04 - system - INFO - System - APP_SHUTDOWN_COMPLETED: 
+2025-10-26 03:18:04 - system - INFO - System - APPLICATION_CLOSED: 

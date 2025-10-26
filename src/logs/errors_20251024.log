@@ -1,0 +1,27 @@
+2025-10-24 00:58:39 - ERROR - AuthService - KeyError: 'username' - Erro ao carregar usuários de usuarios.json
+2025-10-24 20:50:58 - ERROR - AuthService - KeyError: 'username' - Erro ao carregar usuários de usuarios.json
+2025-10-24 21:19:29 - ERROR - AuthService - KeyError: 'username' - Erro ao carregar usuários de usuarios.json
+2025-10-24 21:27:50 - ERROR - AppController - AttributeError: 'RegisterView' object has no attribute 'show_error' - Erro no callback register_failed
+2025-10-24 21:27:52 - ERROR - AppController - AttributeError: 'RegisterView' object has no attribute 'show_error' - Erro no callback register_failed
+2025-10-24 21:27:54 - ERROR - AppController - AttributeError: 'RegisterView' object has no attribute 'show_error' - Erro no callback register_failed
+2025-10-24 21:27:55 - ERROR - AppController - AttributeError: 'RegisterView' object has no attribute 'show_error' - Erro no callback register_failed
+2025-10-24 21:27:55 - ERROR - AppController - AttributeError: 'RegisterView' object has no attribute 'show_error' - Erro no callback register_failed
+2025-10-24 21:27:55 - ERROR - AppController - AttributeError: 'RegisterView' object has no attribute 'show_error' - Erro no callback register_failed
+2025-10-24 21:27:55 - ERROR - AppController - AttributeError: 'RegisterView' object has no attribute 'show_error' - Erro no callback register_failed
+2025-10-24 21:27:59 - ERROR - AppController - AttributeError: 'RegisterView' object has no attribute 'show_error' - Erro no callback register_failed
+2025-10-24 21:27:59 - ERROR - AppController - AttributeError: 'RegisterView' object has no attribute 'show_error' - Erro no callback register_failed
+2025-10-24 21:28:01 - ERROR - AppController - AttributeError: 'RegisterView' object has no attribute 'show_error' - Erro no callback register_failed
+2025-10-24 23:39:16 - ERROR - AuthService - KeyError: 'username' - Erro ao carregar usuários de usuarios.json
+2025-10-24 23:39:35 - ERROR - AppController - AttributeError: 'RegisterView' object has no attribute 'show_error' - Erro no callback register_failed
+2025-10-24 23:39:38 - ERROR - AppController - AttributeError: 'RegisterView' object has no attribute 'show_error' - Erro no callback register_failed
+2025-10-24 23:39:39 - ERROR - AppController - AttributeError: 'RegisterView' object has no attribute 'show_error' - Erro no callback register_failed
+2025-10-24 23:39:39 - ERROR - AppController - AttributeError: 'RegisterView' object has no attribute 'show_error' - Erro no callback register_failed
+2025-10-24 23:39:39 - ERROR - AppController - AttributeError: 'RegisterView' object has no attribute 'show_error' - Erro no callback register_failed
+2025-10-24 23:39:40 - ERROR - AppController - AttributeError: 'RegisterView' object has no attribute 'show_error' - Erro no callback register_failed
+2025-10-24 23:39:40 - ERROR - AppController - AttributeError: 'RegisterView' object has no attribute 'show_error' - Erro no callback register_failed
+2025-10-24 23:39:40 - ERROR - AppController - AttributeError: 'RegisterView' object has no attribute 'show_error' - Erro no callback register_failed
+2025-10-24 23:39:40 - ERROR - AppController - AttributeError: 'RegisterView' object has no attribute 'show_error' - Erro no callback register_failed
+2025-10-24 23:39:40 - ERROR - AppController - AttributeError: 'RegisterView' object has no attribute 'show_error' - Erro no callback register_failed
+2025-10-24 23:39:41 - ERROR - AppController - AttributeError: 'RegisterView' object has no attribute 'show_error' - Erro no callback register_failed
+2025-10-24 23:39:41 - ERROR - AppController - AttributeError: 'RegisterView' object has no attribute 'show_error' - Erro no callback register_failed
+2025-10-24 23:39:41 - ERROR - AppController - AttributeError: 'RegisterView' object has no attribute 'show_error' - Erro no callback register_failed
