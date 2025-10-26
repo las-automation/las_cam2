@@ -197,129 +197,178 @@ class DetectionService:
             stop_event: threading.Event,
             callback: Optional[Callable[[int, int, np.ndarray], None]]
     ) -> None:
-        """Loop principal da thread de detecção."""
+        """Thread principal de detecção."""
         thread_name = threading.current_thread().name
-        log_system_event(f"THREAD_STARTED: {thread_name}", camera_id); print(f"✅ [{thread_name}] Iniciada")
+        log_system_event(f"THREAD_STARTED: {thread_name}", camera_id);
+        print(f"✅ [{thread_name}] Iniciada")
         print(f"   Backend: {self.backend_name}, Modelo: {self.selected_model_path}")
-        cap = None; model = None; is_webcam = False
-
+        cap = None;
+        model = None
         try:
-            log_system_event(f"LOADING_MODEL: {thread_name}", camera_id); print(f"🔄 [{thread_name}] Carregando modelo YOLO...")
-            model = YOLO(self.selected_model_path); log_system_event(f"MODEL_LOADED: {thread_name}", camera_id); print(f"✅ [{thread_name}] Modelo carregado")
-
-            # --- CORREÇÃO: Usa camera_config.source e trata webcam ---
-            source = camera_config.source
-            log_system_event(f"CONNECTING_SOURCE: {thread_name}, Source='{source}'", camera_id)
+            log_system_event(f"LOADING_MODEL: {thread_name}", camera_id);
+            print(f"🔄 [{thread_name}] Carregando modelo YOLO...")
+            model = YOLO(self.selected_model_path);
+            log_system_event(f"MODEL_LOADED: {thread_name}", camera_id);
+            print(f"✅ [{thread_name}] Modelo carregado")
+            source = camera_config.source;
+            log_system_event(f"CONNECTING_SOURCE: {thread_name}, Source='{source}'", camera_id);
             print(f"🔄 [{thread_name}] Conectando a '{source}'...")
-
-            # Tenta converter source para int (índice da webcam)
             try:
-                webcam_index = int(source)
-                cap = cv2.VideoCapture(webcam_index, cv2.CAP_DSHOW) # Usa DSHOW para melhor compatibilidade no Windows
-                is_webcam = True
-                connection_msg = f"Webcam Índice {webcam_index}"
+                webcam_index = int(source); cap = cv2.VideoCapture(webcam_index,
+                                                                   cv2.CAP_DSHOW); is_webcam = True; connection_msg = f"Webcam Índice {webcam_index}"
             except ValueError:
-                # Se não for int, assume que é URL RTSP ou arquivo
-                cap = cv2.VideoCapture(source, cv2.CAP_FFMPEG)
-                is_webcam = False
-                connection_msg = f"Stream {source}"
-
-            if not cap or not cap.isOpened():
-                raise ConnectionError(f"Falha ao abrir fonte: '{source}'")
-
-            log_system_event(f"SOURCE_CONNECTED: {thread_name}, Source='{source}'", camera_id)
+                cap = cv2.VideoCapture(source, cv2.CAP_FFMPEG); is_webcam = False; connection_msg = f"Stream {source}"
+            if not cap or not cap.isOpened(): raise ConnectionError(f"Falha ao abrir fonte: '{source}'")
+            log_system_event(f"SOURCE_CONNECTED: {thread_name}, Source='{source}'", camera_id);
             print(f"✅ [{thread_name}] Conectado a {connection_msg}")
-            # --- FIM CORREÇÃO ---
 
-            cfg = self.config.config.detection; linha_y_pos = max(0.0, min(1.0, cfg.count_line_position))
-            contador = 0; rastreador_estado: Dict[int, Dict[str, Any]] = {}; falhas_consecutivas = 0; max_falhas = cfg.max_detection_failures
+            cfg = self.config.config.detection;
+            linha_y_pos = max(0.0, min(1.0, cfg.count_line_position))
+            contador = 0
+            # --- MODIFICADO: Estado do Rastreador ---
+            # Guarda {'previous_fraction_below': Optional[float], 'counted_this_crossing_up': bool}
+            rastreador_estado: Dict[int, Dict[str, Any]] = {}
+            # --- FIM MODIFICAÇÃO ---
+            falhas_consecutivas = 0;
+            max_falhas = cfg.max_detection_failures
 
-            self.trigger_ui_event("detection_started", camera_id); log_system_event(f"DETECTION_LOOP_STARTING: {thread_name}", camera_id); print(f"🎬 [{thread_name}] Iniciando loop...")
+            self.trigger_ui_event("detection_started", camera_id);
+            log_system_event(f"DETECTION_LOOP_STARTING: {thread_name}", camera_id);
+            print(f"🎬 [{thread_name}] Iniciando loop...")
 
             while not stop_event.is_set():
                 if stop_event.is_set(): break
                 ret, frame = cap.read()
                 if stop_event.is_set(): break
-
                 if not ret or frame is None:
-                    # Lógica de falha na leitura (aumenta robustez)
                     falhas_consecutivas += 1
-                    log_error(thread_name, None, f"Falha na leitura do frame ({falhas_consecutivas}/{max_falhas})")
-                    if falhas_consecutivas > max_falhas:
-                        error_msg = f"Stream/Webcam perdido após {max_falhas} falhas."
-                        log_error(thread_name, None, error_msg)
-                        self.trigger_ui_event("detection_failed", camera_id, error_msg); break
-                    stop_event.wait(0.5); continue # Espera mais se houver falhas
-                falhas_consecutivas = 0 # Reseta em caso de sucesso
+                    if falhas_consecutivas > max_falhas: log_error(thread_name, None,
+                                                                   f"Stream perdido após {max_falhas} falhas."); self.trigger_ui_event(
+                        "detection_failed", camera_id, "Stream perdido"); break
+                    stop_event.wait(0.1);
+                    continue
+                falhas_consecutivas = 0
+                if is_webcam: frame = cv2.flip(frame, 1)  # Inverte webcam
 
-                # Inverte frame da webcam horizontalmente (opcional, comum)
-                if is_webcam:
-                    frame = cv2.flip(frame, 1)
-
-                frame_height, frame_width = frame.shape[:2]; linha_y_pixel = int(frame_height * linha_y_pos)
-                line_width_percent = np.clip(cfg.count_line_width_percent, 0.0, 1.0); line_pixel_width = frame_width * line_width_percent
-                x_start = int((frame_width - line_pixel_width) / 2); x_end = int(x_start + line_pixel_width)
+                frame_height, frame_width = frame.shape[:2];
+                linha_y_pixel = int(frame_height * linha_y_pos)
+                line_width_percent = np.clip(cfg.count_line_width_percent, 0.0, 1.0);
+                line_pixel_width = frame_width * line_width_percent
+                x_start = int((frame_width - line_pixel_width) / 2);
+                x_end = int(x_start + line_pixel_width)
 
                 if stop_event.is_set(): break
-                track_args = {'conf': cfg.confidence_threshold, 'persist': True, 'verbose': False, 'tracker': 'bytetrack.yaml'}
+                track_args = {'conf': cfg.confidence_threshold, 'persist': True, 'verbose': False,
+                              'tracker': 'bytetrack.yaml'}
                 if self.selected_device_args: track_args.update(self.selected_device_args)
                 resultados = model.track(frame, **track_args)
                 if stop_event.is_set(): break
 
                 deteccoes = resultados[0].boxes if resultados and len(resultados) > 0 else None
-                frame_anotado = frame.copy(); current_ids_on_frame = set()
+                frame_anotado = frame.copy();
+                current_ids_on_frame = set()
 
                 if deteccoes is not None and deteccoes.id is not None:
-                    frame_anotado = resultados[0].plot(line_width=1, font_size=0.4) # Usa plot otimizado
+                    frame_anotado = resultados[0].plot(line_width=1, font_size=0.4)
                     for box, obj_id_tensor in zip(deteccoes.xyxy, deteccoes.id):
-                        obj_id = int(obj_id_tensor.cpu().item()); current_ids_on_frame.add(obj_id)
-                        x1, y1, x2, y2 = map(int, box.cpu().numpy()); cx = (x1 + x2) // 2; height = y2 - y1
-                        if height > 0: # Lógica de contagem 70%
-                            pixels_below = max(0, y2 - linha_y_pixel); current_fraction_below = np.clip(pixels_below / height, 0.0, 1.0)
-                            if obj_id not in rastreador_estado: rastreador_estado[obj_id] = {'previous_fraction_below': None, 'counted_this_crossing': False}
-                            state = rastreador_estado[obj_id]; previous_fraction_below = state['previous_fraction_below']; dentro_limites_x = (x_start <= cx <= x_end)
-                            if (previous_fraction_below is not None and previous_fraction_below < CROSSING_THRESHOLD and current_fraction_below >= CROSSING_THRESHOLD and not state['counted_this_crossing'] and dentro_limites_x):
-                                contador += 1; state['counted_this_crossing'] = True; session.detection_count = contador
-                                log_system_event(f"OBJECT_CROSSED: Cam={camera_id}, ID={obj_id}, Count={contador}", camera_id)
-                                print(f"✅ [{thread_name}] ID {obj_id} CRUZOU ({current_fraction_below:.2f} abaixo)! Total: {contador}")
-                            elif current_fraction_below < CROSSING_THRESHOLD: state['counted_this_crossing'] = False
-                            state['previous_fraction_below'] = current_fraction_below
+                        obj_id = int(obj_id_tensor.cpu().item());
+                        current_ids_on_frame.add(obj_id)
+                        x1, y1, x2, y2 = map(int, box.cpu().numpy());
+                        cx = (x1 + x2) // 2;
+                        height = y2 - y1
 
-                ids_to_remove = set(rastreador_estado.keys()) - current_ids_on_frame # Limpa estado
+                        # --- LÓGICA DE CONTAGEM INVERTIDA ---
+                        if height > 0:
+                            pixels_below = max(0, y2 - linha_y_pixel)
+                            current_fraction_below = np.clip(pixels_below / height, 0.0, 1.0)
+
+                            # Inicializa estado se for a primeira vez vendo o ID
+                            if obj_id not in rastreador_estado:
+                                rastreador_estado[obj_id] = {'previous_fraction_below': None,
+                                                             'counted_this_crossing_up': False}
+
+                            state = rastreador_estado[obj_id]
+                            previous_fraction_below = state['previous_fraction_below']
+                            dentro_limites_x = (x_start <= cx <= x_end)
+
+                            # CONDIÇÃO DE CONTAGEM (BAIXO PARA CIMA):
+                            # 1. Visto antes?
+                            # 2. Estava >= 70% abaixo antes?
+                            # 3. Está < 70% abaixo agora?
+                            # 4. Não contado nesta subida?
+                            # 5. Dentro dos limites X?
+                            if (previous_fraction_below is not None and
+                                    previous_fraction_below >= CROSSING_THRESHOLD and  # Era >= 70%
+                                    current_fraction_below < CROSSING_THRESHOLD and  # Agora é < 70%
+                                    not state['counted_this_crossing_up'] and
+                                    dentro_limites_x):
+
+                                contador += 1
+                                state['counted_this_crossing_up'] = True  # Marca como contado nesta subida
+                                session.detection_count = contador
+                                log_system_event(f"OBJECT_CROSSED_UP: Cam={camera_id}, ID={obj_id}, Count={contador}",
+                                                 camera_id)
+                                print(
+                                    f"✅ [{thread_name}] ID {obj_id} CRUZOU PARA CIMA ({current_fraction_below:.2f} abaixo)! Total: {contador}")
+
+                            # CONDIÇÃO DE RESET DA CONTAGEM:
+                            # Se o objeto voltou a ter >= 70% abaixo,
+                            # ele pode ser contado novamente na próxima subida.
+                            elif current_fraction_below >= CROSSING_THRESHOLD:
+                                state['counted_this_crossing_up'] = False  # Permite contar na próxima subida
+
+                            # Atualiza estado para próximo frame
+                            state['previous_fraction_below'] = current_fraction_below
+                        # --- FIM DA LÓGICA INVERTIDA ---
+
+                # Limpa estado de IDs que saíram
+                ids_to_remove = set(rastreador_estado.keys()) - current_ids_on_frame
                 for tid in ids_to_remove: del rastreador_estado[tid]
 
                 # Desenha linha e contagem
                 cv2.line(frame_anotado, (x_start, linha_y_pixel), (x_end, linha_y_pixel), (0, 0, 255), 2)
-                cv2.putText(frame_anotado, f"Contagem: {contador}", (20, 40), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2, cv2.LINE_AA)
+                cv2.putText(frame_anotado, f"Contagem: {contador}", (20, 40), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0),
+                            2, cv2.LINE_AA)
 
-                if stop_event.is_set(): break # Verifica antes do callback/display
+                if stop_event.is_set(): break
                 if callback:
-                    try: callback(camera_id, contador, frame_anotado)
-                    except Exception as e: log_error(thread_name, e, f"Erro no callback")
+                    try:
+                        callback(camera_id, contador, frame_anotado)
+                    except Exception as e:
+                        log_error(thread_name, e, f"Erro no callback")
                 if cfg.show_window:
                     cv2.imshow(f"Camera {camera_id} - {self.backend_name}", frame_anotado)
-                    # Reduz waitKey para potentially melhorar responsividade ao stop_event
                     if cv2.waitKey(1) & 0xFF == ord('q'): stop_event.set(); break
 
         except ConnectionError as conn_e:
-             log_error(thread_name, conn_e, "Erro de conexão RTSP/Webcam"); self.trigger_ui_event("detection_failed", camera_id, f"Erro de conexão: {conn_e}")
+            log_error(thread_name, conn_e, "Erro de conexão RTSP/Webcam");
+            self.trigger_ui_event("detection_failed", camera_id, f"Erro de conexão: {conn_e}")
         except Exception as e:
-            log_error(thread_name, e, f"Erro fatal na thread"); self.trigger_ui_event("detection_failed", camera_id, f"Erro fatal na thread: {e}")
+            log_error(thread_name, e, f"Erro fatal na thread");
+            self.trigger_ui_event("detection_failed", camera_id, f"Erro fatal na thread: {e}")
         finally:
-            log_system_event(f"CLEANING_UP_THREAD: {thread_name}", camera_id); print(f"🧹 [{thread_name}] Limpando recursos...")
-            try: # Libera câmera
-                if cap is not None and cap.isOpened(): cap.release(); log_system_event(f"SOURCE_RELEASED: {thread_name}", camera_id)
-            except Exception as cap_e: log_error(thread_name, cap_e, "Erro ao liberar captura de vídeo")
-            try: # Fecha janela OpenCV
-                cfg = self.config.config.detection # Garante que cfg esteja definida
-                if cfg.show_window: cv2.waitKey(10); cv2.destroyWindow(f"Camera {camera_id} - {self.backend_name}"); cv2.waitKey(10)
-            except Exception as win_e: log_error(thread_name, win_e, "Erro ao fechar janela OpenCV")
-            if session.end_time is None: session.end_session() # Garante end_time
-            log_system_event(f"DETECTION_THREAD_ENDED: {thread_name}", camera_id); print(f"❌ [{thread_name}] Encerrada. Total: {session.detection_count}")
-            if not stop_event.is_set(): # Limpa refs APENAS se a thread parou sozinha
-                 log_system_event(f"THREAD_ENDED_UNEXPECTEDLY: {thread_name}, notifying UI and cleaning up.", camera_id)
-                 self.trigger_ui_event("detection_stopped", camera_id)
-                 self._active_sessions.pop(camera_id, None); self._stop_events.pop(camera_id, None); self._detection_threads.pop(camera_id, None)
+            log_system_event(f"CLEANING_UP_THREAD: {thread_name}", camera_id);
+            print(f"🧹 [{thread_name}] Limpando recursos...")
+            try:  # Libera câmera
+                if cap is not None and cap.isOpened(): cap.release(); log_system_event(
+                    f"SOURCE_RELEASED: {thread_name}", camera_id)
+            except Exception as cap_e:
+                log_error(thread_name, cap_e, "Erro ao liberar captura de vídeo")
+            try:  # Fecha janela OpenCV
+                cfg = self.config.config.detection  # Garante que cfg esteja definida
+                if cfg.show_window: cv2.waitKey(10); cv2.destroyWindow(
+                    f"Camera {camera_id} - {self.backend_name}"); cv2.waitKey(10)
+            except Exception as win_e:
+                log_error(thread_name, win_e, "Erro ao fechar janela OpenCV")
+            if session.end_time is None: session.end_session()  # Garante end_time
+            log_system_event(f"DETECTION_THREAD_ENDED: {thread_name}", camera_id);
+            print(f"❌ [{thread_name}] Encerrada. Total: {session.detection_count}")
+            if not stop_event.is_set():  # Limpa refs APENAS se a thread parou sozinha
+                log_system_event(f"THREAD_ENDED_UNEXPECTEDLY: {thread_name}, notifying UI and cleaning up.", camera_id)
+                self.trigger_ui_event("detection_stopped", camera_id)
+                self._active_sessions.pop(camera_id, None);
+                self._stop_events.pop(camera_id, None);
+                self._detection_threads.pop(camera_id, None)
 
     # (stop_detection e stop_all_detections permanecem os mesmos)
     def stop_detection(self, camera_id: int) -> bool:

@@ -145,6 +145,7 @@
 2025-10-26 13:46:32 - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_2_TYPE_Torta Normal_BACKEND_OpenVINO: 
 2025-10-26 13:49:14 - INFO - User 'gustavo' - LOGOUT_REQUESTED: 
 2025-10-26 13:49:14 - INFO - User 'gustavo' - LOGOUT_COMPLETED: 
+<<<<<<< HEAD
 2025-10-26 14:37:44 - INFO - User 'ands' - LOGIN_FAILED: Usuário não encontrado ou inativo
 2025-10-26 14:37:52 - INFO - User 'ands' - USER_REGISTERED: Role: viewer
 2025-10-26 14:37:52 - INFO - User 'ands' - SELF_REGISTER_SUCCESS: 
@@ -166,3 +167,17 @@
 2025-10-26 14:42:24 - INFO - User 'ands' - LOGIN_SUCCESS: 
 2025-10-26 14:42:41 - INFO - User 'ands' - START_DETECTION_REQUESTED: Cam=1, Type=Torta Normal: 
 2025-10-26 14:42:41 - INFO - User 'ands' - DETECTION_STARTED_CAMERA_1_TYPE_Torta Normal_BACKEND_TensorRT: 
+=======
+2025-10-26 15:07:54 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-26 15:07:54 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-26 15:08:02 - INFO - User 'gustavo' - START_DETECTION_REQUESTED: Cam=1, Type=Torta Normal: 
+2025-10-26 15:08:02 - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_1_TYPE_Torta Normal_BACKEND_OpenVINO: 
+2025-10-26 15:08:14 - INFO - User 'gustavo' - START_DETECTION_REQUESTED: Cam=2, Type=Torta Normal: 
+2025-10-26 15:08:14 - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_2_TYPE_Torta Normal_BACKEND_OpenVINO: 
+2025-10-26 15:11:05 - INFO - User 'gustavo' - START_DETECTION_REQUESTED: Cam=2, Type=Torta Normal: 
+2025-10-26 15:11:05 - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_2_TYPE_Torta Normal_BACKEND_OpenVINO: 
+2025-10-26 15:12:18 - INFO - User 'gustavo' - START_DETECTION_REQUESTED: Cam=2, Type=Torta Normal: 
+2025-10-26 15:12:18 - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_2_TYPE_Torta Normal_BACKEND_DirectML: 
+2025-10-26 15:13:07 - INFO - User 'gustavo' - LOGOUT_REQUESTED: 
+2025-10-26 15:13:07 - INFO - User 'gustavo' - LOGOUT_COMPLETED: 
+>>>>>>> 040f1399e50496c416111c92ddfaaed6ae5ae35b
