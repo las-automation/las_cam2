@@ -363,3 +363,39 @@ See https://pytorch.org/get-started/locally/ for up-to-date torch install instru
 NoneType: None
 2025-10-26 03:12:38 - ERROR - AppController - NoneType: None - Falha ao solicitar início da detecção para Cam=4
 NoneType: None
+2025-10-26 12:38:20 - ERROR - ConfigManager - TypeError: CameraConfig.__init__() got an unexpected keyword argument 'rtsp_url' - Erro dados Câmera ID 3
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\config\settings.py", line 79, in _load_config
+    try: cameras[int(cam_id)] = CameraConfig(**cam_data)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: CameraConfig.__init__() got an unexpected keyword argument 'rtsp_url'
+2025-10-26 12:38:20 - ERROR - ConfigManager - TypeError: CameraConfig.__init__() got an unexpected keyword argument 'rtsp_url' - Erro dados Câmera ID 4
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\config\settings.py", line 79, in _load_config
+    try: cameras[int(cam_id)] = CameraConfig(**cam_data)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: CameraConfig.__init__() got an unexpected keyword argument 'rtsp_url'
+2025-10-26 12:52:04 - ERROR - AppController - AttributeError: 'CameraConfig' object has no attribute 'rtsp_url' - Erro ao obter lista de câmeras
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\controllers\app_controller.py", line 111, in get_cameras
+    'rtsp_url': camera_config.rtsp_url,
+                ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'CameraConfig' object has no attribute 'rtsp_url'
+2025-10-26 13:09:38 - ERROR - DetectionService - NoneType: None - Detecção já está ativa para Câmera 1.
+NoneType: None
+2025-10-26 13:09:47 - ERROR - DetectionService - NoneType: None - Thread Detection-Cam-1 não finalizou no timeout!
+NoneType: None
+2025-10-26 13:09:47 - ERROR - AppController - NoneType: None - Falha ao solicitar início da detecção para Cam=1
+NoneType: None
+2025-10-26 13:09:53 - ERROR - Detection-Cam-1 - ConnectionError: Falha ao abrir fonte: 'rtsp://admin:admin@192.168.0.100:554/stream1' - Erro de conexão RTSP/Webcam
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\services\detection_service.py", line 228, in _run_detection_thread
+    raise ConnectionError(f"Falha ao abrir fonte: '{source}'")
+ConnectionError: Falha ao abrir fonte: 'rtsp://admin:admin@192.168.0.100:554/stream1'
+2025-10-26 13:11:00 - ERROR - Detection-Cam-1 - ConnectionError: Falha ao abrir fonte: 'rtsp://admin:admin@192.168.0.100:554/stream1' - Erro de conexão RTSP/Webcam
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\services\detection_service.py", line 228, in _run_detection_thread
+    raise ConnectionError(f"Falha ao abrir fonte: '{source}'")
+ConnectionError: Falha ao abrir fonte: 'rtsp://admin:admin@192.168.0.100:554/stream1'
+2025-10-26 13:11:05 - ERROR - DetectionService - NoneType: None - Thread Detection-Cam-1 não finalizou no timeout!
+NoneType: None
