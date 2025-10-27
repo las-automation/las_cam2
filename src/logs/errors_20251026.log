@@ -399,3 +399,27 @@ Traceback (most recent call last):
 ConnectionError: Falha ao abrir fonte: 'rtsp://admin:admin@192.168.0.100:554/stream1'
 2025-10-26 13:11:05 - ERROR - DetectionService - NoneType: None - Thread Detection-Cam-1 não finalizou no timeout!
 NoneType: None
+2025-10-26 17:27:30 - ERROR - Detection-Cam-2 - ConnectionError: Falha ao abrir fonte: 'rtsp://admin:admin@192.168.0.5:554/1/2' - Erro de conexão RTSP/Webcam
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\services\detection_service.py", line 221, in _run_detection_thread
+    if not cap or not cap.isOpened(): raise ConnectionError(f"Falha ao abrir fonte: '{source}'")
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionError: Falha ao abrir fonte: 'rtsp://admin:admin@192.168.0.5:554/1/2'
+2025-10-26 22:40:34 - ERROR - ApiService - HTTPError: 401 Client Error: Unauthorized for url: https://siemens-web-back-end.onrender.com/freidamiaosheets/daily-reports - API_SEND_REPORT_HTTP_ERROR: Status=401, Response=...
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\services\api_service.py", line 66, in send_daily_report
+    response.raise_for_status()
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\.venv1\Lib\site-packages\requests\models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://siemens-web-back-end.onrender.com/freidamiaosheets/daily-reports
+2025-10-26 22:40:34 - ERROR - AppController - NoneType: None - Falha ao enviar relatório para API (Cam=2)
+NoneType: None
+2025-10-26 22:40:34 - ERROR - AppController - TypeError: show_error_dialog() got an unexpected keyword argument 'parent' - Erro fatal no callback da UI 'api_report_failed'
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\controllers\app_controller.py", line 48, in trigger_ui_event
+    callback(*args, **kwargs)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\screen_manager.py", line 358, in _on_api_report_failed
+    self.camera_windows[camera_id].show_error(msg)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\camera_view.py", line 308, in show_error
+    show_error_dialog(f"Erro - Câmera {self.camera_id}", message, parent=self)
+TypeError: show_error_dialog() got an unexpected keyword argument 'parent'

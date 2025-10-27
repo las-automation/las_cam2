@@ -5,9 +5,11 @@ import logging
 import logging.handlers
 from pathlib import Path
 from datetime import datetime
+from .paths import LOG_DIR_PATH # Importa o path
 from typing import Optional
 import os
 
+LOG_DIRECTORY = LOG_DIR_PATH
 
 class LoggerManager:
     """Gerenciador de logs do sistema"""

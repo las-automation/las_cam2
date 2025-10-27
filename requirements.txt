@@ -6,7 +6,7 @@ tkinter-tooltip>=2.0.0
 torch==2.4.1+cu124
 torchvision==0.19.1+cu124
 torchaudio==2.4.1+cu124
---extra-index-url https://download.pytorch.org/whl/cu121
+--extra-index-url https://download.pytorch.org/whl/cu124
 
 torch-directml
 ultralytics>=8.0.0
@@ -19,6 +19,7 @@ scipy>=1.11.0
 
 # Geração de Relatórios
 reportlab>=4.0.0
+requests>=2.28.0
 
 # Utilitários
 pathlib2>=2.3.7

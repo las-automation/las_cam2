@@ -1377,3 +1377,229 @@
 2025-10-26 15:13:07 - INFO - System - LOGOUT_ATTEMPT_WITHOUT_USER: 
 2025-10-26 15:13:07 - INFO - System - APP_SHUTDOWN_COMPLETED: 
 2025-10-26 15:13:07 - INFO - System - APPLICATION_CLOSED: 
+2025-10-26 16:14:59 - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-26 16:14:59 - INFO - System - DIRECTML_AVAILABLE: 
+2025-10-26 16:14:59 - INFO - System - APPLICATION_STARTUP: 
+2025-10-26 16:15:00 - INFO - System - DETECTION_SERVICE_INITIALIZED_BACKEND_DIRECTML: 
+2025-10-26 16:15:00 - INFO - System - REPORT_SERVICE_INITIALIZED: Directory=C:\Users\cchrr\Documents\GitHub\las_cam2\src\reports: 
+2025-10-26 16:15:00 - INFO - System - APP_CONTROLLER_INITIALIZED: 
+2025-10-26 16:15:00 - INFO - System - UI_CALLBACK_SET: login_success: 
+2025-10-26 16:15:00 - INFO - System - UI_CALLBACK_SET: login_failed: 
+2025-10-26 16:15:00 - INFO - System - UI_CALLBACK_SET: register_success: 
+2025-10-26 16:15:00 - INFO - System - UI_CALLBACK_SET: self_register_success: 
+2025-10-26 16:15:00 - INFO - System - UI_CALLBACK_SET: register_failed: 
+2025-10-26 16:15:00 - INFO - System - UI_CALLBACK_SET: logout_success: 
+2025-10-26 16:15:00 - INFO - System - UI_CALLBACK_SET: detection_starting: 
+2025-10-26 16:15:00 - INFO - System - UI_CALLBACK_SET: detection_started: 
+2025-10-26 16:15:00 - INFO - System - UI_CALLBACK_SET: detection_stopped: 
+2025-10-26 16:15:00 - INFO - System - UI_CALLBACK_SET: detection_failed: 
+2025-10-26 16:15:00 - INFO - System - UI_CALLBACK_SET: detection_update: 
+2025-10-26 16:15:00 - INFO - System - UI_CALLBACK_SET: count_reset: 
+2025-10-26 16:15:00 - INFO - System - UI_CALLBACK_SET: report_generated: 
+2025-10-26 16:15:00 - INFO - System - UI_CALLBACK_SET: report_failed: 
+2025-10-26 16:15:00 - INFO - System - UI_CALLBACK_SET: config_updated: 
+2025-10-26 16:15:00 - INFO - System - UI_CALLBACK_SET: camera_added: 
+2025-10-26 16:15:00 - INFO - System - UI_CALLBACK_SET: camera_removed: 
+2025-10-26 16:15:00 - INFO - System - UI_CALLBACK_SET: error: 
+2025-10-26 16:15:00 - INFO - System - APPLICATION_INITIALIZED: 
+2025-10-26 16:15:00 - INFO - System - APPLICATION_MAINLOOP_START: 
+2025-10-26 17:03:14 - INFO - System - APPLICATION_CLOSING: 
+2025-10-26 17:03:14 - INFO - System - APP_SHUTDOWN_REQUESTED: 
+2025-10-26 17:03:14 - INFO - System - STOP_ALL_DETECTIONS: Nenhuma detecção ativa.: 
+2025-10-26 17:03:14 - INFO - System - STOP_ALL_DETECTIONS: Nenhuma detecção ativa.: 
+2025-10-26 17:03:14 - INFO - System - APP_SHUTDOWN_COMPLETED: 
+2025-10-26 17:03:14 - INFO - System - APP_SHUTDOWN_REQUESTED: 
+2025-10-26 17:03:14 - INFO - System - STOP_ALL_DETECTIONS: Nenhuma detecção ativa.: 
+2025-10-26 17:03:14 - INFO - System - LOGOUT_ATTEMPT_WITHOUT_USER: 
+2025-10-26 17:03:14 - INFO - System - APP_SHUTDOWN_COMPLETED: 
+2025-10-26 17:03:14 - INFO - System - APPLICATION_CLOSED: 
+2025-10-26 17:22:20 - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-26 17:22:20 - INFO - System - DIRECTML_AVAILABLE: 
+2025-10-26 17:22:20 - INFO - System - APPLICATION_STARTUP: 
+2025-10-26 17:22:20 - INFO - System - DETECTION_SERVICE_INITIALIZED_BACKEND_DIRECTML: 
+2025-10-26 17:22:20 - INFO - System - REPORT_SERVICE_INITIALIZED: Directory=C:\Users\cchrr\Documents\GitHub\las_cam2\src\reports: 
+2025-10-26 17:22:20 - INFO - System - APP_CONTROLLER_INITIALIZED: 
+2025-10-26 17:22:20 - INFO - System - UI_CALLBACK_SET: login_success: 
+2025-10-26 17:22:20 - INFO - System - UI_CALLBACK_SET: login_failed: 
+2025-10-26 17:22:20 - INFO - System - UI_CALLBACK_SET: register_success: 
+2025-10-26 17:22:20 - INFO - System - UI_CALLBACK_SET: self_register_success: 
+2025-10-26 17:22:20 - INFO - System - UI_CALLBACK_SET: register_failed: 
+2025-10-26 17:22:20 - INFO - System - UI_CALLBACK_SET: logout_success: 
+2025-10-26 17:22:20 - INFO - System - UI_CALLBACK_SET: detection_starting: 
+2025-10-26 17:22:20 - INFO - System - UI_CALLBACK_SET: detection_started: 
+2025-10-26 17:22:20 - INFO - System - UI_CALLBACK_SET: detection_stopped: 
+2025-10-26 17:22:20 - INFO - System - UI_CALLBACK_SET: detection_failed: 
+2025-10-26 17:22:20 - INFO - System - UI_CALLBACK_SET: detection_update: 
+2025-10-26 17:22:20 - INFO - System - UI_CALLBACK_SET: count_reset: 
+2025-10-26 17:22:20 - INFO - System - UI_CALLBACK_SET: report_generated: 
+2025-10-26 17:22:20 - INFO - System - UI_CALLBACK_SET: report_failed: 
+2025-10-26 17:22:20 - INFO - System - UI_CALLBACK_SET: config_updated: 
+2025-10-26 17:22:20 - INFO - System - UI_CALLBACK_SET: camera_added: 
+2025-10-26 17:22:20 - INFO - System - UI_CALLBACK_SET: camera_removed: 
+2025-10-26 17:22:20 - INFO - System - UI_CALLBACK_SET: error: 
+2025-10-26 17:22:20 - INFO - System - APPLICATION_INITIALIZED: 
+2025-10-26 17:22:20 - INFO - System - APPLICATION_MAINLOOP_START: 
+2025-10-26 17:23:32 - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=1, Data={'name': 'Nova Câmera 1', 'source': '0', 'description': 'Insira a descrição', 'enabled': True}: 1
+2025-10-26 17:23:32 - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=1: 1
+2025-10-26 17:23:33 - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=2, Data={'name': 'Nova Câmera 2', 'source': 'rtsp://admin:admin@192.168.0.5:554/1/2', 'description': 'Insira a descrição', 'enabled': True}: 2
+2025-10-26 17:23:33 - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=2: 2
+2025-10-26 17:23:33 - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=1, Data={'name': 'Nova Câmera 1', 'source': '0', 'description': 'Insira a descrição', 'enabled': True}: 1
+2025-10-26 17:23:33 - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=1: 1
+2025-10-26 17:23:34 - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=2, Data={'name': 'Nova Câmera 2', 'source': 'rtsp://admin:admin@192.168.0.5:554/1/2', 'description': 'Insira a descrição', 'enabled': True}: 2
+2025-10-26 17:23:34 - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=2: 2
+2025-10-26 17:23:34 - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=1, Data={'name': 'Nova Câmera 1', 'source': '0', 'description': 'Insira a descrição', 'enabled': True}: 1
+2025-10-26 17:23:34 - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=1: 1
+2025-10-26 17:23:35 - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=2, Data={'name': 'Nova Câmera 2', 'source': 'rtsp://admin:admin@192.168.0.5:554/1/2', 'description': 'Insira a descrição', 'enabled': True}: 2
+2025-10-26 17:23:35 - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=2: 2
+2025-10-26 17:26:50 - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=1, Data={'name': 'Nova Câmera 1', 'source': '0', 'description': 'Insira a descrição', 'enabled': True}: 1
+2025-10-26 17:26:50 - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=1: 1
+2025-10-26 17:26:50 - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-26 17:27:00 - INFO - System - THREAD_STARTED: Detection-Cam-2: 2
+2025-10-26 17:27:00 - INFO - System - LOADING_MODEL: Detection-Cam-2: 2
+2025-10-26 17:27:00 - INFO - System - MODEL_LOADED: Detection-Cam-2: 2
+2025-10-26 17:27:00 - INFO - System - CONNECTING_SOURCE: Detection-Cam-2, Source='rtsp://admin:admin@192.168.0.5:554/1/2': 2
+2025-10-26 17:27:31 - INFO - System - STOP_DETECTION_REQUESTED: Cam=2: 2
+2025-10-26 17:27:31 - INFO - System - STOPPING_DETECTION_REQUESTED: Camera ID: 2: 2
+2025-10-26 17:27:31 - INFO - System - CLEANING_UP_THREAD: Detection-Cam-2: 2
+2025-10-26 17:27:31 - INFO - System - DETECTION_THREAD_ENDED: Detection-Cam-2: 2
+2025-10-26 17:27:46 - INFO - System - THREAD_STARTED: Detection-Cam-2: 2
+2025-10-26 17:27:46 - INFO - System - LOADING_MODEL: Detection-Cam-2: 2
+2025-10-26 17:27:46 - INFO - System - MODEL_LOADED: Detection-Cam-2: 2
+2025-10-26 17:27:46 - INFO - System - CONNECTING_SOURCE: Detection-Cam-2, Source='rtsp://admin:admin@192.168.0.5:554/1/2': 2
+2025-10-26 17:27:54 - INFO - System - SOURCE_CONNECTED: Detection-Cam-2, Source='rtsp://admin:admin@192.168.0.5:554/1/2': 2
+2025-10-26 17:27:55 - INFO - System - DETECTION_LOOP_STARTING: Detection-Cam-2: 2
+2025-10-26 17:28:14 - INFO - System - STOP_DETECTION_REQUESTED: Cam=2: 2
+2025-10-26 17:28:14 - INFO - System - STOPPING_DETECTION_REQUESTED: Camera ID: 2: 2
+2025-10-26 17:28:14 - INFO - System - CLEANING_UP_THREAD: Detection-Cam-2: 2
+2025-10-26 17:28:14 - INFO - System - SOURCE_RELEASED: Detection-Cam-2: 2
+2025-10-26 17:28:14 - INFO - System - DETECTION_THREAD_ENDED: Detection-Cam-2: 2
+2025-10-26 17:28:14 - INFO - System - DETECTION_STOPPED_CONFIRMED: Camera ID: 2: 2
+2025-10-26 17:28:14 - INFO - System - SESSION_ENDED: Cam=2, Count=0, Duration=0:00:28.622672: 2
+2025-10-26 17:28:14 - INFO - System - SKIPPING_REPORT_NO_COUNT: Cam=2: 2
+2025-10-26 17:32:26 - INFO - System - THREAD_STARTED: Detection-Cam-2: 2
+2025-10-26 17:32:26 - INFO - System - LOADING_MODEL: Detection-Cam-2: 2
+2025-10-26 17:32:27 - INFO - System - MODEL_LOADED: Detection-Cam-2: 2
+2025-10-26 17:32:27 - INFO - System - CONNECTING_SOURCE: Detection-Cam-2, Source='rtsp://admin:admin@192.168.0.5:554/1/2': 2
+2025-10-26 17:32:33 - INFO - System - SOURCE_CONNECTED: Detection-Cam-2, Source='rtsp://admin:admin@192.168.0.5:554/1/2': 2
+2025-10-26 17:32:33 - INFO - System - DETECTION_LOOP_STARTING: Detection-Cam-2: 2
+2025-10-26 17:32:43 - INFO - System - STOP_DETECTION_REQUESTED: Cam=2: 2
+2025-10-26 17:32:43 - INFO - System - STOPPING_DETECTION_REQUESTED: Camera ID: 2: 2
+2025-10-26 17:32:43 - INFO - System - CLEANING_UP_THREAD: Detection-Cam-2: 2
+2025-10-26 17:32:43 - INFO - System - SOURCE_RELEASED: Detection-Cam-2: 2
+2025-10-26 17:32:43 - INFO - System - DETECTION_THREAD_ENDED: Detection-Cam-2: 2
+2025-10-26 17:32:43 - INFO - System - DETECTION_STOPPED_CONFIRMED: Camera ID: 2: 2
+2025-10-26 17:32:43 - INFO - System - SESSION_ENDED: Cam=2, Count=0, Duration=0:00:16.474995: 2
+2025-10-26 17:32:43 - INFO - System - SKIPPING_REPORT_NO_COUNT: Cam=2: 2
+2025-10-26 17:41:42 - INFO - System - APPLICATION_CLOSING: 
+2025-10-26 17:41:42 - INFO - System - STOP_DETECTION_REQUESTED: Cam=2: 2
+2025-10-26 17:41:42 - INFO - System - STOP_DETECTION_IGNORED: Nenhuma sessão ativa encontrada para Cam=2: 2
+2025-10-26 17:41:42 - INFO - System - APP_SHUTDOWN_REQUESTED: 
+2025-10-26 17:41:42 - INFO - System - STOP_ALL_DETECTIONS: Nenhuma detecção ativa.: 
+2025-10-26 17:41:42 - INFO - System - STOP_ALL_DETECTIONS: Nenhuma detecção ativa.: 
+2025-10-26 17:41:42 - INFO - System - APP_SHUTDOWN_COMPLETED: 
+2025-10-26 17:41:42 - INFO - System - APP_SHUTDOWN_REQUESTED: 
+2025-10-26 17:41:42 - INFO - System - STOP_ALL_DETECTIONS: Nenhuma detecção ativa.: 
+2025-10-26 17:41:42 - INFO - System - LOGOUT_ATTEMPT_WITHOUT_USER: 
+2025-10-26 17:41:42 - INFO - System - APP_SHUTDOWN_COMPLETED: 
+2025-10-26 17:41:42 - INFO - System - APPLICATION_CLOSED: 
+2025-10-26 21:48:34 - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-26 21:48:34 - INFO - System - DIRECTML_AVAILABLE: 
+2025-10-26 21:48:34 - INFO - System - APPLICATION_STARTUP: 
+2025-10-26 21:48:35 - INFO - System - DETECTION_SERVICE_INITIALIZED_BACKEND_DIRECTML: 
+2025-10-26 21:48:35 - INFO - System - REPORT_SERVICE_INITIALIZED: Directory=C:\Users\cchrr\Documents\GitHub\las_cam2\src\reports: 
+2025-10-26 21:48:35 - INFO - System - APP_CONTROLLER_INITIALIZED: 
+2025-10-26 21:48:35 - INFO - System - UI_CALLBACK_SET: login_success: 
+2025-10-26 21:48:35 - INFO - System - UI_CALLBACK_SET: login_failed: 
+2025-10-26 21:48:35 - INFO - System - UI_CALLBACK_SET: register_success: 
+2025-10-26 21:48:35 - INFO - System - UI_CALLBACK_SET: self_register_success: 
+2025-10-26 21:48:35 - INFO - System - UI_CALLBACK_SET: register_failed: 
+2025-10-26 21:48:35 - INFO - System - UI_CALLBACK_SET: logout_success: 
+2025-10-26 21:48:35 - INFO - System - UI_CALLBACK_SET: detection_starting: 
+2025-10-26 21:48:35 - INFO - System - UI_CALLBACK_SET: detection_started: 
+2025-10-26 21:48:35 - INFO - System - UI_CALLBACK_SET: detection_stopped: 
+2025-10-26 21:48:35 - INFO - System - UI_CALLBACK_SET: detection_failed: 
+2025-10-26 21:48:35 - INFO - System - UI_CALLBACK_SET: detection_update: 
+2025-10-26 21:48:35 - INFO - System - UI_CALLBACK_SET: count_reset: 
+2025-10-26 21:48:35 - INFO - System - UI_CALLBACK_SET: report_generated: 
+2025-10-26 21:48:35 - INFO - System - UI_CALLBACK_SET: report_failed: 
+2025-10-26 21:48:35 - INFO - System - UI_CALLBACK_SET: config_updated: 
+2025-10-26 21:48:35 - INFO - System - UI_CALLBACK_SET: camera_added: 
+2025-10-26 21:48:35 - INFO - System - UI_CALLBACK_SET: camera_removed: 
+2025-10-26 21:48:35 - INFO - System - UI_CALLBACK_SET: error: 
+2025-10-26 21:48:35 - INFO - System - UI_CALLBACK_SET: api_report_sent: 
+2025-10-26 21:48:35 - INFO - System - UI_CALLBACK_SET: api_report_failed: 
+2025-10-26 21:48:35 - INFO - System - APPLICATION_INITIALIZED: 
+2025-10-26 21:48:35 - INFO - System - APPLICATION_MAINLOOP_START: 
+2025-10-26 21:49:01 - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-26 21:50:45 - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=1, Data={'name': 'Nova Câmera 1', 'source': '0', 'description': 'Insira a descrição', 'enabled': True}: 1
+2025-10-26 21:50:45 - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=1: 1
+2025-10-26 21:50:45 - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=2, Data={'name': 'Nova Câmera 2', 'source': 'rtsp://admin:admin@192.168.0.5:554/1/2', 'description': 'Insira a descrição', 'enabled': True}: 2
+2025-10-26 21:50:45 - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=2: 2
+2025-10-26 21:50:54 - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-26 21:50:57 - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=1, Data={'name': 'Nova Câmera 1', 'source': '0', 'description': 'Insira a descrição', 'enabled': True}: 1
+2025-10-26 21:50:57 - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=1: 1
+2025-10-26 21:50:58 - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-26 21:51:03 - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=1, Data={'name': 'Nova Câmera 1', 'source': '0', 'description': 'Insira a descrição', 'enabled': True}: 1
+2025-10-26 21:51:03 - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=1: 1
+2025-10-26 21:51:03 - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-26 21:52:33 - INFO - System - STOP_DETECTION_REQUESTED: Cam=2: 2
+2025-10-26 21:52:33 - INFO - System - APPLICATION_CLOSING: 
+2025-10-26 21:52:33 - INFO - System - APP_SHUTDOWN_REQUESTED: 
+2025-10-26 21:52:33 - INFO - System - STOP_ALL_DETECTIONS: Nenhuma detecção ativa.: 
+2025-10-26 21:52:33 - INFO - System - STOP_ALL_DETECTIONS: Nenhuma detecção ativa.: 
+2025-10-26 21:52:33 - INFO - System - APP_SHUTDOWN_COMPLETED: 
+2025-10-26 21:52:33 - INFO - System - APP_SHUTDOWN_REQUESTED: 
+2025-10-26 21:52:33 - INFO - System - STOP_ALL_DETECTIONS: Nenhuma detecção ativa.: 
+2025-10-26 21:52:33 - INFO - System - LOGOUT_ATTEMPT_WITHOUT_USER: 
+2025-10-26 21:52:33 - INFO - System - APP_SHUTDOWN_COMPLETED: 
+2025-10-26 21:52:33 - INFO - System - APPLICATION_CLOSED: 
+2025-10-26 22:38:43 - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-26 22:38:43 - INFO - System - DIRECTML_AVAILABLE: 
+2025-10-26 22:38:43 - INFO - System - APPLICATION_STARTUP: 
+2025-10-26 22:38:43 - INFO - System - DETECTION_SERVICE_INITIALIZED_BACKEND_DIRECTML: 
+2025-10-26 22:38:43 - INFO - System - REPORT_SERVICE_INITIALIZED: Directory=C:\Users\cchrr\Documents\GitHub\las_cam2\src\reports: 
+2025-10-26 22:38:43 - INFO - System - APP_CONTROLLER_INITIALIZED: 
+2025-10-26 22:38:43 - INFO - System - UI_CALLBACK_SET: login_success: 
+2025-10-26 22:38:43 - INFO - System - UI_CALLBACK_SET: login_failed: 
+2025-10-26 22:38:43 - INFO - System - UI_CALLBACK_SET: register_success: 
+2025-10-26 22:38:43 - INFO - System - UI_CALLBACK_SET: self_register_success: 
+2025-10-26 22:38:43 - INFO - System - UI_CALLBACK_SET: register_failed: 
+2025-10-26 22:38:43 - INFO - System - UI_CALLBACK_SET: logout_success: 
+2025-10-26 22:38:43 - INFO - System - UI_CALLBACK_SET: detection_starting: 
+2025-10-26 22:38:43 - INFO - System - UI_CALLBACK_SET: detection_started: 
+2025-10-26 22:38:43 - INFO - System - UI_CALLBACK_SET: detection_stopped: 
+2025-10-26 22:38:43 - INFO - System - UI_CALLBACK_SET: detection_failed: 
+2025-10-26 22:38:43 - INFO - System - UI_CALLBACK_SET: detection_update: 
+2025-10-26 22:38:43 - INFO - System - UI_CALLBACK_SET: count_reset: 
+2025-10-26 22:38:43 - INFO - System - UI_CALLBACK_SET: report_generated: 
+2025-10-26 22:38:43 - INFO - System - UI_CALLBACK_SET: report_failed: 
+2025-10-26 22:38:43 - INFO - System - UI_CALLBACK_SET: config_updated: 
+2025-10-26 22:38:43 - INFO - System - UI_CALLBACK_SET: camera_added: 
+2025-10-26 22:38:43 - INFO - System - UI_CALLBACK_SET: camera_removed: 
+2025-10-26 22:38:43 - INFO - System - UI_CALLBACK_SET: error: 
+2025-10-26 22:38:43 - INFO - System - UI_CALLBACK_SET: api_report_sent: 
+2025-10-26 22:38:43 - INFO - System - UI_CALLBACK_SET: api_report_failed: 
+2025-10-26 22:38:44 - INFO - System - APPLICATION_INITIALIZED: 
+2025-10-26 22:38:44 - INFO - System - APPLICATION_MAINLOOP_START: 
+2025-10-26 22:39:25 - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-26 22:39:42 - INFO - System - THREAD_STARTED: Detection-Cam-2: 2
+2025-10-26 22:39:42 - INFO - System - LOADING_MODEL: Detection-Cam-2: 2
+2025-10-26 22:39:42 - INFO - System - MODEL_LOADED: Detection-Cam-2: 2
+2025-10-26 22:39:42 - INFO - System - CONNECTING_SOURCE: Detection-Cam-2, Source='rtsp://admin:admin@192.168.0.5:554/1/2': 2
+2025-10-26 22:39:49 - INFO - System - SOURCE_CONNECTED: Detection-Cam-2, Source='rtsp://admin:admin@192.168.0.5:554/1/2': 2
+2025-10-26 22:39:49 - INFO - System - DETECTION_LOOP_STARTING: Detection-Cam-2: 2
+2025-10-26 22:40:28 - INFO - System - STOP_DETECTION_REQUESTED: Cam=2: 2
+2025-10-26 22:40:28 - INFO - System - STOPPING_DETECTION_REQUESTED: Camera ID: 2: 2
+2025-10-26 22:40:28 - INFO - System - CLEANING_UP_THREAD: Detection-Cam-2: 2
+2025-10-26 22:40:28 - INFO - System - SOURCE_RELEASED: Detection-Cam-2: 2
+2025-10-26 22:40:28 - INFO - System - DETECTION_THREAD_ENDED: Detection-Cam-2: 2
+2025-10-26 22:40:28 - INFO - System - DETECTION_STOPPED_CONFIRMED: Camera ID: 2: 2
+2025-10-26 22:40:33 - INFO - System - FINALIZE_SESSION_REQUESTED: Cam=2: 2
+2025-10-26 22:40:33 - INFO - System - PROCESSING_REPORT_AND_API: Cam=2, Count=0: 2
+2025-10-26 22:40:33 - INFO - System - GENERATING_FINAL_REPORT_PDF: Cam=2: 
+2025-10-26 22:40:33 - INFO - System - GENERATING_ENHANCED_REPORT: reports\Relatorio_Nova_Câmera_2_20251026_223942.pdf: 
+2025-10-26 22:40:33 - INFO - System - ENHANCED_REPORT_GENERATED: reports\Relatorio_Nova_Câmera_2_20251026_223942.pdf: 
+2025-10-26 22:40:33 - INFO - System - REPORT_GENERATED: reports\Relatorio_Nova_Câmera_2_20251026_223942.pdf: 2
+2025-10-26 22:40:33 - INFO - System - SENDING_REPORT_TO_API: Cam=2: 
+2025-10-26 22:40:33 - INFO - System - API_SEND_REPORT_START: URL=https://siemens-web-back-end.onrender.com/freidamiaosheets/daily-reports: 
+2025-10-26 22:41:04 - INFO - System - APPLICATION_INTERRUPTED: 

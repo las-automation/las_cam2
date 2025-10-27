@@ -16,6 +16,7 @@ from reportlab.lib.pagesizes import A4
 from reportlab.lib.units import cm, inch # Adiciona inch
 # --- FIM CORREÇÃO ---
 from reportlab.pdfgen import canvas # Importa canvas para generate_simple_pdf
+from ..utils.paths import REPORTS_DIR_PATH
 
 # Imports do seu projeto
 from ..models.entities import DetectionSession, DetectionEvent, ReportData, DailyReport

@@ -1,0 +1,502 @@
+2025-10-27 00:24:50 - system - INFO - System - CONFIG_NOT_FOUND_CREATING_DEFAULT: 
+2025-10-27 00:24:50 - system - INFO - System - DEFAULT_CONFIG_CREATED_AND_SAVED: 
+2025-10-27 00:24:51 - system - INFO - System - DIRECTML_AVAILABLE: 
+2025-10-27 00:24:51 - system - INFO - System - APPLICATION_STARTUP: 
+2025-10-27 00:24:51 - system - INFO - System - Criado usuário administrador padrão: 
+2025-10-27 00:24:51 - system - INFO - System - DETECTION_SERVICE_INITIALIZED_BACKEND_DIRECTML: 
+2025-10-27 00:24:51 - system - INFO - System - REPORT_SERVICE_INITIALIZED: Directory=C:\Users\cchrr\Documents\GitHub\las_cam2\src\reports: 
+2025-10-27 00:24:51 - system - INFO - System - APP_CONTROLLER_INITIALIZED: 
+2025-10-27 00:24:51 - system - INFO - System - UI_CALLBACK_SET: login_success: 
+2025-10-27 00:24:51 - system - INFO - System - UI_CALLBACK_SET: login_failed: 
+2025-10-27 00:24:51 - system - INFO - System - UI_CALLBACK_SET: register_success: 
+2025-10-27 00:24:51 - system - INFO - System - UI_CALLBACK_SET: self_register_success: 
+2025-10-27 00:24:51 - system - INFO - System - UI_CALLBACK_SET: register_failed: 
+2025-10-27 00:24:51 - system - INFO - System - UI_CALLBACK_SET: logout_success: 
+2025-10-27 00:24:51 - system - INFO - System - UI_CALLBACK_SET: detection_starting: 
+2025-10-27 00:24:51 - system - INFO - System - UI_CALLBACK_SET: detection_started: 
+2025-10-27 00:24:51 - system - INFO - System - UI_CALLBACK_SET: detection_stopped: 
+2025-10-27 00:24:51 - system - INFO - System - UI_CALLBACK_SET: detection_failed: 
+2025-10-27 00:24:51 - system - INFO - System - UI_CALLBACK_SET: detection_update: 
+2025-10-27 00:24:51 - system - INFO - System - UI_CALLBACK_SET: count_reset: 
+2025-10-27 00:24:51 - system - INFO - System - UI_CALLBACK_SET: report_generated: 
+2025-10-27 00:24:51 - system - INFO - System - UI_CALLBACK_SET: report_failed: 
+2025-10-27 00:24:51 - system - INFO - System - UI_CALLBACK_SET: config_updated: 
+2025-10-27 00:24:51 - system - INFO - System - UI_CALLBACK_SET: camera_added: 
+2025-10-27 00:24:51 - system - INFO - System - UI_CALLBACK_SET: camera_removed: 
+2025-10-27 00:24:51 - system - INFO - System - UI_CALLBACK_SET: error: 
+2025-10-27 00:24:51 - system - INFO - System - UI_CALLBACK_SET: api_report_sent: 
+2025-10-27 00:24:51 - system - INFO - System - UI_CALLBACK_SET: api_report_failed: 
+2025-10-27 00:24:51 - system - INFO - System - APPLICATION_INITIALIZED: 
+2025-10-27 00:24:51 - system - INFO - System - APPLICATION_MAINLOOP_START: 
+2025-10-27 00:25:01 - user_actions - INFO - User 'gustavo' - LOGIN_FAILED: Usuário não encontrado ou inativo
+2025-10-27 00:25:13 - user_actions - INFO - User 'gustavo' - USER_REGISTERED: Role: viewer
+2025-10-27 00:25:13 - user_actions - INFO - User 'gustavo' - SELF_REGISTER_SUCCESS: 
+2025-10-27 00:25:17 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-27 00:25:17 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-27 00:25:20 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-27 00:25:21 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=0, Data={'name': 'Webcam Principal', 'source': '0', 'description': 'Webcam integrada ou USB', 'enabled': True}: 0
+2025-10-27 00:25:21 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=0: 0
+2025-10-27 00:25:22 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=1, Data={'name': 'Câmera IP Entrada', 'source': 'rtsp://admin:admin@192.168.0.100:554/stream1', 'description': 'Câmera IP', 'enabled': True}: 1
+2025-10-27 00:25:22 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=1: 1
+2025-10-27 00:25:23 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=2, Data={'name': 'Câmera IP Saida', 'source': 'rtsp://admin:admin@192.168.0.101:554/stream1', 'description': 'Câmera IP', 'enabled': False}: 2
+2025-10-27 00:25:23 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=2: 2
+2025-10-27 00:25:23 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=1, Data={'name': 'Câmera IP Entrada', 'source': 'rtsp://admin:admin@192.168.0.100:554/stream1', 'description': 'Câmera IP', 'enabled': True}: 1
+2025-10-27 00:25:23 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=1: 1
+2025-10-27 00:25:25 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=0, Data={'name': 'Webcam Principal', 'source': '0', 'description': 'Webcam integrada ou USB', 'enabled': True}: 0
+2025-10-27 00:25:25 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=0: 0
+2025-10-27 00:25:27 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=1, Data={'name': 'Câmera IP Entrada', 'source': 'rtsp://admin:admin@192.168.0.100:554/stream1', 'description': 'Câmera IP', 'enabled': True}: 1
+2025-10-27 00:25:27 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=1: 1
+2025-10-27 00:25:28 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=2, Data={'name': 'Câmera IP Saida', 'source': 'rtsp://admin:admin@192.168.0.101:554/stream1', 'description': 'Câmera IP', 'enabled': False}: 2
+2025-10-27 00:25:28 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=2: 2
+2025-10-27 00:25:28 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=1, Data={'name': 'Câmera IP Entrada', 'source': 'rtsp://admin:admin@192.168.0.100:554/stream1', 'description': 'Câmera IP', 'enabled': True}: 1
+2025-10-27 00:25:28 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=1: 1
+2025-10-27 00:25:28 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=0, Data={'name': 'Webcam Principal', 'source': '0', 'description': 'Webcam integrada ou USB', 'enabled': True}: 0
+2025-10-27 00:25:28 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=0: 0
+2025-10-27 00:25:29 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=1, Data={'name': 'Câmera IP Entrada', 'source': 'rtsp://admin:admin@192.168.0.100:554/stream1', 'description': 'Câmera IP', 'enabled': True}: 1
+2025-10-27 00:25:29 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=1: 1
+2025-10-27 00:25:30 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=2, Data={'name': 'Câmera IP Saida', 'source': 'rtsp://admin:admin@192.168.0.101:554/stream1', 'description': 'Câmera IP', 'enabled': False}: 2
+2025-10-27 00:25:30 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=2: 2
+2025-10-27 00:25:30 - system - INFO - System - ADD_CAMERA_REQUESTED: ID=3, Name=Nova Câmera 3: 
+2025-10-27 00:25:30 - system - INFO - System - CAMERA_ADDED_SAVED: ID=3, Name=Nova Câmera 3: 
+2025-10-27 00:25:30 - system - INFO - System - ADD_CAMERA_SUCCESS: ID=3: 
+2025-10-27 00:25:30 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=2, Data={'name': 'Câmera IP Saida', 'source': 'rtsp://admin:admin@192.168.0.101:554/stream1', 'description': 'Câmera IP', 'enabled': False}: 2
+2025-10-27 00:25:30 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=2: 2
+2025-10-27 00:25:32 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=3, Data={'name': 'Nova Câmera 3', 'source': '0', 'description': 'Insira a descrição', 'enabled': True}: 3
+2025-10-27 00:25:32 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=3: 3
+2025-10-27 00:25:32 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=1, Data={'name': 'Câmera IP Entrada', 'source': 'rtsp://admin:admin@192.168.0.100:554/stream1', 'description': 'Câmera IP', 'enabled': True}: 1
+2025-10-27 00:25:32 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=1: 1
+2025-10-27 00:25:33 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=0, Data={'name': 'Webcam Principal', 'source': '0', 'description': 'Webcam integrada ou USB', 'enabled': True}: 0
+2025-10-27 00:25:33 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=0: 0
+2025-10-27 00:25:33 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=1, Data={'name': 'Câmera IP Entrada', 'source': 'rtsp://admin:admin@192.168.0.100:554/stream1', 'description': 'Câmera IP', 'enabled': True}: 1
+2025-10-27 00:25:33 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=1: 1
+2025-10-27 00:25:33 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=2, Data={'name': 'Câmera IP Saida', 'source': 'rtsp://admin:admin@192.168.0.101:554/stream1', 'description': 'Câmera IP', 'enabled': False}: 2
+2025-10-27 00:25:33 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=2: 2
+2025-10-27 00:25:34 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=3, Data={'name': 'Nova Câmera 3', 'source': '0', 'description': 'Insira a descrição', 'enabled': True}: 3
+2025-10-27 00:25:34 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=3: 3
+2025-10-27 00:25:35 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=2, Data={'name': 'Câmera IP Saida', 'source': 'rtsp://admin:admin@192.168.0.101:554/stream1', 'description': 'Câmera IP', 'enabled': False}: 2
+2025-10-27 00:25:35 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=2: 2
+2025-10-27 00:26:08 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=1, Data={'name': 'Câmera IP Entrada', 'source': 'rtsp://admin:admin@192.168.0.100:554/stream1', 'description': 'Câmera IP', 'enabled': True}: 1
+2025-10-27 00:26:08 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=1: 1
+2025-10-27 00:26:08 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-27 00:26:10 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-27 00:26:10 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=1, Data={'name': 'Câmera IP Entrada', 'source': 'rtsp://admin:admin@192.168.0.100:554/stream1', 'description': 'Câmera IP', 'enabled': True}: 1
+2025-10-27 00:26:10 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=1: 1
+2025-10-27 00:26:21 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-27 00:26:22 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=0, Data={'name': 'Webcam Principal', 'source': '0', 'description': 'Webcam integrada ou USB', 'enabled': True}: 0
+2025-10-27 00:26:22 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=0: 0
+2025-10-27 00:29:12 - system - INFO - System - APPLICATION_CLOSING: 
+2025-10-27 00:29:12 - system - INFO - System - APP_SHUTDOWN_REQUESTED: 
+2025-10-27 00:29:12 - system - INFO - System - STOP_ALL_DETECTIONS: Nenhuma detecção ativa.: 
+2025-10-27 00:29:12 - user_actions - INFO - User 'gustavo' - LOGOUT_REQUESTED: 
+2025-10-27 00:29:12 - system - INFO - System - STOP_ALL_DETECTIONS: Nenhuma detecção ativa.: 
+2025-10-27 00:29:12 - user_actions - INFO - User 'gustavo' - LOGOUT_COMPLETED: 
+2025-10-27 00:29:12 - system - INFO - System - APP_SHUTDOWN_COMPLETED: 
+2025-10-27 00:29:12 - system - INFO - System - APP_SHUTDOWN_REQUESTED: 
+2025-10-27 00:29:12 - system - INFO - System - STOP_ALL_DETECTIONS: Nenhuma detecção ativa.: 
+2025-10-27 00:29:12 - system - INFO - System - LOGOUT_ATTEMPT_WITHOUT_USER: 
+2025-10-27 00:29:12 - system - INFO - System - APP_SHUTDOWN_COMPLETED: 
+2025-10-27 00:29:12 - system - INFO - System - APPLICATION_CLOSED: 
+2025-10-27 00:31:27 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-27 00:31:28 - system - INFO - System - DIRECTML_AVAILABLE: 
+2025-10-27 00:31:28 - system - INFO - System - APPLICATION_STARTUP: 
+2025-10-27 00:31:28 - system - INFO - System - DETECTION_SERVICE_INITIALIZED_BACKEND_DIRECTML: 
+2025-10-27 00:31:28 - system - INFO - System - REPORT_SERVICE_INITIALIZED: Directory=C:\Users\cchrr\Documents\GitHub\las_cam2\src\reports: 
+2025-10-27 00:31:28 - system - INFO - System - APP_CONTROLLER_INITIALIZED: 
+2025-10-27 00:31:28 - system - INFO - System - UI_CALLBACK_SET: login_success: 
+2025-10-27 00:31:28 - system - INFO - System - UI_CALLBACK_SET: login_failed: 
+2025-10-27 00:31:28 - system - INFO - System - UI_CALLBACK_SET: register_success: 
+2025-10-27 00:31:28 - system - INFO - System - UI_CALLBACK_SET: self_register_success: 
+2025-10-27 00:31:28 - system - INFO - System - UI_CALLBACK_SET: register_failed: 
+2025-10-27 00:31:28 - system - INFO - System - UI_CALLBACK_SET: logout_success: 
+2025-10-27 00:31:28 - system - INFO - System - UI_CALLBACK_SET: detection_starting: 
+2025-10-27 00:31:28 - system - INFO - System - UI_CALLBACK_SET: detection_started: 
+2025-10-27 00:31:28 - system - INFO - System - UI_CALLBACK_SET: detection_stopped: 
+2025-10-27 00:31:28 - system - INFO - System - UI_CALLBACK_SET: detection_failed: 
+2025-10-27 00:31:28 - system - INFO - System - UI_CALLBACK_SET: detection_update: 
+2025-10-27 00:31:28 - system - INFO - System - UI_CALLBACK_SET: count_reset: 
+2025-10-27 00:31:28 - system - INFO - System - UI_CALLBACK_SET: report_generated: 
+2025-10-27 00:31:28 - system - INFO - System - UI_CALLBACK_SET: report_failed: 
+2025-10-27 00:31:28 - system - INFO - System - UI_CALLBACK_SET: config_updated: 
+2025-10-27 00:31:28 - system - INFO - System - UI_CALLBACK_SET: camera_added: 
+2025-10-27 00:31:28 - system - INFO - System - UI_CALLBACK_SET: camera_removed: 
+2025-10-27 00:31:28 - system - INFO - System - UI_CALLBACK_SET: error: 
+2025-10-27 00:31:28 - system - INFO - System - UI_CALLBACK_SET: api_report_sent: 
+2025-10-27 00:31:28 - system - INFO - System - UI_CALLBACK_SET: api_report_failed: 
+2025-10-27 00:31:28 - system - INFO - System - APPLICATION_INITIALIZED: 
+2025-10-27 00:31:28 - system - INFO - System - APPLICATION_MAINLOOP_START: 
+2025-10-27 00:31:38 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-27 00:31:38 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-27 00:32:01 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-27 00:32:03 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=0, Data={'name': 'Webcam Principal', 'source': '0', 'description': 'Webcam integrada ou USB', 'enabled': True}: 0
+2025-10-27 00:32:03 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=0: 0
+2025-10-27 00:32:03 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=2, Data={'name': 'Câmera IP Saida', 'source': 'rtsp://admin:admin@192.168.0.101:554/stream1', 'description': 'Câmera IP', 'enabled': False}: 2
+2025-10-27 00:32:03 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=2: 2
+2025-10-27 00:32:05 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=3, Data={'name': 'Nova Câmera 3', 'source': '0', 'description': 'Insira a descrição', 'enabled': True}: 3
+2025-10-27 00:32:05 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=3: 3
+2025-10-27 00:32:06 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=2, Data={'name': 'Câmera IP Saida', 'source': 'rtsp://admin:admin@192.168.0.101:554/stream1', 'description': 'Câmera IP', 'enabled': False}: 2
+2025-10-27 00:32:06 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=2: 2
+2025-10-27 00:32:06 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=1, Data={'name': 'Câmera IP Entrada', 'source': 'rtsp://admin:admin@192.168.0.100:554/stream1', 'description': 'Câmera IP', 'enabled': True}: 1
+2025-10-27 00:32:06 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=1: 1
+2025-10-27 00:32:09 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=0, Data={'name': 'Webcam Principal', 'source': '0', 'description': 'Webcam integrada ou USB', 'enabled': True}: 0
+2025-10-27 00:32:09 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=0: 0
+2025-10-27 00:32:09 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=2, Data={'name': 'Câmera IP Saida', 'source': 'rtsp://admin:admin@192.168.0.101:554/stream1', 'description': 'Câmera IP', 'enabled': False}: 2
+2025-10-27 00:32:09 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=2: 2
+2025-10-27 00:32:10 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=1, Data={'name': 'Câmera IP Entrada', 'source': 'rtsp://admin:admin@192.168.0.100:554/stream1', 'description': 'Câmera IP', 'enabled': True}: 1
+2025-10-27 00:32:10 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=1: 1
+2025-10-27 00:32:10 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=0, Data={'name': 'Webcam Principal', 'source': '0', 'description': 'Webcam integrada ou USB', 'enabled': True}: 0
+2025-10-27 00:32:10 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=0: 0
+2025-10-27 00:32:12 - system - INFO - System - REMOVE_CAMERA_REQUESTED: ID=3: 3
+2025-10-27 00:32:12 - system - INFO - System - CAMERA_REMOVED_SAVED: ID=3: 
+2025-10-27 00:32:12 - system - INFO - System - REMOVE_CAMERA_SUCCESS: ID=3: 
+2025-10-27 00:32:13 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=0, Data={'name': 'Webcam Principal', 'source': '0', 'description': 'Webcam integrada ou USB', 'enabled': True}: 0
+2025-10-27 00:32:13 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=0: 0
+2025-10-27 00:32:14 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=2, Data={'name': 'Câmera IP Saida', 'source': 'rtsp://admin:admin@192.168.0.101:554/stream1', 'description': 'Câmera IP', 'enabled': False}: 2
+2025-10-27 00:32:14 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=2: 2
+2025-10-27 00:32:14 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=1, Data={'name': 'Câmera IP Entrada', 'source': 'rtsp://admin:admin@192.168.0.100:554/stream1', 'description': 'Câmera IP', 'enabled': True}: 1
+2025-10-27 00:32:14 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=1: 1
+2025-10-27 00:32:16 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=0, Data={'name': 'Webcam Principal', 'source': '0', 'description': 'Webcam integrada ou USB', 'enabled': True}: 0
+2025-10-27 00:32:16 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=0: 0
+2025-10-27 00:32:16 - system - INFO - System - ADD_CAMERA_REQUESTED: ID=3, Name=Nova Câmera 3: 
+2025-10-27 00:32:16 - system - INFO - System - CAMERA_ADDED_SAVED: ID=3, Name=Nova Câmera 3: 
+2025-10-27 00:32:16 - system - INFO - System - ADD_CAMERA_SUCCESS: ID=3: 
+2025-10-27 00:32:16 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=0, Data={'name': 'Webcam Principal', 'source': '0', 'description': 'Webcam integrada ou USB', 'enabled': True}: 0
+2025-10-27 00:32:16 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=0: 0
+2025-10-27 00:32:59 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=3, Data={'name': 'Nova Câmera 3', 'source': '0', 'description': 'Insira a descrição', 'enabled': True}: 3
+2025-10-27 00:32:59 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=3: 3
+2025-10-27 00:32:59 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-27 00:33:50 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-27 00:33:50 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=3, Data={'name': 'Nova Câmera 3', 'source': '0', 'description': 'Insira a descrição', 'enabled': True}: 3
+2025-10-27 00:33:50 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=3: 3
+2025-10-27 00:46:41 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-27 00:59:01 - system - INFO - System - APPLICATION_CLOSING: 
+2025-10-27 00:59:01 - system - INFO - System - APP_SHUTDOWN_REQUESTED: 
+2025-10-27 00:59:01 - system - INFO - System - STOP_ALL_DETECTIONS: Nenhuma detecção ativa.: 
+2025-10-27 00:59:01 - user_actions - INFO - User 'gustavo' - LOGOUT_REQUESTED: 
+2025-10-27 00:59:01 - system - INFO - System - STOP_ALL_DETECTIONS: Nenhuma detecção ativa.: 
+2025-10-27 00:59:01 - user_actions - INFO - User 'gustavo' - LOGOUT_COMPLETED: 
+2025-10-27 00:59:01 - system - INFO - System - APP_SHUTDOWN_COMPLETED: 
+2025-10-27 00:59:01 - system - INFO - System - APP_SHUTDOWN_REQUESTED: 
+2025-10-27 00:59:01 - system - INFO - System - STOP_ALL_DETECTIONS: Nenhuma detecção ativa.: 
+2025-10-27 00:59:01 - system - INFO - System - LOGOUT_ATTEMPT_WITHOUT_USER: 
+2025-10-27 00:59:01 - system - INFO - System - APP_SHUTDOWN_COMPLETED: 
+2025-10-27 00:59:01 - system - INFO - System - APPLICATION_CLOSED: 
+2025-10-27 00:59:10 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-27 00:59:10 - system - INFO - System - DIRECTML_AVAILABLE: 
+2025-10-27 00:59:10 - system - INFO - System - APPLICATION_STARTUP: 
+2025-10-27 00:59:10 - system - INFO - System - DETECTION_SERVICE_INITIALIZED_BACKEND_DIRECTML: 
+2025-10-27 00:59:10 - system - INFO - System - REPORT_SERVICE_INITIALIZED: Directory=C:\Users\cchrr\Documents\GitHub\las_cam2\src\reports: 
+2025-10-27 00:59:10 - system - INFO - System - APP_CONTROLLER_INITIALIZED: 
+2025-10-27 00:59:10 - system - INFO - System - UI_CALLBACK_SET: login_success: 
+2025-10-27 00:59:10 - system - INFO - System - UI_CALLBACK_SET: login_failed: 
+2025-10-27 00:59:10 - system - INFO - System - UI_CALLBACK_SET: register_success: 
+2025-10-27 00:59:10 - system - INFO - System - UI_CALLBACK_SET: self_register_success: 
+2025-10-27 00:59:10 - system - INFO - System - UI_CALLBACK_SET: register_failed: 
+2025-10-27 00:59:10 - system - INFO - System - UI_CALLBACK_SET: logout_success: 
+2025-10-27 00:59:10 - system - INFO - System - UI_CALLBACK_SET: detection_starting: 
+2025-10-27 00:59:10 - system - INFO - System - UI_CALLBACK_SET: detection_started: 
+2025-10-27 00:59:10 - system - INFO - System - UI_CALLBACK_SET: detection_stopped: 
+2025-10-27 00:59:10 - system - INFO - System - UI_CALLBACK_SET: detection_failed: 
+2025-10-27 00:59:10 - system - INFO - System - UI_CALLBACK_SET: detection_update: 
+2025-10-27 00:59:10 - system - INFO - System - UI_CALLBACK_SET: count_reset: 
+2025-10-27 00:59:10 - system - INFO - System - UI_CALLBACK_SET: report_generated: 
+2025-10-27 00:59:10 - system - INFO - System - UI_CALLBACK_SET: report_failed: 
+2025-10-27 00:59:10 - system - INFO - System - UI_CALLBACK_SET: config_updated: 
+2025-10-27 00:59:10 - system - INFO - System - UI_CALLBACK_SET: camera_added: 
+2025-10-27 00:59:10 - system - INFO - System - UI_CALLBACK_SET: camera_removed: 
+2025-10-27 00:59:10 - system - INFO - System - UI_CALLBACK_SET: error: 
+2025-10-27 00:59:10 - system - INFO - System - UI_CALLBACK_SET: api_report_sent: 
+2025-10-27 00:59:10 - system - INFO - System - UI_CALLBACK_SET: api_report_failed: 
+2025-10-27 00:59:11 - system - INFO - System - APPLICATION_INITIALIZED: 
+2025-10-27 00:59:11 - system - INFO - System - APPLICATION_MAINLOOP_START: 
+2025-10-27 00:59:19 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-27 00:59:19 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-27 00:59:20 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-27 00:59:25 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-27 00:59:28 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-27 01:06:21 - system - INFO - System - APPLICATION_INTERRUPTED: 
+2025-10-27 01:54:56 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-27 01:54:56 - system - INFO - System - DIRECTML_AVAILABLE: 
+2025-10-27 01:54:56 - system - INFO - System - APPLICATION_STARTUP: 
+2025-10-27 01:54:56 - system - INFO - System - DETECTION_SERVICE_INITIALIZED_BACKEND_DIRECTML: 
+2025-10-27 01:54:56 - system - INFO - System - REPORT_SERVICE_INITIALIZED: Directory=C:\Users\cchrr\Documents\GitHub\las_cam2\src\reports: 
+2025-10-27 01:54:56 - system - INFO - System - APP_CONTROLLER_INITIALIZED: 
+2025-10-27 01:54:56 - system - INFO - System - UI_CALLBACK_SET: login_success: 
+2025-10-27 01:54:56 - system - INFO - System - UI_CALLBACK_SET: login_failed: 
+2025-10-27 01:54:56 - system - INFO - System - UI_CALLBACK_SET: register_success: 
+2025-10-27 01:54:56 - system - INFO - System - UI_CALLBACK_SET: self_register_success: 
+2025-10-27 01:54:56 - system - INFO - System - UI_CALLBACK_SET: register_failed: 
+2025-10-27 01:54:56 - system - INFO - System - UI_CALLBACK_SET: logout_success: 
+2025-10-27 01:54:56 - system - INFO - System - UI_CALLBACK_SET: detection_starting: 
+2025-10-27 01:54:56 - system - INFO - System - UI_CALLBACK_SET: detection_started: 
+2025-10-27 01:54:56 - system - INFO - System - UI_CALLBACK_SET: detection_stopped: 
+2025-10-27 01:54:56 - system - INFO - System - UI_CALLBACK_SET: detection_failed: 
+2025-10-27 01:54:56 - system - INFO - System - UI_CALLBACK_SET: detection_update: 
+2025-10-27 01:54:56 - system - INFO - System - UI_CALLBACK_SET: count_reset: 
+2025-10-27 01:54:56 - system - INFO - System - UI_CALLBACK_SET: report_generated: 
+2025-10-27 01:54:56 - system - INFO - System - UI_CALLBACK_SET: report_failed: 
+2025-10-27 01:54:56 - system - INFO - System - UI_CALLBACK_SET: config_updated: 
+2025-10-27 01:54:56 - system - INFO - System - UI_CALLBACK_SET: camera_added: 
+2025-10-27 01:54:56 - system - INFO - System - UI_CALLBACK_SET: camera_removed: 
+2025-10-27 01:54:56 - system - INFO - System - UI_CALLBACK_SET: error: 
+2025-10-27 01:54:56 - system - INFO - System - UI_CALLBACK_SET: api_report_sent: 
+2025-10-27 01:54:56 - system - INFO - System - UI_CALLBACK_SET: api_report_failed: 
+2025-10-27 01:54:56 - system - INFO - System - APPLICATION_FATAL_ERROR: 'SettingsView' object has no attribute '_handle_restore_defaults': 
+2025-10-27 01:59:55 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-27 01:59:55 - system - INFO - System - DIRECTML_AVAILABLE: 
+2025-10-27 01:59:55 - system - INFO - System - APPLICATION_STARTUP: 
+2025-10-27 01:59:55 - system - INFO - System - DETECTION_SERVICE_INITIALIZED_BACKEND_DIRECTML: 
+2025-10-27 01:59:55 - system - INFO - System - REPORT_SERVICE_INITIALIZED: Directory=C:\Users\cchrr\Documents\GitHub\las_cam2\src\reports: 
+2025-10-27 01:59:55 - system - INFO - System - APP_CONTROLLER_INITIALIZED: 
+2025-10-27 01:59:55 - system - INFO - System - UI_CALLBACK_SET: login_success: 
+2025-10-27 01:59:55 - system - INFO - System - UI_CALLBACK_SET: login_failed: 
+2025-10-27 01:59:55 - system - INFO - System - UI_CALLBACK_SET: register_success: 
+2025-10-27 01:59:55 - system - INFO - System - UI_CALLBACK_SET: self_register_success: 
+2025-10-27 01:59:55 - system - INFO - System - UI_CALLBACK_SET: register_failed: 
+2025-10-27 01:59:55 - system - INFO - System - UI_CALLBACK_SET: logout_success: 
+2025-10-27 01:59:55 - system - INFO - System - UI_CALLBACK_SET: detection_starting: 
+2025-10-27 01:59:55 - system - INFO - System - UI_CALLBACK_SET: detection_started: 
+2025-10-27 01:59:55 - system - INFO - System - UI_CALLBACK_SET: detection_stopped: 
+2025-10-27 01:59:55 - system - INFO - System - UI_CALLBACK_SET: detection_failed: 
+2025-10-27 01:59:55 - system - INFO - System - UI_CALLBACK_SET: detection_update: 
+2025-10-27 01:59:55 - system - INFO - System - UI_CALLBACK_SET: count_reset: 
+2025-10-27 01:59:55 - system - INFO - System - UI_CALLBACK_SET: report_generated: 
+2025-10-27 01:59:55 - system - INFO - System - UI_CALLBACK_SET: report_failed: 
+2025-10-27 01:59:55 - system - INFO - System - UI_CALLBACK_SET: config_updated: 
+2025-10-27 01:59:55 - system - INFO - System - UI_CALLBACK_SET: camera_added: 
+2025-10-27 01:59:55 - system - INFO - System - UI_CALLBACK_SET: camera_removed: 
+2025-10-27 01:59:55 - system - INFO - System - UI_CALLBACK_SET: error: 
+2025-10-27 01:59:55 - system - INFO - System - UI_CALLBACK_SET: api_report_sent: 
+2025-10-27 01:59:55 - system - INFO - System - UI_CALLBACK_SET: api_report_failed: 
+2025-10-27 01:59:55 - system - INFO - System - APPLICATION_INITIALIZED: 
+2025-10-27 01:59:55 - system - INFO - System - APPLICATION_MAINLOOP_START: 
+2025-10-27 02:00:04 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-27 02:00:04 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-27 02:00:05 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-27 02:00:24 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=0, Data={'name': 'Webcam Principal', 'source': '0', 'description': 'Webcam integrada ou USB', 'enabled': True}: 0
+2025-10-27 02:00:24 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=0: 0
+2025-10-27 02:00:24 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-27 02:00:32 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-27 02:00:39 - user_actions - INFO - User 'gustavo' - FACTORY_RESET_REQUESTED: 
+2025-10-27 02:00:39 - system - INFO - System - STOP_ALL_DETECTIONS: Nenhuma detecção ativa.: 
+2025-10-27 02:00:39 - errors - ERROR - AppController - AttributeError: 'ConfigManager' object has no attribute 'restore_defaults' - Erro crítico durante a restauração de fábrica
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\controllers\app_controller.py", line 59, in restore_all_factory_defaults
+    if not self.config.restore_defaults():
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ConfigManager' object has no attribute 'restore_defaults'
+2025-10-27 02:00:47 - errors - ERROR - SettingsView - TypeError: show_error_dialog() got an unexpected keyword argument 'parent' - Erro ao chamar restore_all_factory_defaults
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\settings_view.py", line 524, in _handle_restore_defaults
+    show_error_dialog("Erro", "Não foi possível restaurar as configurações (ver logs).", parent=self)
+TypeError: show_error_dialog() got an unexpected keyword argument 'parent'
+2025-10-27 02:13:40 - system - INFO - System - APPLICATION_INTERRUPTED: 
+2025-10-27 02:13:47 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-27 02:13:47 - system - INFO - System - DIRECTML_AVAILABLE: 
+2025-10-27 02:13:47 - system - INFO - System - APPLICATION_STARTUP: 
+2025-10-27 02:13:47 - system - INFO - System - DETECTION_SERVICE_INITIALIZED_BACKEND_OPENVINO: 
+2025-10-27 02:13:47 - system - INFO - System - REPORT_SERVICE_INITIALIZED: Directory=C:\Users\cchrr\Documents\GitHub\las_cam2\src\reports: 
+2025-10-27 02:13:47 - system - INFO - System - APP_CONTROLLER_INITIALIZED: 
+2025-10-27 02:13:47 - system - INFO - System - UI_CALLBACK_SET: login_success: 
+2025-10-27 02:13:47 - system - INFO - System - UI_CALLBACK_SET: login_failed: 
+2025-10-27 02:13:47 - system - INFO - System - UI_CALLBACK_SET: register_success: 
+2025-10-27 02:13:47 - system - INFO - System - UI_CALLBACK_SET: self_register_success: 
+2025-10-27 02:13:47 - system - INFO - System - UI_CALLBACK_SET: register_failed: 
+2025-10-27 02:13:47 - system - INFO - System - UI_CALLBACK_SET: logout_success: 
+2025-10-27 02:13:47 - system - INFO - System - UI_CALLBACK_SET: detection_starting: 
+2025-10-27 02:13:47 - system - INFO - System - UI_CALLBACK_SET: detection_started: 
+2025-10-27 02:13:47 - system - INFO - System - UI_CALLBACK_SET: detection_stopped: 
+2025-10-27 02:13:47 - system - INFO - System - UI_CALLBACK_SET: detection_failed: 
+2025-10-27 02:13:47 - system - INFO - System - UI_CALLBACK_SET: detection_update: 
+2025-10-27 02:13:47 - system - INFO - System - UI_CALLBACK_SET: count_reset: 
+2025-10-27 02:13:47 - system - INFO - System - UI_CALLBACK_SET: report_generated: 
+2025-10-27 02:13:47 - system - INFO - System - UI_CALLBACK_SET: report_failed: 
+2025-10-27 02:13:47 - system - INFO - System - UI_CALLBACK_SET: config_updated: 
+2025-10-27 02:13:47 - system - INFO - System - UI_CALLBACK_SET: camera_added: 
+2025-10-27 02:13:47 - system - INFO - System - UI_CALLBACK_SET: camera_removed: 
+2025-10-27 02:13:47 - system - INFO - System - UI_CALLBACK_SET: error: 
+2025-10-27 02:13:47 - system - INFO - System - UI_CALLBACK_SET: api_report_sent: 
+2025-10-27 02:13:47 - system - INFO - System - UI_CALLBACK_SET: api_report_failed: 
+2025-10-27 02:13:47 - system - INFO - System - APPLICATION_FATAL_ERROR: 'SettingsView' object has no attribute '_handle_restore_defaults': 
+2025-10-27 02:14:32 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-27 02:14:32 - system - INFO - System - DIRECTML_AVAILABLE: 
+2025-10-27 02:14:32 - system - INFO - System - APPLICATION_STARTUP: 
+2025-10-27 02:14:32 - system - INFO - System - DETECTION_SERVICE_INITIALIZED_BACKEND_OPENVINO: 
+2025-10-27 02:14:32 - system - INFO - System - REPORT_SERVICE_INITIALIZED: Directory=C:\Users\cchrr\Documents\GitHub\las_cam2\src\reports: 
+2025-10-27 02:14:32 - system - INFO - System - APP_CONTROLLER_INITIALIZED: 
+2025-10-27 02:14:32 - system - INFO - System - UI_CALLBACK_SET: login_success: 
+2025-10-27 02:14:32 - system - INFO - System - UI_CALLBACK_SET: login_failed: 
+2025-10-27 02:14:32 - system - INFO - System - UI_CALLBACK_SET: register_success: 
+2025-10-27 02:14:32 - system - INFO - System - UI_CALLBACK_SET: self_register_success: 
+2025-10-27 02:14:32 - system - INFO - System - UI_CALLBACK_SET: register_failed: 
+2025-10-27 02:14:32 - system - INFO - System - UI_CALLBACK_SET: logout_success: 
+2025-10-27 02:14:32 - system - INFO - System - UI_CALLBACK_SET: detection_starting: 
+2025-10-27 02:14:32 - system - INFO - System - UI_CALLBACK_SET: detection_started: 
+2025-10-27 02:14:32 - system - INFO - System - UI_CALLBACK_SET: detection_stopped: 
+2025-10-27 02:14:32 - system - INFO - System - UI_CALLBACK_SET: detection_failed: 
+2025-10-27 02:14:32 - system - INFO - System - UI_CALLBACK_SET: detection_update: 
+2025-10-27 02:14:32 - system - INFO - System - UI_CALLBACK_SET: count_reset: 
+2025-10-27 02:14:32 - system - INFO - System - UI_CALLBACK_SET: report_generated: 
+2025-10-27 02:14:32 - system - INFO - System - UI_CALLBACK_SET: report_failed: 
+2025-10-27 02:14:32 - system - INFO - System - UI_CALLBACK_SET: config_updated: 
+2025-10-27 02:14:32 - system - INFO - System - UI_CALLBACK_SET: camera_added: 
+2025-10-27 02:14:32 - system - INFO - System - UI_CALLBACK_SET: camera_removed: 
+2025-10-27 02:14:32 - system - INFO - System - UI_CALLBACK_SET: error: 
+2025-10-27 02:14:32 - system - INFO - System - UI_CALLBACK_SET: api_report_sent: 
+2025-10-27 02:14:32 - system - INFO - System - UI_CALLBACK_SET: api_report_failed: 
+2025-10-27 02:14:32 - system - INFO - System - APPLICATION_INITIALIZED: 
+2025-10-27 02:14:32 - system - INFO - System - APPLICATION_MAINLOOP_START: 
+2025-10-27 02:14:38 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-27 02:14:38 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-27 02:14:40 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-27 02:14:43 - user_actions - INFO - User 'gustavo' - FACTORY_RESET_REQUESTED: 
+2025-10-27 02:14:43 - system - INFO - System - STOP_ALL_DETECTIONS: Nenhuma detecção ativa.: 
+2025-10-27 02:14:43 - system - INFO - System - CONFIG_RESTORE_DEFAULTS_REQUESTED: 
+2025-10-27 02:14:43 - system - INFO - System - CONFIG_SAVED_TO_FILE: 
+2025-10-27 02:14:43 - system - INFO - System - DEFAULT_CONFIG_CREATED_AND_SAVED: 
+2025-10-27 02:14:43 - system - INFO - System - AUTH_SERVICE: Restaurando usuários padrão...: 
+2025-10-27 02:14:44 - system - INFO - System - Criado usuário administrador padrão: 
+2025-10-27 02:14:44 - system - INFO - System - AUTH_SERVICE: usuários.json restaurado com sucesso (apenas admin).: 
+2025-10-27 02:14:44 - system - INFO - System - FACTORY_RESET_SUCCESS: 
+2025-10-27 02:14:44 - user_actions - INFO - User 'gustavo' - LOGOUT_REQUESTED: 
+2025-10-27 02:14:44 - system - INFO - System - STOP_ALL_DETECTIONS: Nenhuma detecção ativa.: 
+2025-10-27 02:14:44 - user_actions - INFO - User 'gustavo' - LOGOUT_COMPLETED: 
+2025-10-27 02:14:52 - user_actions - INFO - User 'gustavo' - LOGIN_FAILED: Usuário não encontrado ou inativo
+2025-10-27 02:15:04 - user_actions - INFO - User 'gustavo' - USER_REGISTERED: Role: viewer
+2025-10-27 02:15:04 - user_actions - INFO - User 'gustavo' - SELF_REGISTER_SUCCESS: 
+2025-10-27 02:15:07 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-27 02:15:07 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-27 02:15:08 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-27 02:15:13 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=0, Data={'name': 'Webcam Principal', 'source': '0', 'description': 'Webcam integrada ou USB', 'enabled': True}: 0
+2025-10-27 02:15:13 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=0: 0
+2025-10-27 02:15:14 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=1, Data={'name': 'Câmera IP Entrada', 'source': 'rtsp://admin:admin@192.168.0.100:554/stream1', 'description': 'Câmera IP', 'enabled': True}: 1
+2025-10-27 02:15:14 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=1: 1
+2025-10-27 02:15:15 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=2, Data={'name': 'Câmera IP Saida', 'source': 'rtsp://admin:admin@192.168.0.101:554/stream1', 'description': 'Câmera IP', 'enabled': False}: 2
+2025-10-27 02:15:15 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=2: 2
+2025-10-27 02:15:19 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-27 02:15:19 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=1, Data={'name': 'Câmera IP Entrada', 'source': 'rtsp://admin:admin@192.168.0.100:554/stream1', 'description': 'Câmera IP', 'enabled': True}: 1
+2025-10-27 02:15:19 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=1: 1
+2025-10-27 02:15:21 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=0, Data={'name': 'Webcam Principal', 'source': '0', 'description': 'Webcam integrada ou USB', 'enabled': True}: 0
+2025-10-27 02:15:21 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=0: 0
+2025-10-27 02:15:22 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=1, Data={'name': 'Câmera IP Entrada', 'source': 'rtsp://admin:admin@192.168.0.100:554/stream1', 'description': 'Câmera IP', 'enabled': True}: 1
+2025-10-27 02:15:22 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=1: 1
+2025-10-27 02:15:22 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=2, Data={'name': 'Câmera IP Saida', 'source': 'rtsp://admin:admin@192.168.0.101:554/stream1', 'description': 'Câmera IP', 'enabled': False}: 2
+2025-10-27 02:15:22 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=2: 2
+2025-10-27 02:15:23 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=1, Data={'name': 'Câmera IP Entrada', 'source': 'rtsp://admin:admin@192.168.0.100:554/stream1', 'description': 'Câmera IP', 'enabled': True}: 1
+2025-10-27 02:15:23 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=1: 1
+2025-10-27 02:15:24 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=2, Data={'name': 'Câmera IP Saida', 'source': 'rtsp://admin:admin@192.168.0.101:554/stream1', 'description': 'Câmera IP', 'enabled': False}: 2
+2025-10-27 02:15:24 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=2: 2
+2025-10-27 02:15:24 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=1, Data={'name': 'Câmera IP Entrada', 'source': 'rtsp://admin:admin@192.168.0.100:554/stream1', 'description': 'Câmera IP', 'enabled': True}: 1
+2025-10-27 02:15:24 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=1: 1
+2025-10-27 02:15:30 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=2, Data={'name': 'Câmera IP Saida', 'source': 'rtsp://admin:admin@192.168.0.101:554/stream1', 'description': 'Câmera IP', 'enabled': False}: 2
+2025-10-27 02:15:30 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=2: 2
+2025-10-27 02:15:40 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=1, Data={'name': 'Câmera IP Entrada', 'source': 'rtsp://admin:admin@192.168.0.5:554/stream1', 'description': 'Câmera IP', 'enabled': True}: 1
+2025-10-27 02:15:40 - system - INFO - System - CONFIG_SAVED_TO_FILE: 
+2025-10-27 02:15:40 - system - INFO - System - CAMERA_CONFIG_UPDATED_SAVED: ID=1: 
+2025-10-27 02:15:40 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=1: 1
+2025-10-27 02:15:40 - system - INFO - System - CONFIG_SAVED_TO_FILE: 
+2025-10-27 02:15:40 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-27 02:15:59 - user_actions - INFO - User 'gustavo' - START_DETECTION_REQUESTED: Cam=1, Type=Torta Normal: 
+2025-10-27 02:15:59 - system - INFO - System - THREAD_STARTED: Detection-Cam-1: 1
+2025-10-27 02:15:59 - user_actions - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_1_TYPE_Torta Normal_BACKEND_DirectML: 
+2025-10-27 02:15:59 - system - INFO - System - LOADING_MODEL: Detection-Cam-1: 1
+2025-10-27 02:15:59 - system - INFO - System - MODEL_LOADED: Detection-Cam-1: 1
+2025-10-27 02:15:59 - system - INFO - System - CONNECTING_SOURCE: Detection-Cam-1, Source='rtsp://admin:admin@192.168.0.5:554/stream1': 1
+2025-10-27 02:16:29 - errors - ERROR - Detection-Cam-1 - ConnectionError: Falha ao abrir fonte: 'rtsp://admin:admin@192.168.0.5:554/stream1' - Erro de conexão RTSP/Webcam
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\services\detection_service.py", line 239, in _run_detection_thread
+    if not cap or not cap.isOpened(): raise ConnectionError(f"Falha ao abrir fonte: '{source}'")
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionError: Falha ao abrir fonte: 'rtsp://admin:admin@192.168.0.5:554/stream1'
+2025-10-27 02:16:32 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=1: 1
+2025-10-27 02:16:32 - system - INFO - System - STOPPING_DETECTION_REQUESTED: Camera ID: 1: 1
+2025-10-27 02:16:32 - system - INFO - System - CLEANING_UP_THREAD: Detection-Cam-1: 1
+2025-10-27 02:16:32 - system - INFO - System - DETECTION_THREAD_ENDED: Detection-Cam-1: 1
+2025-10-27 02:16:33 - user_actions - INFO - User 'gustavo' - START_DETECTION_REQUESTED: Cam=1, Type=Torta Normal: 
+2025-10-27 02:16:33 - system - INFO - System - THREAD_STARTED: Detection-Cam-1: 1
+2025-10-27 02:16:33 - user_actions - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_1_TYPE_Torta Normal_BACKEND_DirectML: 
+2025-10-27 02:16:33 - system - INFO - System - LOADING_MODEL: Detection-Cam-1: 1
+2025-10-27 02:16:34 - system - INFO - System - MODEL_LOADED: Detection-Cam-1: 1
+2025-10-27 02:16:34 - system - INFO - System - CONNECTING_SOURCE: Detection-Cam-1, Source='rtsp://admin:admin@192.168.0.5:554/stream1': 1
+2025-10-27 02:16:52 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-27 02:16:52 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=1, Data={'name': 'Câmera IP Entrada', 'source': 'rtsp://admin:admin@192.168.0.5:554/stream1', 'description': 'Câmera IP', 'enabled': True}: 1
+2025-10-27 02:16:52 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=1: 1
+2025-10-27 02:16:54 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=0, Data={'name': 'Webcam Principal', 'source': '0', 'description': 'Webcam integrada ou USB', 'enabled': True}: 0
+2025-10-27 02:16:54 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=0: 0
+2025-10-27 02:17:02 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=1, Data={'name': 'Câmera IP Entrada', 'source': 'rtsp://admin:admin@192.168.0.5:554/1/6', 'description': 'Câmera IP', 'enabled': True}: 1
+2025-10-27 02:17:02 - system - INFO - System - CONFIG_SAVED_TO_FILE: 
+2025-10-27 02:17:02 - system - INFO - System - CAMERA_CONFIG_UPDATED_SAVED: ID=1: 
+2025-10-27 02:17:02 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=1: 1
+2025-10-27 02:17:02 - system - INFO - System - CONFIG_SAVED_TO_FILE: 
+2025-10-27 02:17:02 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-27 02:17:04 - system - INFO - System - SOURCE_CONNECTED: Detection-Cam-1, Source='rtsp://admin:admin@192.168.0.5:554/stream1': 1
+2025-10-27 02:17:04 - system - INFO - System - DETECTION_LOOP_STARTING: Detection-Cam-1: 1
+2025-10-27 02:17:15 - system - INFO - System - APPLICATION_CLOSING: 
+2025-10-27 02:17:15 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=1: 1
+2025-10-27 02:17:15 - system - INFO - System - STOPPING_DETECTION_REQUESTED: Camera ID: 1: 1
+2025-10-27 02:17:32 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-27 02:17:32 - system - INFO - System - DIRECTML_AVAILABLE: 
+2025-10-27 02:17:32 - system - INFO - System - APPLICATION_STARTUP: 
+2025-10-27 02:17:32 - system - INFO - System - DETECTION_SERVICE_INITIALIZED_BACKEND_DIRECTML: 
+2025-10-27 02:17:32 - system - INFO - System - REPORT_SERVICE_INITIALIZED: Directory=C:\Users\cchrr\Documents\GitHub\las_cam2\src\reports: 
+2025-10-27 02:17:32 - system - INFO - System - APP_CONTROLLER_INITIALIZED: 
+2025-10-27 02:17:32 - system - INFO - System - UI_CALLBACK_SET: login_success: 
+2025-10-27 02:17:32 - system - INFO - System - UI_CALLBACK_SET: login_failed: 
+2025-10-27 02:17:32 - system - INFO - System - UI_CALLBACK_SET: register_success: 
+2025-10-27 02:17:32 - system - INFO - System - UI_CALLBACK_SET: self_register_success: 
+2025-10-27 02:17:32 - system - INFO - System - UI_CALLBACK_SET: register_failed: 
+2025-10-27 02:17:32 - system - INFO - System - UI_CALLBACK_SET: logout_success: 
+2025-10-27 02:17:32 - system - INFO - System - UI_CALLBACK_SET: detection_starting: 
+2025-10-27 02:17:32 - system - INFO - System - UI_CALLBACK_SET: detection_started: 
+2025-10-27 02:17:32 - system - INFO - System - UI_CALLBACK_SET: detection_stopped: 
+2025-10-27 02:17:32 - system - INFO - System - UI_CALLBACK_SET: detection_failed: 
+2025-10-27 02:17:32 - system - INFO - System - UI_CALLBACK_SET: detection_update: 
+2025-10-27 02:17:32 - system - INFO - System - UI_CALLBACK_SET: count_reset: 
+2025-10-27 02:17:32 - system - INFO - System - UI_CALLBACK_SET: report_generated: 
+2025-10-27 02:17:32 - system - INFO - System - UI_CALLBACK_SET: report_failed: 
+2025-10-27 02:17:32 - system - INFO - System - UI_CALLBACK_SET: config_updated: 
+2025-10-27 02:17:32 - system - INFO - System - UI_CALLBACK_SET: camera_added: 
+2025-10-27 02:17:32 - system - INFO - System - UI_CALLBACK_SET: camera_removed: 
+2025-10-27 02:17:32 - system - INFO - System - UI_CALLBACK_SET: error: 
+2025-10-27 02:17:32 - system - INFO - System - UI_CALLBACK_SET: api_report_sent: 
+2025-10-27 02:17:32 - system - INFO - System - UI_CALLBACK_SET: api_report_failed: 
+2025-10-27 02:17:32 - system - INFO - System - APPLICATION_INITIALIZED: 
+2025-10-27 02:17:32 - system - INFO - System - APPLICATION_MAINLOOP_START: 
+2025-10-27 02:17:40 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-27 02:17:40 - user_actions - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-27 02:17:44 - system - INFO - System - CONFIG_LOADED_SUCCESSFULLY: 
+2025-10-27 02:17:45 - system - INFO - System - UPDATE_CAMERA_CONFIG_REQUESTED: ID=0, Data={'name': 'Webcam Principal', 'source': '0', 'description': 'Webcam integrada ou USB', 'enabled': True}: 0
+2025-10-27 02:17:45 - system - INFO - System - UPDATE_CAMERA_CONFIG_SUCCESS: ID=0: 0
+2025-10-27 02:17:51 - user_actions - INFO - User 'gustavo' - START_DETECTION_REQUESTED: Cam=1, Type=Torta Normal: 
+2025-10-27 02:17:51 - system - INFO - System - THREAD_STARTED: Detection-Cam-1: 1
+2025-10-27 02:17:51 - user_actions - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_1_TYPE_Torta Normal_BACKEND_DirectML: 
+2025-10-27 02:17:51 - system - INFO - System - LOADING_MODEL: Detection-Cam-1: 1
+2025-10-27 02:17:51 - system - INFO - System - MODEL_LOADED: Detection-Cam-1: 1
+2025-10-27 02:17:51 - system - INFO - System - CONNECTING_SOURCE: Detection-Cam-1, Source='rtsp://admin:admin@192.168.0.5:554/1/6': 1
+2025-10-27 02:17:58 - system - INFO - System - SOURCE_CONNECTED: Detection-Cam-1, Source='rtsp://admin:admin@192.168.0.5:554/1/6': 1
+2025-10-27 02:17:58 - system - INFO - System - DETECTION_LOOP_STARTING: Detection-Cam-1: 1
+2025-10-27 02:18:21 - system - INFO - System - STOP_DETECTION_REQUESTED: Cam=1: 1
+2025-10-27 02:18:21 - system - INFO - System - STOPPING_DETECTION_REQUESTED: Camera ID: 1: 1
+2025-10-27 02:18:21 - system - INFO - System - CLEANING_UP_THREAD: Detection-Cam-1: 1
+2025-10-27 02:18:21 - system - INFO - System - SOURCE_RELEASED: Detection-Cam-1: 1
+2025-10-27 02:18:21 - system - INFO - System - DETECTION_THREAD_ENDED: Detection-Cam-1: 1
+2025-10-27 02:18:21 - system - INFO - System - DETECTION_STOPPED_CONFIRMED: Camera ID: 1: 1
+2025-10-27 02:18:40 - system - INFO - System - FINALIZE_SESSION_REQUESTED: Cam=1: 1
+2025-10-27 02:18:40 - system - INFO - System - PROCESSING_REPORT_AND_API: Cam=1, Count=0: 1
+2025-10-27 02:18:40 - system - INFO - System - GENERATING_FINAL_REPORT_PDF: Cam=1: 
+2025-10-27 02:18:40 - system - INFO - System - GENERATING_ENHANCED_REPORT: reports\Relatorio_Câmera_IP_Entrada_20251027_021751.pdf: 
+2025-10-27 02:18:40 - system - INFO - System - ENHANCED_REPORT_GENERATED: reports\Relatorio_Câmera_IP_Entrada_20251027_021751.pdf: 
+2025-10-27 02:18:40 - system - INFO - System - REPORT_GENERATED: reports\Relatorio_Câmera_IP_Entrada_20251027_021751.pdf: 1
+2025-10-27 02:18:40 - system - INFO - System - SENDING_REPORT_TO_API: Cam=1: 
+2025-10-27 02:18:40 - errors - ERROR - ApiService - NoneType: None - URL base da API inválida encontrada no config: ''
+NoneType: None
+2025-10-27 02:18:40 - errors - ERROR - AppController - NoneType: None - Falha ao enviar relatório para API (Cam=1)
+NoneType: None
+2025-10-27 02:18:40 - errors - ERROR - AppController - TypeError: show_error_dialog() got an unexpected keyword argument 'parent' - Erro fatal no callback da UI 'api_report_failed'
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\controllers\app_controller.py", line 91, in trigger_ui_event
+    callback(*args, **kwargs)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\screen_manager.py", line 358, in _on_api_report_failed
+    self.camera_windows[camera_id].show_error(msg)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\camera_view.py", line 308, in show_error
+    show_error_dialog(f"Erro - Câmera {self.camera_id}", message, parent=self)
+TypeError: show_error_dialog() got an unexpected keyword argument 'parent'

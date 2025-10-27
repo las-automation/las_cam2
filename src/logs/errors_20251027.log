@@ -1,0 +1,30 @@
+2025-10-27 02:00:39 - ERROR - AppController - AttributeError: 'ConfigManager' object has no attribute 'restore_defaults' - Erro crítico durante a restauração de fábrica
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\controllers\app_controller.py", line 59, in restore_all_factory_defaults
+    if not self.config.restore_defaults():
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'ConfigManager' object has no attribute 'restore_defaults'
+2025-10-27 02:00:47 - ERROR - SettingsView - TypeError: show_error_dialog() got an unexpected keyword argument 'parent' - Erro ao chamar restore_all_factory_defaults
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\settings_view.py", line 524, in _handle_restore_defaults
+    show_error_dialog("Erro", "Não foi possível restaurar as configurações (ver logs).", parent=self)
+TypeError: show_error_dialog() got an unexpected keyword argument 'parent'
+2025-10-27 02:16:29 - ERROR - Detection-Cam-1 - ConnectionError: Falha ao abrir fonte: 'rtsp://admin:admin@192.168.0.5:554/stream1' - Erro de conexão RTSP/Webcam
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\services\detection_service.py", line 239, in _run_detection_thread
+    if not cap or not cap.isOpened(): raise ConnectionError(f"Falha ao abrir fonte: '{source}'")
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ConnectionError: Falha ao abrir fonte: 'rtsp://admin:admin@192.168.0.5:554/stream1'
+2025-10-27 02:18:40 - ERROR - ApiService - NoneType: None - URL base da API inválida encontrada no config: ''
+NoneType: None
+2025-10-27 02:18:40 - ERROR - AppController - NoneType: None - Falha ao enviar relatório para API (Cam=1)
+NoneType: None
+2025-10-27 02:18:40 - ERROR - AppController - TypeError: show_error_dialog() got an unexpected keyword argument 'parent' - Erro fatal no callback da UI 'api_report_failed'
+Traceback (most recent call last):
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\controllers\app_controller.py", line 91, in trigger_ui_event
+    callback(*args, **kwargs)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\screen_manager.py", line 358, in _on_api_report_failed
+    self.camera_windows[camera_id].show_error(msg)
+  File "C:\Users\cchrr\Documents\GitHub\las_cam2\src\app\views\camera_view.py", line 308, in show_error
+    show_error_dialog(f"Erro - Câmera {self.camera_id}", message, parent=self)
+TypeError: show_error_dialog() got an unexpected keyword argument 'parent'

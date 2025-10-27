@@ -1,0 +1,34 @@
+2025-10-27 00:25:01 - INFO - User 'gustavo' - LOGIN_FAILED: Usuário não encontrado ou inativo
+2025-10-27 00:25:13 - INFO - User 'gustavo' - USER_REGISTERED: Role: viewer
+2025-10-27 00:25:13 - INFO - User 'gustavo' - SELF_REGISTER_SUCCESS: 
+2025-10-27 00:25:17 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-27 00:25:17 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-27 00:29:12 - INFO - User 'gustavo' - LOGOUT_REQUESTED: 
+2025-10-27 00:29:12 - INFO - User 'gustavo' - LOGOUT_COMPLETED: 
+2025-10-27 00:31:38 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-27 00:31:38 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-27 00:59:01 - INFO - User 'gustavo' - LOGOUT_REQUESTED: 
+2025-10-27 00:59:01 - INFO - User 'gustavo' - LOGOUT_COMPLETED: 
+2025-10-27 00:59:19 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-27 00:59:19 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-27 02:00:04 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-27 02:00:04 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-27 02:00:39 - INFO - User 'gustavo' - FACTORY_RESET_REQUESTED: 
+2025-10-27 02:14:38 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-27 02:14:38 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-27 02:14:43 - INFO - User 'gustavo' - FACTORY_RESET_REQUESTED: 
+2025-10-27 02:14:44 - INFO - User 'gustavo' - LOGOUT_REQUESTED: 
+2025-10-27 02:14:44 - INFO - User 'gustavo' - LOGOUT_COMPLETED: 
+2025-10-27 02:14:52 - INFO - User 'gustavo' - LOGIN_FAILED: Usuário não encontrado ou inativo
+2025-10-27 02:15:04 - INFO - User 'gustavo' - USER_REGISTERED: Role: viewer
+2025-10-27 02:15:04 - INFO - User 'gustavo' - SELF_REGISTER_SUCCESS: 
+2025-10-27 02:15:07 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-27 02:15:07 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-27 02:15:59 - INFO - User 'gustavo' - START_DETECTION_REQUESTED: Cam=1, Type=Torta Normal: 
+2025-10-27 02:15:59 - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_1_TYPE_Torta Normal_BACKEND_DirectML: 
+2025-10-27 02:16:33 - INFO - User 'gustavo' - START_DETECTION_REQUESTED: Cam=1, Type=Torta Normal: 
+2025-10-27 02:16:33 - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_1_TYPE_Torta Normal_BACKEND_DirectML: 
+2025-10-27 02:17:40 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-27 02:17:40 - INFO - User 'gustavo' - LOGIN_SUCCESS: 
+2025-10-27 02:17:51 - INFO - User 'gustavo' - START_DETECTION_REQUESTED: Cam=1, Type=Torta Normal: 
+2025-10-27 02:17:51 - INFO - User 'gustavo' - DETECTION_STARTED_CAMERA_1_TYPE_Torta Normal_BACKEND_DirectML: 
